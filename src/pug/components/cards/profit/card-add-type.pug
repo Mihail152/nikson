@@ -1,0 +1,19 @@
+div.card.profit
+    div.card__header.type
+        div.status
+            img(src="../svg/PriceIcon.svg")
+
+    div.card__body        
+        div.filed_row 
+            label От
+            input(type="text", placeholder="Стоимость")
+        div.filed_row.mb24 
+            label До
+            input(type="text", placeholder="Стоимость")
+        div.filed_row 
+            input(type="text", placeholder="Прибыль в процентах")
+        
+
+    div.card__footer.w-100.flex
+        a(href="#").btn Отменить
+        a(href="#").btn.prime Сохранить

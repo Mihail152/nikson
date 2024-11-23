@@ -1,0 +1,231 @@
+.cards {
+    padding: 40px;
+}
+
+.card {
+    background: #FFFFFF1A;
+    backdrop-filter: blur(16px);
+    max-width: 342px;
+    min-height: 380px;
+    border-radius: 24px;
+    padding: 40px 24px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    &.company {
+        min-height: 508px;
+    }
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .card__header {
+        padding-bottom: 24px;
+        border-bottom: 1px solid #FFFFFF1A;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.type {
+            border-bottom: none;
+        }
+
+        .date {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #FFFFFF99;
+        }
+    }
+
+    .card__body {
+        flex-grow: 1;
+    }
+
+    .action {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.8px;
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .indocator {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+        }
+    }
+
+    .markets {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.8px;
+    }
+
+    .info {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: #FFFFFF99;
+        margin-bottom: 8px;
+    }
+
+    .text {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.2px;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__footer {
+        margin-top: auto;
+    }
+
+
+    .card__footer {
+        &.w-100 {
+            gap: 16px
+        }
+    }
+
+    .link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+
+        &:hover {
+            span {
+                border-color: transparent;
+            }
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1rem;
+            color: #FFFFFF99;
+            border-bottom: 1px solid #FFFFFF99;
+            padding-top: 5px;
+        }
+    }
+
+    .remove-btn {}
+
+
+    .fz18 {
+        font-size: 18px;
+    }
+
+
+    &.organization {
+        min-height: 370px;
+
+        .title {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 33.6px;
+
+        }
+    }
+
+    &.integrations {
+        min-height: 370px;
+
+        .title {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 33.6px;
+
+        }
+
+        .markets {
+            flex-direction: column;
+
+            .market {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                span {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28.8px;
+                    color: #fff;
+                }
+            }
+
+
+        }
+    }
+
+    &.worker {
+        min-height: 473px;
+
+        .title {
+            margin-top: 24px;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+        .info {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+
+    .more {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        text-decoration: underline;
+        color: #FFFFFF99;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.mh312 {
+        min-height: 312px;
+    }
+}

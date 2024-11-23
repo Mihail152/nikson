@@ -1,0 +1,27 @@
+div.cards
+    div.column-4.mb24
+        div.col 
+            include cards/company/card-on.pug
+            include cards/company/card-off.pug
+            include cards/company/card-delete.pug        
+        div.col 
+            include cards/profit/card-default.pug
+            include cards/profit/card-add.pug
+            include cards/profit/card-add-type.pug
+            include cards/profit/card-delete.pug
+        div.col
+            include cards/worker/card-default.pug
+            include cards/worker/card-delete.pug
+        div.col
+            include cards/integrations/card-default.pug
+            include cards/integrations/card-delete.pug
+            include cards/integrations/card-add.pug
+            
+
+    div.column-4
+        div.col 
+            include cards/worker/inOrganization.pug
+            include cards/worker/other.pug
+        div.col
+            include cards/integrations/inOrganization.pug
+            include cards/integrations/other.pug

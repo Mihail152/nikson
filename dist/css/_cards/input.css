@@ -1,0 +1,36 @@
+.filed_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.filed_row:last-child {
+  margin-bottom: 0;
+}
+.filed_row label {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+.filed_row input {
+  max-width: 246px;
+  height: 48px;
+  padding: 16px 24px;
+  gap: 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  background: rgba(255, 255, 255, 0.1019607843);
+  border: none;
+  color: #fff;
+}
+.filed_row input:focus {
+  outline: 2px solid #6825DA;
+  outline-color: #6825DA;
+  outline-offset: 0px;
+}

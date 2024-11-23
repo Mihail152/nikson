@@ -91,6 +91,48 @@ table {
   font-weight: 600;
   font-style: normal;
 }
+.btn {
+  width: 100%;
+  height: 44px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1019607843);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btn.prime {
+  background: #6825DA;
+}
+.btn.prime:hover {
+  background: #7D39F0;
+}
+
+.btn-add {
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+.btn-add.prime {
+  background: #6825DA;
+}
+.btn-add.prime:hover {
+  background: #7D39F0;
+}
+
 .cards {
   padding: 40px;
 }
@@ -103,6 +145,242 @@ table {
   border-radius: 24px;
   padding: 40px 24px;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card.company {
+  min-height: 508px;
+}
+.card:last-child {
+  margin-bottom: 0 !important;
+}
+.card a {
+  text-decoration: none;
+}
+.card .card__header {
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card .card__header.type {
+  border-bottom: none;
+}
+.card .card__header .date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.card .card__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.card .action {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+.card .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.card .status .indocator {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.card .status span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.card .markets {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.card .title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+.card .info {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.card .label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+.card .text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  margin-bottom: 8px;
+}
+.card .text:last-child {
+  margin-bottom: 0;
+}
+.card .card__footer {
+  margin-top: auto;
+}
+.card .card__footer.w-100 {
+  gap: 16px;
+}
+.card .link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 8px;
+}
+.card .link:hover span {
+  border-color: transparent;
+}
+.card .link span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-top: 5px;
+}
+.card .fz18 {
+  font-size: 18px;
+}
+.card.organization {
+  min-height: 370px;
+}
+.card.organization .title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.card.integrations {
+  min-height: 370px;
+}
+.card.integrations .title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.card.integrations .markets {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card.integrations .markets .market {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.card.integrations .markets .market span {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  color: #fff;
+}
+.card.worker {
+  min-height: 473px;
+}
+.card.worker .title {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.card.worker .info {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.card .more {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.6);
+}
+.card .more:hover {
+  text-decoration: none;
+}
+.card.mh312 {
+  min-height: 312px;
+}
+
+.filed_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.filed_row:last-child {
+  margin-bottom: 0;
+}
+.filed_row label {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+.filed_row input {
+  max-width: 246px;
+  height: 48px;
+  padding: 16px 24px;
+  gap: 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  background: rgba(255, 255, 255, 0.1019607843);
+  border: none;
+  color: #fff;
+}
+.filed_row input:focus {
+  outline: 2px solid #6825DA;
+  outline-color: #6825DA;
+  outline-offset: 0px;
 }
 
 * {
@@ -116,4 +394,62 @@ body {
 
 .bg-dark {
   background-color: #151515;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.column-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 358px);
+  gap: 40px;
+}
+.column-4 .col {
+  margin: 0 8px;
+}
+.column-4 .col > * {
+  margin-bottom: 8px;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aicenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jccenter {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.gap24 {
+  gap: 24px;
+}
+
+.mb16 {
+  margin-bottom: 16px !important;
+}
+
+.mb24 {
+  margin-bottom: 24px !important;
 }
