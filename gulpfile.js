@@ -4,6 +4,7 @@ import gulpSass from "gulp-sass";
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import postcss from "gulp-postcss";
+import changed from 'gulp-changed';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
@@ -13,18 +14,21 @@ import browserSync from 'browser-sync';
 import fileInclude from 'gulp-file-include';
 import prettier from 'gulp-prettier';
 
-
 const paths = {
   styles: 'src/scss/**/*.scss',
   scripts: 'src/js/**/*.js',
   pug: 'src/pug/**/*.pug',
   images: 'src/images/**/*',
+  svg: 'src/svg/**/*',
+  fonts: 'src/fonts/**/*',
   html: 'src/html/**/*.html',
   dist: {
     base: 'dist',
     css: 'dist/css',
     js: 'dist/js',
     images: 'dist/images',
+    svg: 'dist/svg',
+    fonts: 'dist/fonts',
   },
 };
 
@@ -40,7 +44,8 @@ function styles() {
     // minify
     .pipe(cleanCSS({ level: 1 }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.dist.css)); 
+    .pipe(gulp.dest(paths.dist.css))
+    .pipe(browserSync.stream());
 }
 
 
@@ -70,6 +75,27 @@ function images() {
     .pipe(gulp.dest(paths.dist.images));
 }
 
+function copySVG() {
+  return gulp
+    .src(paths.svg)
+    .pipe(changed(paths.dist.svg))
+    .pipe(rename((path) => {
+      path.basename = path.basename.replace(/[^a-zA-Z0-9-_]/g, '');
+      return path;
+    }))
+    .pipe(gulp.dest(paths.dist.svg));
+}
+function copyFonts() {
+  return gulp
+    .src(paths.fonts)
+    .pipe(changed(paths.dist.fonts))
+    .pipe(rename((path) => {
+      path.basename = path.basename.replace(/[^a-zA-Z0-9-_]/g, '');
+      return path;
+    }))
+    .pipe(gulp.dest(paths.dist.fonts));
+}
+
 
 function includeHTML() {
   return gulp
@@ -95,11 +121,13 @@ function serve() {
     },
   });
 
-  gulp.watch(paths.styles, styles);
-  gulp.watch(paths.scripts, scripts);
-  gulp.watch(paths.pug, compilePug);
-  gulp.watch(paths.html, includeHTML);
+  gulp.watch(paths.styles, styles).on('change', browserSync.reload);;
+  gulp.watch(paths.scripts, scripts).on('change', browserSync.reload);;
+  gulp.watch(paths.pug, compilePug).on('change', browserSync.reload);;
+  gulp.watch(paths.html, includeHTML).on('change', browserSync.reload);;
   gulp.watch(paths.images, images).on('change', browserSync.reload);
+  gulp.watch(paths.svg, copySVG).on('change', browserSync.reload); 
+  gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
 }
 
 
@@ -109,12 +137,14 @@ export {
   compilePug,
   images,
   includeHTML,
+  copySVG,
+  copyFonts,
   format,
   serve,
 };
 
 
 export default gulp.series(
-  gulp.parallel(styles, scripts, compilePug, includeHTML, images),
+  gulp.parallel(styles, scripts, compilePug, includeHTML, images, copySVG, copyFonts),
   serve
 );

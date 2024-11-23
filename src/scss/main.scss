@@ -1,7 +1,16 @@
+@use 'reset';
+@use 'fonts';
+@use 'variables';
+@use '_cards/cards.scss';
 
 *{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    display: grid;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Golos Text', sans-serif;
+}
+
+.bg-dark{
+    background-color: variables.$bg;    
 }
