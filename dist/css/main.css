@@ -57,37 +57,37 @@ table {
 
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-Regular.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-Bold.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-Black.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-ExtraBold.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-Medium.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
+  src: url("./../fonts/Golos_Text/GolosText-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }

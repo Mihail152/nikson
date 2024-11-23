@@ -88,11 +88,6 @@ function copySVG() {
 function copyFonts() {
   return gulp
     .src(paths.fonts)
-    .pipe(changed(paths.dist.fonts))
-    .pipe(rename((path) => {
-      path.basename = path.basename.replace(/[^a-zA-Z0-9-_]/g, '');
-      return path;
-    }))
     .pipe(gulp.dest(paths.dist.fonts));
 }
 
@@ -127,7 +122,7 @@ function serve() {
   gulp.watch(paths.html, includeHTML).on('change', browserSync.reload);;
   gulp.watch(paths.images, images).on('change', browserSync.reload);
   gulp.watch(paths.svg, copySVG).on('change', browserSync.reload); 
-  gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
+  // gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
 }
 
 
@@ -138,13 +133,13 @@ export {
   images,
   includeHTML,
   copySVG,
-  copyFonts,
+  // copyFonts,
   format,
   serve,
 };
 
 
 export default gulp.series(
-  gulp.parallel(styles, scripts, compilePug, includeHTML, images, copySVG, copyFonts),
+  gulp.parallel(styles, scripts, compilePug, includeHTML, images, copySVG),
   serve
 );
