@@ -15,12 +15,23 @@
                 max-width: 64px;
             }
         }
+
+        .user {
+            display: none;
+        }
+
+        .menu-item {
+            span {
+                display: none;
+            }
+        }
     }
 }
 
 .main-container {
     padding: 0 0 0 376px;
     // transition: padding-left .25s ease;
+    color: #fff;
 
     .sidebar-wrapper {
         padding: 24px;
@@ -71,6 +82,85 @@
             background: #6162eb;
             background: radial-gradient(circle, rgba(97, 98, 235, .3) 0, rgba(255, 255, 255, 0) 70%);
             display: block;
+        }
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, .0509803922);
+        width: 68px;
+        border-radius: 24px;
+        height: 68px;
+    }
+
+    .user-profile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        border-bottom: 1px solid #FFFFFF1A;
+
+        .name {
+            margin-bottom: 4px;
+            a {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21.6px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+        }
+
+        .role {
+            a {
+
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19.2px;
+                color: #FFFFFF66;
+                text-decoration: none;
+
+            }
+        }
+
+    }
+
+    .menu {
+        margin-top: 40px;
+
+        li {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            border-radius: 16px;
+            padding: 20px 24px;
+            text-decoration: none;
+            color: #fff;
+
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+
+
+            &.active {
+                background: #262633;
+            }
+
+
         }
     }
 }

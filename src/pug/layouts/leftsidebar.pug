@@ -3,15 +3,46 @@ div.page-wrapper
         nav.sidebar-wrapper 
             div.sidebar-header
                 div.brand
-                    a(href="#") 
+                    a(href="../") 
                         img(src="./../svg/Logo.svg", alt="")
                 div.toggle-sidebar
                     img(src="./../svg/ToggleBar.svg", alt="")
-            div.user-profile User 
-            div.menu menu
+            div.user-profile
+                    a(href="#") 
+                        div.icon
+                            img(src="./../svg/IconAccount.svg", alt="")
+                    div.user
+                        div.name
+                            a(href="#") Иванов Иван Иванович
+                        div.role 
+                            a(href="#") Администратор
+
+
+            div.menu
+                ul  
+                    li 
+                        a(href="#").menu-item.active
+                            img(src="./../svg/navigation/products.svg", alt="") 
+                            span Товары
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/products.svg", alt="") 
+                            span Организации
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/products.svg", alt="") 
+                            span Интеграции
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/products.svg", alt="") 
+                            span Финансовые группы
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/products.svg", alt="") 
+                            span Пользователи
             div.sidebar-footer
-                div.notification notification 
-                div.logout Exit
+                //- div.notification notification 
+                //- div.logout Exit
 
 
         div.app-container content
