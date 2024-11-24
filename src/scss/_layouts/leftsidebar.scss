@@ -1,0 +1,48 @@
+.page-wrapper {
+    padding: 24px;
+
+    &.pinned {
+        .main-container {
+            padding-left: 174px;
+        }
+
+        .sidebar-wrapper {
+            width: 174px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}
+
+.main-container {
+    padding: 0 0 0 400px;
+    transition: padding-left .25s ease;
+
+    .sidebar-wrapper {
+        padding: 24px;
+        width: 400px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: left .3s ease, width .3s ease;
+    }
+
+    .toggle-sidebar {
+        width: 64px;
+        height: 64px;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF0D;
+        cursor: pointer;
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

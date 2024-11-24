@@ -1,0 +1,1 @@
+let toggleButton=document.querySelector(".toggle-sidebar"),pageWrapper=document.querySelector(".page-wrapper");toggleButton.addEventListener("click",()=>{pageWrapper.classList.toggle("pinned")});
