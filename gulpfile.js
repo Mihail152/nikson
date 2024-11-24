@@ -70,9 +70,10 @@ function compilePug() {
 
 function images() {
   return gulp
-    .src(paths.images)
+    .src(paths.images, { encoding: false })
     .pipe(imagemin())
-    .pipe(gulp.dest(paths.dist.images));
+    .pipe(gulp.dest(paths.dist.images))
+    .pipe(browserSync.stream());
 }
 
 function copySVG() {

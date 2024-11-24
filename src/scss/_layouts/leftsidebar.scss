@@ -3,20 +3,24 @@
 
     &.pinned {
         .main-container {
-            padding-left: 174px;
+            padding-left: 88px;
         }
 
         .sidebar-wrapper {
-            width: 174px;
-            padding-left: 12px;
-            padding-right: 12px;
+            width: 112px;
+        }
+
+        .brand {
+            img {
+                max-width: 64px;
+            }
         }
     }
 }
 
 .main-container {
-    padding: 0 0 0 400px;
-    transition: padding-left .25s ease;
+    padding: 0 0 0 376px;
+    // transition: padding-left .25s ease;
 
     .sidebar-wrapper {
         padding: 24px;
@@ -26,7 +30,7 @@
         top: 0;
         left: 0;
         z-index: 10;
-        transition: left .3s ease, width .3s ease;
+        // transition: left .3s ease, width .3s ease;
     }
 
     .toggle-sidebar {
@@ -44,5 +48,29 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .app-container {
+        position: relative;
+        height: calc(100vh - 48px);
+        overflow: hidden;
+        background: #FFFFFF0D;
+        border-radius: 24px;
+        padding: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -900px;
+            width: 1800px;
+            height: 1800px;
+            background: #6162eb;
+            background: radial-gradient(circle, rgba(97, 98, 235, .3) 0, rgba(255, 255, 255, 0) 70%);
+            display: block;
+        }
     }
 }

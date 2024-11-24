@@ -2,18 +2,17 @@
   padding: 24px;
 }
 .page-wrapper.pinned .main-container {
-  padding-left: 174px;
+  padding-left: 88px;
 }
 .page-wrapper.pinned .sidebar-wrapper {
-  width: 174px;
-  padding-left: 12px;
-  padding-right: 12px;
+  width: 112px;
+}
+.page-wrapper.pinned .brand img {
+  max-width: 64px;
 }
 
 .main-container {
-  padding: 0 0 0 400px;
-  -webkit-transition: padding-left 0.25s ease;
-  transition: padding-left 0.25s ease;
+  padding: 0 0 0 376px;
 }
 .main-container .sidebar-wrapper {
   padding: 24px;
@@ -23,8 +22,6 @@
   top: 0;
   left: 0;
   z-index: 10;
-  -webkit-transition: left 0.3s ease, width 0.3s ease;
-  transition: left 0.3s ease, width 0.3s ease;
 }
 .main-container .toggle-sidebar {
   width: 64px;
@@ -52,4 +49,28 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+.main-container .app-container {
+  position: relative;
+  height: calc(100vh - 48px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.0509803922);
+  border-radius: 24px;
+  padding: 40px;
+}
+.main-container .app-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -900px;
+  width: 1800px;
+  height: 1800px;
+  background: #6162eb;
+  background: radial-gradient(circle, rgba(97, 98, 235, 0.3) 0, rgba(255, 255, 255, 0) 70%);
+  display: block;
 }
