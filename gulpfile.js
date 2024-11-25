@@ -123,7 +123,7 @@ function serve() {
   gulp.watch(paths.html, includeHTML).on('change', browserSync.reload);;
   gulp.watch(paths.images, images).on('change', browserSync.reload);
   gulp.watch(paths.svg, copySVG).on('change', browserSync.reload); 
-  // gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
+  gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
 }
 
 
@@ -134,7 +134,7 @@ export {
   images,
   includeHTML,
   copySVG,
-  // copyFonts,
+  copyFonts,
   format,
   serve,
 };

@@ -97,6 +97,16 @@ table {
 .page-wrapper.pinned .main-container {
   padding-left: 88px;
 }
+.page-wrapper.pinned .main-container .badge {
+  top: 0px;
+  right: -5px;
+}
+.page-wrapper.pinned .main-container .menu .menu-item {
+  border-radius: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .page-wrapper.pinned .sidebar-wrapper {
   width: 112px;
 }
@@ -106,7 +116,7 @@ table {
 .page-wrapper.pinned .user {
   display: none;
 }
-.page-wrapper.pinned .menu-item span {
+.page-wrapper.pinned .menu-item span:not(.badge) {
   display: none;
 }
 
@@ -122,6 +132,17 @@ table {
   top: 0;
   left: 0;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+}
+.main-container .sidebar-wrapper .sidebar-footer {
+  margin-top: auto;
 }
 .main-container .toggle-sidebar {
   width: 64px;
@@ -138,6 +159,9 @@ table {
           justify-content: center;
   background: rgba(255, 255, 255, 0.0509803922);
   cursor: pointer;
+}
+.main-container .toggle-sidebar.active, .main-container .toggle-sidebar:hover {
+  background: #262633;
 }
 .main-container .sidebar-header {
   display: -webkit-box;
@@ -174,6 +198,30 @@ table {
   background: radial-gradient(circle, rgba(97, 98, 235, 0.3) 0, rgba(255, 255, 255, 0) 70%);
   display: block;
 }
+.main-container .app-container .title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+  margin-bottom: 40px;
+}
+.main-container .app-container input {
+  background: rgba(255, 255, 255, 0.0509803922);
+  border: none;
+  width: 480px;
+  height: 48px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  color: #fff;
+}
+.main-container .app-container input.search {
+  background-image: url(./../svg/IconSearch.svg);
+  background-position: 24px center;
+  background-repeat: no-repeat;
+  padding-left: 54px;
+}
+.main-container .app-container-inner {
+  position: relative;
+}
 .main-container .icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,8 +238,10 @@ table {
   height: 68px;
 }
 .main-container .user-profile {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.main-container .user-profile a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,27 +252,30 @@ table {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+  text-decoration: none;
+  border-radius: 24px;
 }
-.main-container .user-profile .name {
+.main-container .user-profile a:hover, .main-container .user-profile a.active {
+  background: #262633;
+}
+.main-container .user-profile .user-name {
   margin-bottom: 4px;
-}
-.main-container .user-profile .name a {
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   color: #fff;
   text-decoration: none;
 }
-.main-container .user-profile .role a {
+.main-container .user-profile .user-role {
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
-.main-container .menu {
-  margin-top: 40px;
+.main-container .menu-wrap {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1019607843);
 }
 .main-container .menu li {
   margin-bottom: 8px;
@@ -246,9 +299,53 @@ table {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+  position: relative;
 }
-.main-container .menu .menu-item.active {
+.main-container .menu .menu-item.active, .main-container .menu .menu-item:hover {
   background: #262633;
+}
+.main-container .badge {
+  position: absolute;
+  right: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: center;
+  background: #6825da;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+.main-container .tabs {
+  background: rgba(255, 255, 255, 0.0509803922);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+.main-container .tabs .tab-link {
+  height: 56px;
+  padding: 16px 24px;
+  gap: 8px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.main-container .tabs .tab-link.active {
+  background: #262633;
+}
+.main-container .tab-content {
+  display: none;
+}
+.main-container .tab-content.active {
+  display: block;
 }
 
 * {

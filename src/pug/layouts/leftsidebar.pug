@@ -8,41 +8,59 @@ div.page-wrapper
                 div.toggle-sidebar
                     img(src="./../svg/ToggleBar.svg", alt="")
             div.user-profile
-                    a(href="#") 
-                        div.icon
-                            img(src="./../svg/IconAccount.svg", alt="")
+                a(href="#")
+                    div.icon
+                        img(src="./../svg/IconAccount.svg", alt="")
                     div.user
-                        div.name
-                            a(href="#") Иванов Иван Иванович
-                        div.role 
-                            a(href="#") Администратор
+                        div.user-name Иванов Иван Иванович
+                        div.user-role Администратор
 
 
-            div.menu
-                ul  
+            div.menu-wrap
+                ul.menu  
                     li 
                         a(href="#").menu-item.active
                             img(src="./../svg/navigation/products.svg", alt="") 
                             span Товары
                     li 
                         a(href="#").menu-item
-                            img(src="./../svg/navigation/products.svg", alt="") 
+                            img(src="./../svg/navigation/briefcase.svg", alt="") 
                             span Организации
                     li 
                         a(href="#").menu-item
-                            img(src="./../svg/navigation/products.svg", alt="") 
+                            img(src="./../svg/navigation/integrations.svg", alt="") 
                             span Интеграции
                     li 
                         a(href="#").menu-item
-                            img(src="./../svg/navigation/products.svg", alt="") 
+                            img(src="./../svg/navigation/finance.svg", alt="") 
                             span Финансовые группы
                     li 
                         a(href="#").menu-item
-                            img(src="./../svg/navigation/products.svg", alt="") 
+                            img(src="./../svg/navigation/users.svg", alt="") 
                             span Пользователи
             div.sidebar-footer
-                //- div.notification notification 
-                //- div.logout Exit
+                ul.menu  
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/notifications.svg", alt="") 
+                            span Уведомления
+                            span.badge 99+
+
+                    li 
+                        a(href="#").menu-item
+                            img(src="./../svg/navigation/logout.svg", alt="") 
+                            span Выйти
 
 
-        div.app-container content
+        div.app-container
+            div.app-container-inner
+                div.tabs                    
+                    button(data-tab="tab1").tab-link.active Список товаров
+                    button(data-tab="tab2").tab-link Задания для закупщиков
+                div.tabs-content                    
+                    div.tab-content.active(data-id="tab1")
+                        div.title Список товаров
+                        div
+                            input(type="text", class="search", placeholder="Поиск по товарам")
+                    div.tab-content(data-id="tab2")
+                        div.title Задания для закупщиков

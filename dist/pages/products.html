@@ -14,25 +14,47 @@
             <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
             <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
           </div>
-          <div class="user-profile"><a href="#"> 
-              <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div></a>
-            <div class="user">
-              <div class="name"><a href="#">Иванов Иван Иванович</a></div>
-              <div class="role"> <a href="#">Администратор</a></div>
-            </div>
-          </div>
-          <div class="menu">
-            <ul> 
+          <div class="user-profile"><a href="#">
+              <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div>
+              <div class="user">
+                <div class="user-name">Иванов Иван Иванович</div>
+                <div class="user-role">Администратор</div>
+              </div></a></div>
+          <div class="menu-wrap">
+            <ul class="menu"> 
               <li> <a class="menu-item active" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Товары</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Организации</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Интеграции</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Финансовые группы</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Пользователи</span></a></li>
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/briefcase.svg" alt=""><span>Организации</span></a></li>
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/integrations.svg" alt=""><span>Интеграции</span></a></li>
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/finance.svg" alt=""><span>Финансовые группы</span></a></li>
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/users.svg" alt=""><span>Пользователи</span></a></li>
             </ul>
           </div>
-          <div class="sidebar-footer"></div>
+          <div class="sidebar-footer">
+            <ul class="menu"> 
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
+              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+            </ul>
+          </div>
         </nav>
-        <div class="app-container">content</div>
+        <div class="app-container">
+          <div class="app-container-inner">
+            <div class="tabs">                   
+              <button class="tab-link active" data-tab="tab1">Список товаров</button>
+              <button class="tab-link" data-tab="tab2">Задания для закупщиков</button>
+            </div>
+            <div class="tabs-content">                   
+              <div class="tab-content active" data-id="tab1">
+                <div class="title">Список товаров</div>
+                <div>
+                  <input class="search" type="text" placeholder="Поиск по товарам">
+                </div>
+              </div>
+              <div class="tab-content" data-id="tab2">
+                <div class="title">Задания для закупщиков</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./../js/main.js"></script>
