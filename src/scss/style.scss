@@ -1,6 +1,9 @@
 @use 'reset';
 @use 'fonts';
 @use 'variables';
+@use 'slimscroll';
 @use '_layouts/leftsidebar.scss';
 @use 'common';
 @use 'form';
+@use '_components/table.scss';
+@use '_components/pagination.scss';

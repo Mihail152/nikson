@@ -52,10 +52,14 @@ function styles() {
 function scripts() {
   return gulp
     .src(paths.scripts)
-    .pipe(concat('main.js'))
-    .pipe(uglify())
+    
+    // .pipe(uglify())
     .pipe(gulp.dest(paths.dist.js))
-    .pipe(browserSync.stream());
+
+    // .pipe(concat('main.js'))
+    // .pipe(rename({ suffix: '.min' }))
+    // .pipe(gulp.dest(paths.dist.js))
+    // .pipe(browserSync.stream());
 }
 
 

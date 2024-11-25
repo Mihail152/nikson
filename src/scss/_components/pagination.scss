@@ -1,0 +1,44 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+
+
+    .page-item{
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, .1019607843);
+        backdrop-filter: blur(16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+
+        &:hover,
+        &.current{
+            background: #FFFFFF66;
+            span{
+                opacity: 1;
+            }
+        }
+
+        &.prev{
+            margin-right: 16px;
+        }
+        &.next{
+            margin-left: 16px;
+        }
+
+        img,
+        span{
+            opacity: 60%;
+        }
+        
+    }
+}

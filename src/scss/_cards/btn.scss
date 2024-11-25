@@ -1,5 +1,12 @@
+button{
+    border: none;
+    box-shadow: none; 
+    cursor: pointer;
+}
+
 .btn{
     width: 100%;
+    max-width: 270px;
     height: 44px;
     padding: 13.5px 24px;
     border-radius: 16px;
@@ -8,6 +15,10 @@
     text-align: center;
     font-size: 16px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
     &:hover{
         background: #FFFFFF33;
@@ -19,6 +30,10 @@
         &:hover{
             background: #7D39F0;
         }
+    }
+
+    &.wide{
+        max-width: inherit;
     }
 }
 .btn-add{

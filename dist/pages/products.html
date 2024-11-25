@@ -9,34 +9,37 @@
   <body class="bg-dark">
     <div class="page-wrapper">
       <div class="main-container">
-        <nav class="sidebar-wrapper"> 
-          <div class="sidebar-header">
-            <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
-            <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
-          </div>
-          <div class="user-profile"><a href="#">
-              <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div>
-              <div class="user">
-                <div class="user-name">Иванов Иван Иванович</div>
-                <div class="user-role">Администратор</div>
-              </div></a></div>
-          <div class="menu-wrap">
-            <ul class="menu"> 
-              <li> <a class="menu-item active" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Товары</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/briefcase.svg" alt=""><span>Организации</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/integrations.svg" alt=""><span>Интеграции</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/finance.svg" alt=""><span>Финансовые группы</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/users.svg" alt=""><span>Пользователи</span></a></li>
-            </ul>
-          </div>
-          <div class="sidebar-footer">
-            <ul class="menu"> 
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-              <li> <a class="menu-item" href="#"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
-            </ul>
-          </div>
-        </nav>
+        <div class="sidebar-wrapper"> 
+          <nav class="sidebar-inner slimScroll">
+            <div class="sidebar-header">
+              <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
+              <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
+            </div>
+            <div class="user-profile"><a href="#">
+                <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div>
+                <div class="user">
+                  <div class="user-name">Иванов Иван Иванович</div>
+                  <div class="user-role">Администратор</div>
+                </div></a></div>
+            <div class="menu-wrap">
+              <ul class="menu"> 
+                <li> <a class="menu-item active" href="#"><img src="./../svg/navigation/products.svg" alt=""><span>Товары</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/briefcase.svg" alt=""><span>Организации</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/integrations.svg" alt=""><span>Интеграции</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/finance.svg" alt=""><span>Финансовые группы</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/users.svg" alt=""><span>Пользователи</span></a></li>
+              </ul>
+            </div>
+            <div class="sidebar-footer">
+              <ul class="menu"> 
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
         <div class="app-container">
+          <div class="app-container-bg"></div>
           <div class="app-container-inner">
             <div class="tabs">                   
               <button class="tab-link active" data-tab="tab1">Список товаров</button>
@@ -44,19 +47,262 @@
             </div>
             <div class="tabs-content">                   
               <div class="tab-content active" data-id="tab1">
-                <div class="title">Список товаров</div>
-                <div>
-                  <input class="search" type="text" placeholder="Поиск по товарам">
+                <div class="content-header"> 
+                  <div class="title">Список товаров</div>
+                  <button class="btn prime"><img src="../svg/BTNicons.svg" alt=""><span>Добавить товар</span></button>
                 </div>
+                <div class="content-bar">
+                  <input class="search" type="text" placeholder="Поиск по товарам">
+                  <div class="sorting">
+                    <button class="btn"> <img src="../svg/IconFilter.svg" alt=""><span>Фильтр</span></button>
+                    <button class="btn"> <img src="../svg/IconSorting.svg" alt=""><span>Сортировка</span></button>
+                  </div>
+                </div>
+                <div class="table slimScroll">
+                  <div class="thead"> 
+                    <div class="td">SKU</div>
+                    <div class="td">Название</div>
+                    <div class="td">Цена</div>
+                    <div class="td">Остатки</div>
+                    <div class="td"></div>
+                  </div>
+                  <div class="tbody"> 
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"><a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"><a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                    <div class="tr"> 
+                      <div class="td">39847</div>
+                      <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                      <div class="td">200 000 ₽</div>
+                      <div class="td">2 463</div>
+                      <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+                <nav>
+                  <ul class="pagination">
+                    <li><a class="page-item prev" href="#prev"> <img src="../svg/arrow/arrow-prev.svg" alt=""></a></li>
+                    <li> <span class="page-item current">1  </span></li>
+                    <li> <a class="page-item" href="#page-2"> <span>2 </span></a></li>
+                    <li> <a class="page-item" href="#page-3"> <span>3 </span></a></li>
+                    <li> <a class="page-item" href="#page-4"> <span>4 </span></a></li>
+                    <li> <a class="page-item" href="#page-5"> <span>5 </span></a></li>
+                    <li> <span class="page-item">... </span></li>
+                    <li> <a class="page-item" href="#page-99"> <span>99</span></a></li>
+                    <li><a class="page-item next" href="#next"><img src="../svg/arrow/arrow-next.svg" alt=""></a></li>
+                  </ul>
+                </nav>
               </div>
               <div class="tab-content" data-id="tab2">
-                <div class="title">Задания для закупщиков</div>
+                <div class="content-header"> 
+                  <div class="title">Задания для закупщиков</div>
+                </div>
+                <div class="content-bar">
+                  <input class="search" type="text" placeholder="Поиск по товарам">
+                  <div class="sorting">
+                    <button class="btn"> <img src="../svg/IconFilter.svg" alt=""><span>Фильтр</span></button>
+                    <button class="btn"> <img src="../svg/IconSorting.svg" alt=""><span>Сортировка</span></button>
+                  </div>
+                </div>
+                <div class="tab-cards">
+                  <div class="card order">
+                    <div class="card__header">
+                      <div class="order">Заказ № <span>38944</span></div>
+                      <div class="detail"><img src="../svg/info/info.svg" alt=""><a href="#">Подробнее о заказе    </a></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                    </div>
+                    <div class="card__footer">
+                      <div class="status"><img src="../svg/IconClock.svg"><span>В работе</span></div>
+                    </div>
+                  </div>
+                  <div class="card order">
+                    <div class="card__header">
+                      <div class="order">Заказ № <span>38944</span></div>
+                      <div class="detail"><img src="../svg/info/info.svg" alt=""><a href="#">Подробнее о заказе    </a></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                    </div>
+                    <div class="card__footer">
+                      <div class="status"><img src="../svg/IconClock.svg"><span>В работе</span></div>
+                    </div>
+                  </div>
+                  <div class="card order">
+                    <div class="card__header">
+                      <div class="order">Заказ № <span>38944</span></div>
+                      <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="#">Вернуть в работу  </a></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                    </div>
+                    <div class="card__footer">
+                      <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
+                    </div>
+                  </div>
+                  <div class="card order">
+                    <div class="card__header">
+                      <div class="order">Заказ № <span>38944</span></div>
+                      <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="#">Вернуть в работу  </a></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                    </div>
+                    <div class="card__footer">
+                      <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
+                    </div>
+                  </div>
+                  <div class="card order">
+                    <div class="card__header">
+                      <div class="order">Заказ № <span>38944</span></div>
+                      <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="#">Вернуть в работу  </a></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                    </div>
+                    <div class="card__footer">
+                      <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="./../js/slimscroll.js"></script>
     <script src="./../js/main.js"></script>
   </body>
 </html>
