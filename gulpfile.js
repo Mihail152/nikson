@@ -16,6 +16,7 @@ import prettier from 'gulp-prettier';
 
 const paths = {
   styles: 'src/scss/**/*.scss',
+  css: 'src/css/**/*.css',
   scripts: 'src/js/**/*.js',
   pug: 'src/pug/**/*.pug',
   images: 'src/images/**/*',
@@ -48,18 +49,24 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+function css() {
+  return gulp
+    .src(paths.css)
+    .pipe(gulp.dest(paths.dist.css));
+}
+
 
 function scripts() {
   return gulp
     .src(paths.scripts)
     
-    // .pipe(uglify())
     .pipe(gulp.dest(paths.dist.js))
-
-    // .pipe(concat('main.js'))
-    // .pipe(rename({ suffix: '.min' }))
-    // .pipe(gulp.dest(paths.dist.js))
-    // .pipe(browserSync.stream());
+    
+    .pipe(uglify())
+    .pipe(concat('main.js'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.dist.js))
+    .pipe(browserSync.stream());
 }
 
 
@@ -122,6 +129,7 @@ function serve() {
   });
 
   gulp.watch(paths.styles, styles).on('change', browserSync.reload);;
+  gulp.watch(paths.css, css).on('change', browserSync.reload);;
   gulp.watch(paths.scripts, scripts).on('change', browserSync.reload);;
   gulp.watch(paths.pug, compilePug).on('change', browserSync.reload);;
   gulp.watch(paths.html, includeHTML).on('change', browserSync.reload);;
@@ -133,6 +141,7 @@ function serve() {
 
 export {
   styles,
+  css,
   scripts,
   compilePug,
   images,
@@ -145,6 +154,6 @@ export {
 
 
 export default gulp.series(
-  gulp.parallel(styles, scripts, compilePug, includeHTML, images, copySVG),
+  gulp.parallel(styles, css, scripts, compilePug, includeHTML, images, copySVG),
   serve
 );

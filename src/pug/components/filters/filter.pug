@@ -1,0 +1,53 @@
+//- Контейнер фильтра (скрытый по умолчанию)
+div.filter-container.hidden
+    div.filter
+        div.filter__column
+            div.h2 Filter's slider
+            div.filter__price
+                input#price-min(type="number" placeholder="От")
+                img(src="../svg/filtres/line.svg", alt="")
+                input#price-max(type="number" placeholder="До")
+            div.filter__slider
+                div#price-range
+            div.h3 CheckBoxes
+            div.filter__checkboxes
+                div.checkbox
+                    input(type="checkbox", id="checkbox-1", checked)
+                    label(for="checkbox-1") Позиция      
+                div.checkbox
+                    input(type="checkbox", id="checkbox-2")
+                    label(for="checkbox-2") Позиция      
+                div.checkbox
+                    input(type="checkbox", id="checkbox-3")
+                    label(for="checkbox-3") Позиция      
+                div.checkbox
+                    input(type="checkbox", id="checkbox-4")
+                    label(for="checkbox-4") Позиция      
+                
+    
+        div.filter__column
+            div.h2 Filter's slider 2
+            div.filter__price
+                input#price-min-2(type="number" placeholder="От")
+                img(src="../svg/filtres/line.svg", alt="")
+                input#price-max-2(type="number" placeholder="До")
+            div.filter__slider
+                div#price-range-2
+            div.h3 RadioBTN
+            div.filter__radios
+                div.radio
+                    input(type="radio", name="filter-option", value="radio-1", id="radio-1", checked)
+                    label(for="radio-1") Позиция
+                div.radio
+                    input(type="radio", name="filter-option", value="radio-2", id="radio-2")
+                    label(for="radio-2") Позиция                    
+                div.radio
+                    input(type="radio", name="filter-option", value="radio-3", id="radio-3")
+                    label(for="radio-3") Позиция                    
+                div.radio
+                    input(type="radio", name="filter-option", value="radio-4", id="radio-4" )
+                    label(for="radio-4") Позиция                    
+                
+    div.filter__actions
+        button.btn.prime.apply-filter(type="button") Применить
+        button.link.reset-filter(type="button") Сбросить фильтры

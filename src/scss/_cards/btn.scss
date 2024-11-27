@@ -1,10 +1,10 @@
-button{
+button {
     border: none;
-    box-shadow: none; 
+    box-shadow: none;
     cursor: pointer;
 }
 
-.btn{
+.btn {
     width: 100%;
     max-width: 270px;
     height: 44px;
@@ -20,34 +20,53 @@ button{
     justify-content: center;
     gap: 8px;
 
-    &:hover{
+    &:hover {
         background: #FFFFFF33;
     }
 
-    &.prime{
+    &.prime {
         background: #6825DA;
 
-        &:hover{
+        &:hover {
             background: #7D39F0;
         }
     }
 
-    &.wide{
+    &.wide {
         max-width: inherit;
     }
 }
-.btn-add{
+
+.btn-add {
     width: 64px;
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    &.prime{
+
+    &.prime {
         background: #6825DA;
 
-        &:hover{
+        &:hover {
             background: #7D39F0;
         }
-    } 
+    }
+}
+
+.link {
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-decoration: underline;
+    color: #FFFFFF99;
+
+    border: none;
+    background-color: transparent;
+
+    &:hover{
+        text-decoration: none;
+    }
+
 }

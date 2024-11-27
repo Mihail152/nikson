@@ -283,6 +283,7 @@
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  position: relative;
 }
 
 .tab-cards {

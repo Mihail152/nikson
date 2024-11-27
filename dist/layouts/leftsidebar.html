@@ -46,7 +46,75 @@
             <div class="content-bar">
               <input class="search" type="text" placeholder="Поиск по товарам"/>
               <div class="sorting">
-                <button class="btn"> <img src="../svg/IconFilter.svg" alt=""/><span>Фильтр</span></button>
+                <div> 
+                  <button class="btn filter-toggle"><img src="../svg/IconFilter.svg" alt=""/><span>Фильтр</span></button>
+                  <div class="filter-container hidden">
+                    <div class="filter">
+                      <div class="filter__column">
+                        <div class="h2">Filter's slider</div>
+                        <div class="filter__price">
+                          <input id="price-min" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
+                          <input id="price-max" type="number" placeholder="До"/>
+                        </div>
+                        <div class="filter__slider">
+                          <div id="price-range"></div>
+                        </div>
+                        <div class="h3">CheckBoxes</div>
+                        <div class="filter__checkboxes">
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-1" checked="checked"/>
+                            <label for="checkbox-1">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-2"/>
+                            <label for="checkbox-2">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-3"/>
+                            <label for="checkbox-3">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-4"/>
+                            <label for="checkbox-4">Позиция      </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter__column">
+                        <div class="h2">Filter's slider 2</div>
+                        <div class="filter__price">
+                          <input id="price-min-2" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
+                          <input id="price-max-2" type="number" placeholder="До"/>
+                        </div>
+                        <div class="filter__slider">
+                          <div id="price-range-2"></div>
+                        </div>
+                        <div class="h3">RadioBTN</div>
+                        <div class="filter__radios">
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked="checked"/>
+                            <label for="radio-1">Позиция</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-2" id="radio-2"/>
+                            <label for="radio-2">Позиция                    </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-3" id="radio-3"/>
+                            <label for="radio-3">Позиция                    </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-4" id="radio-4"/>
+                            <label for="radio-4">Позиция                    </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__actions">
+                      <button class="btn prime apply-filter" type="button">Применить</button>
+                      <button class="link reset-filter" type="button">Сбросить фильтры</button>
+                    </div>
+                  </div>
+                </div>
                 <button class="btn"> <img src="../svg/IconSorting.svg" alt=""/><span>Сортировка</span></button>
               </div>
             </div>
@@ -222,7 +290,75 @@
             <div class="content-bar">
               <input class="search" type="text" placeholder="Поиск по товарам"/>
               <div class="sorting">
-                <button class="btn"> <img src="../svg/IconFilter.svg" alt=""/><span>Фильтр</span></button>
+                <div> 
+                  <button class="btn filter-toggle"><img src="../svg/IconFilter.svg" alt=""/><span>Фильтр</span></button>
+                  <div class="filter-container hidden">
+                    <div class="filter">
+                      <div class="filter__column">
+                        <div class="h2">Filter's slider</div>
+                        <div class="filter__price">
+                          <input id="price-min" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
+                          <input id="price-max" type="number" placeholder="До"/>
+                        </div>
+                        <div class="filter__slider">
+                          <div id="price-range"></div>
+                        </div>
+                        <div class="h3">CheckBoxes</div>
+                        <div class="filter__checkboxes">
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-1" checked="checked"/>
+                            <label for="checkbox-1">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-2"/>
+                            <label for="checkbox-2">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-3"/>
+                            <label for="checkbox-3">Позиция      </label>
+                          </div>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-4"/>
+                            <label for="checkbox-4">Позиция      </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter__column">
+                        <div class="h2">Filter's slider 2</div>
+                        <div class="filter__price">
+                          <input id="price-min-2" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
+                          <input id="price-max-2" type="number" placeholder="До"/>
+                        </div>
+                        <div class="filter__slider">
+                          <div id="price-range-2"></div>
+                        </div>
+                        <div class="h3">RadioBTN</div>
+                        <div class="filter__radios">
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked="checked"/>
+                            <label for="radio-1">Позиция</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-2" id="radio-2"/>
+                            <label for="radio-2">Позиция                    </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-3" id="radio-3"/>
+                            <label for="radio-3">Позиция                    </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="filter-option" value="radio-4" id="radio-4"/>
+                            <label for="radio-4">Позиция                    </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__actions">
+                      <button class="btn prime apply-filter" type="button">Применить</button>
+                      <button class="link reset-filter" type="button">Сбросить фильтры</button>
+                    </div>
+                  </div>
+                </div>
                 <button class="btn"> <img src="../svg/IconSorting.svg" alt=""/><span>Сортировка</span></button>
               </div>
             </div>

@@ -1,5 +1,96 @@
-
 @use './_cards/btn.scss';
 @use './_cards/card.scss';
 @use './_cards/input.scss';
 
+
+.checkbox {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        position: absolute;
+        left: -99999999px;
+    }
+
+    label::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        padding-bottom: 0.05em;
+        font-size: 0.7em;
+        border: 2px solid #FFFFFF33;
+        border-radius: 8px;
+        vertical-align: middle;
+        margin-right: 16px;
+        text-align: center;
+        position: relative;
+        top: -0.2em;
+    }
+
+    input:checked+label::before {
+        background: url(../svg/filtres/check.svg);
+        border-color: #6825da;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.radio {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        position: absolute;
+        left: -99999999px;
+    }
+
+    label::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        padding-bottom: 0.05em;
+        font-size: 0.7em;
+        border: 2px solid #FFFFFF33;
+        border-radius: 50px;
+        vertical-align: middle;
+        margin-right: 16px;
+        text-align: center;
+        position: relative;
+        top: -0.2em;
+    }
+
+    input:checked+label::before {
+        background: url(../svg/filtres/radio.svg);
+        border-color: #6825da;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

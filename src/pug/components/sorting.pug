@@ -1,7 +1,10 @@
 div.sorting
-    button.btn 
-        img(src="../svg/IconFilter.svg", alt="")
-        span Фильтр
+    div 
+        button.btn(class="filter-toggle")
+            img(src="../svg/IconFilter.svg", alt="")
+            span Фильтр
+        include ./filters/filter.pug
+
     button.btn 
         img(src="../svg/IconSorting.svg", alt="")
         span Сортировка

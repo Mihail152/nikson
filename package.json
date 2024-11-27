@@ -29,6 +29,7 @@
     "sass": "^1.81.0"
   },
   "dependencies": {
-    "cssnano": "^7.0.6"
+    "cssnano": "^7.0.6",
+    "nouislider": "^15.8.1"
   }
 }

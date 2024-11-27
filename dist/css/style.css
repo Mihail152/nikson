@@ -435,6 +435,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  position: relative;
 }
 
 .tab-cards {
@@ -590,6 +591,19 @@ button {
 }
 .btn-add.prime:hover {
   background: #7D39F0;
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  background-color: transparent;
+}
+.link:hover {
+  text-decoration: none;
 }
 
 .cards {
@@ -954,6 +968,88 @@ input.search {
   padding-left: 64px;
 }
 
+.checkbox {
+  margin-bottom: 8px;
+}
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+.checkbox label {
+  cursor: pointer;
+}
+.checkbox input {
+  position: absolute;
+  left: -99999999px;
+}
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding-bottom: 0.05em;
+  font-size: 0.7em;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  vertical-align: middle;
+  margin-right: 16px;
+  text-align: center;
+  position: relative;
+  top: -0.2em;
+}
+.checkbox input:checked + label::before {
+  background: url(../svg/filtres/check.svg);
+  border-color: #6825da;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio {
+  margin-bottom: 8px;
+}
+.radio:last-child {
+  margin-bottom: 0;
+}
+.radio label {
+  cursor: pointer;
+}
+.radio input {
+  position: absolute;
+  left: -99999999px;
+}
+.radio label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding-bottom: 0.05em;
+  font-size: 0.7em;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-right: 16px;
+  text-align: center;
+  position: relative;
+  top: -0.2em;
+}
+.radio input:checked + label::before {
+  background: url(../svg/filtres/radio.svg);
+  border-color: #6825da;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .table {
   min-width: 750px;
   min-height: 500px;
@@ -1002,6 +1098,105 @@ input.search {
 }
 .tr:nth-child(odd) {
   background: rgba(255, 255, 255, 0.1019607843);
+}
+
+.filter-container {
+  position: absolute;
+  background: #2C2C2C;
+  width: 618px;
+  padding: 24px;
+  z-index: 1;
+  right: 0;
+  border-radius: 24px;
+  margin-top: 24px;
+}
+.filter-container .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 64px;
+  margin-bottom: 24px;
+}
+.filter-container .filter .h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  margin-bottom: 16px;
+}
+.filter-container .filter .h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  margin-bottom: 16px;
+}
+.filter-container .filter input {
+  width: 100%;
+}
+.filter-container .filter .noUi-horizontal {
+  background: rgba(255, 255, 255, 0.1019607843);
+  height: 2px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+.filter-container .filter .noUi-horizontal .noUi-handle {
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  top: -8px;
+  border: none;
+  border-radius: 50px;
+  background: #6825da;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+.filter-container .filter .noUi-horizontal .noUi-handle:after, .filter-container .filter .noUi-horizontal .noUi-handle:before {
+  display: none;
+}
+.filter-container .filter .noUi-connect {
+  background: #6825da;
+}
+.filter-container .filter__column {
+  width: 50%;
+}
+.filter-container .filter__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.filter-container .filter__price [type=number] {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.filter-container .filter__slider {
+  margin-bottom: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.filter-container .btn {
+  max-width: 137px;
+}
+.filter-container .filter__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .pagination {
