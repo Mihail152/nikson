@@ -1,12 +1,26 @@
+.open .filter-container {
+  display: block;
+}
+.open .filter-toggle {
+  background: rgba(255, 255, 255, 0.4);
+}
+.open .filter-toggle svg path {
+  stroke: #fff;
+}
+
 .filter-container {
   position: absolute;
-  background: #2C2C2C;
+  background: #2c2c2c;
   width: 618px;
   padding: 24px;
   z-index: 1;
   right: 0;
   border-radius: 24px;
   margin-top: 24px;
+  display: none;
+}
+.filter-container.sort {
+  max-width: 240px;
 }
 .filter-container .filter {
   display: -webkit-box;
@@ -95,4 +109,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.filter-container .filter__price input[data-changed=true] {
+  color: #fff;
 }

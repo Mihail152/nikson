@@ -52,7 +52,7 @@
   // transition: padding-left .25s ease;
   color: #fff;
 
-  .sidebar-wrapper {    
+  .sidebar-wrapper {
     width: 400px;
     padding: 24px;
     height: 100vh;
@@ -102,9 +102,8 @@
     background: #ffffff0d;
     overflow: hidden;
     border-radius: 24px;
-    
 
-    .app-container-bg{
+    .app-container-bg {
       position: absolute;
       left: 0;
       top: 0;
@@ -120,13 +119,15 @@
         width: 1800px;
         height: 1800px;
         background: #6162eb;
-        background: radial-gradient(circle,
-            rgba(97, 98, 235, 0.3) 0,
-            rgba(255, 255, 255, 0) 70%);
+        background: radial-gradient(
+          circle,
+          rgba(97, 98, 235, 0.3) 0,
+          rgba(255, 255, 255, 0) 70%
+        );
         display: block;
       }
     }
-    .content-header{
+    .content-header {
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
@@ -138,7 +139,6 @@
       font-weight: 600;
       line-height: 72px;
     }
-
   }
 
   .app-container-inner {
@@ -272,28 +272,38 @@
   .tab-content {
     display: none;
 
-    
     &.active {
       display: block;
     }
   }
 
-  .content-bar{
-    margin-bottom: 40px;   
+  .content-bar {
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
-  .sorting{
+  .sorting {
     display: flex;
     gap: 8px;
     position: relative;
-
   }
 }
 
-.tab-cards{
+.filtercount.visible {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tab-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px 16px;

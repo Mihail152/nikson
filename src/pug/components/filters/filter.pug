@@ -1,18 +1,17 @@
-//- Контейнер фильтра (скрытый по умолчанию)
-div.filter-container.hidden
+div.filter-container
     div.filter
         div.filter__column
             div.h2 Filter's slider
             div.filter__price
-                input#price-min(type="number" placeholder="От")
+                input.price-min(type="number" placeholder="От")
                 img(src="../svg/filtres/line.svg", alt="")
-                input#price-max(type="number" placeholder="До")
+                input.price-max(type="number" placeholder="До")
             div.filter__slider
                 div#price-range
             div.h3 CheckBoxes
             div.filter__checkboxes
                 div.checkbox
-                    input(type="checkbox", id="checkbox-1", checked)
+                    input(type="checkbox", id="checkbox-1")
                     label(for="checkbox-1") Позиция      
                 div.checkbox
                     input(type="checkbox", id="checkbox-2")
@@ -28,9 +27,9 @@ div.filter-container.hidden
         div.filter__column
             div.h2 Filter's slider 2
             div.filter__price
-                input#price-min-2(type="number" placeholder="От")
+                input.price-min(type="number" placeholder="От")
                 img(src="../svg/filtres/line.svg", alt="")
-                input#price-max-2(type="number" placeholder="До")
+                input.price-max(type="number" placeholder="До")
             div.filter__slider
                 div#price-range-2
             div.h3 RadioBTN

@@ -36,9 +36,6 @@ button {
 .btn.prime:hover {
   background: #7D39F0;
 }
-.btn.wide {
-  max-width: inherit;
-}
 
 .btn-add {
   width: 64px;

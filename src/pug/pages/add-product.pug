@@ -7,9 +7,10 @@ html(lang="en")
         link(rel="stylesheet", href="../css/style.min.css")
         title Products
     body.bg-dark
-        - var template_main = 'products'
-        include ../layouts/leftsidebar.pug 
 
-        //- script(src="./../js/slimscroll.js")
+        - var template_main = 'add-product'
+        include ../layouts/leftsidebar.pug
+
+
         script(src="./../js/nouislider.js")
         script(src="./../js/main.js")
