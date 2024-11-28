@@ -1,1 +1,24 @@
-p hi
+div.app-container_header
+    a(href="/pages/products.html").back
+        img(src="../svg/arrow/arrow-prev.svg", alt="")
+    div.title Добавить товар
+div.app-container_body
+    div.field-group.mx-800
+        div.field-row
+            div.field-column
+                label(for="") Название
+                input(type="text", placeholder="Название")
+        div.field-row
+            div.field-column
+                label(for="") SKU
+                input(type="text", placeholder="Введите значение")
+            div.field-column
+                label(for="") Цена
+                input(type="text", placeholder="Укажите цену")
+            div.field-column
+                label(for="") Остатки
+                input(type="text", placeholder="Укажите остатки")
+        div.field-footer                
+            button.btn Отменить
+            button.btn.prime Сохранить
+    

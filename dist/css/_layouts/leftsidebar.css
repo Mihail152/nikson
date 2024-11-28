@@ -99,6 +99,25 @@
   overflow: hidden;
   border-radius: 24px;
 }
+.main-container .app-container .items {
+  margin-bottom: 40px;
+}
+.main-container .app-container .items .product-item {
+  margin-bottom: 24px;
+}
+.main-container .app-container .items .title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  gap: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
 .main-container .app-container .app-container-bg {
   position: absolute;
   left: 0;
@@ -132,7 +151,26 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.main-container .app-container .title {
+.main-container .app-container .content-header .title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+}
+.main-container .app-container .app-container_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.main-container .app-container .app-container_header .market {
+  margin-left: 24px;
+  width: 42px;
+}
+.main-container .app-container .app-container_header .title {
   font-size: 60px;
   font-weight: 600;
   line-height: 72px;
@@ -305,23 +343,18 @@
   font-weight: 400;
 }
 
-.tab-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px 16px;
-}
-@media (max-width: 1320px) {
-  .tab-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 1080px) {
-  .tab-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 767px) {
-  .tab-cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.back {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1019607843);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

@@ -1,0 +1,22 @@
+div.app-container_header
+    a(href="/pages/products.html").back
+        img(src="../svg/arrow/arrow-prev.svg", alt="")
+    div.title Заказ № 38944 
+    a(href="#") 
+        img(src="../svg/markets/ozon_on.svg", alt="", class="market")
+
+
+include ../../components/table-order.pug  
+div.items
+    div.product-item
+        div.title 
+            img(src="../svg/navigation/briefcase.svg", alt="")
+            span ООО “Ромашка”
+        p Организация
+    div.product-item
+        div.title 
+            img(src="../svg/Integrations.svg", alt="")
+            span Ozon INT
+        p Интеграция
+
+button.btn.prime Пометить выполненным

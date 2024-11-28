@@ -1,0 +1,16 @@
+div.content-header 
+    div.title Организации                             
+
+    a(href="add-organizations.html").btn.prime
+        img(src="../svg/BTNicons.svg", alt="")
+        span Добавить организацию
+    
+div.content-bar
+    input(type="text", class="search", placeholder="Поиск по товарам")
+    include ../../components/sorting.pug 
+
+div.cards-grid
+    include ../../components/cards/company/card-on.pug
+    include ../../components/cards/company/card-on.pug
+    include ../../components/cards/company/card-on.pug
+    include ../../components/cards/company/card-on.pug

@@ -1,0 +1,43 @@
+div.app-container_header
+    a(href="/pages/organizations.html").back
+        img(src="../svg/arrow/arrow-prev.svg", alt="")
+    div.title Добавить организацию
+div.app-container_body
+    div.field-group.gap0
+        div.field-row.mb24.gap24
+            div.h2 Основные данные
+            img(src="../svg/arrow/arrow-up.svg", alt="")
+        div.field-row.mb40
+            div.field-column.mw60
+                label(for="") Название
+                input(type="text", placeholder="Название")
+            div.field-column.mw25
+                label(for="") Финансовая группа
+                input(type="text", placeholder="Выберите из списка")
+            div.field-column.mw15
+                label(for="") Доп. процент затрат
+                input(type="text", placeholder="Введите значение")
+    div.field-group.gap0
+        div.field-row.mb24.gap24
+            div.h2 Желаемая чистая прибыль
+            img(src="../svg/arrow/arrow-up.svg", alt="")
+        div.cards-grid.mb40
+            include ../../components/cards/profit/card-default.pug
+            include ../../components/cards/profit/card-delete.pug
+            include ../../components/cards/profit/card-add-type.pug
+            include ../../components/cards/profit/card-add.pug
+            
+    div.field-group.gap0
+        div.field-row.mb24.gap24
+            div.h2 Интеграции
+            img(src="../svg/arrow/arrow-up.svg", alt="")
+        div.cards-grid.mb40
+            include ../../components/cards/integrations/card-default.pug
+            include ../../components/cards/integrations/card-delete.pug
+            include ../../components/cards/integrations/card-add.pug
+            
+        
+        div.field-footer                
+            button.btn Отменить
+            button.btn.prime Сохранить
+    

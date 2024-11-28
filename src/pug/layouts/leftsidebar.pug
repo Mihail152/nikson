@@ -20,11 +20,11 @@ div.page-wrapper
                 div.menu-wrap
                     ul.menu  
                         li 
-                            a(href="#").menu-item.active
+                            a(href="/pages/products.html").menu-item.active
                                 img(src="./../svg/navigation/products.svg", alt="") 
                                 span Товары
                         li 
-                            a(href="#").menu-item
+                            a(href="/pages/organizations.html").menu-item
                                 img(src="./../svg/navigation/briefcase.svg", alt="") 
                                 span Организации
                         li 
@@ -56,6 +56,17 @@ div.page-wrapper
         div.app-container
             div.app-container-bg
             div.app-container-inner
-                p Template main: #{template_main}
-                - var template_main_path = "./content/" + template_main + ".pug"
-                include ./content/products.pug
+                if template_main == 'products'
+                    include ./content/products.pug    
+                if template_main == 'add-product'
+                    include ./content/add-product.pug
+                if template_main == 'order'
+                    include ./content/order.pug
+                if template_main == 'organizations'
+                    include ./content/organizations.pug
+                if template_main == 'add-organizations'
+                    include ./content/add-organizations.pug
+                    
+
+
+            
