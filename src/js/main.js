@@ -102,4 +102,47 @@ document.addEventListener("DOMContentLoaded", () => {
         slider2.noUiSlider.set([null, maxPrice2.value]);
     });
 
+    // set first radio 
+    const filterContainer = document.querySelector('.filter-container');
+    const radioButtons = filterContainer.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.checked = false;
+    });
+
+    if (radioButtons.length > 0) {
+        radioButtons[0].checked = true;
+    }
+
+
+
+    // reset filter
+    document.querySelector('.reset-filter').addEventListener('click', () => {
+        // const filterContainer = document.querySelector('.filter-container');
+
+        filterContainer.querySelectorAll('input[type="number"]').forEach(input => {
+            input.value = '';
+        });
+        filterContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        filterContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.checked = false;
+        });    
+        const firstRadio = filterContainer.querySelector('input[type="radio"]');
+        if (firstRadio) {
+            firstRadio.checked = true;
+        }
+        
+        
+        const sliderInstance = slider.noUiSlider;
+        if (sliderInstance) {
+            sliderInstance.set([sliderInstance.options.range.min, sliderInstance.options.range.max]);
+        }
+        const sliderInstance2 = slider2.noUiSlider;
+        if (sliderInstance2) {
+            sliderInstance2.set([sliderInstance.options.range.min, sliderInstance.options.range.max]);
+        }
+    
+        console.log('Фильтры сброшены');
+    });
 });
