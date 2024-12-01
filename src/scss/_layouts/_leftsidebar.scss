@@ -105,6 +105,14 @@
     overflow: hidden;
     border-radius: 24px;
 
+    .page-title {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 72px;
+      color: #FFFFFF;
+
+    }
+
     .items {
       margin-bottom: 40px;
 
@@ -122,13 +130,6 @@
         margin-bottom: 8px;
       }
 
-      .page-title {
-        font-size: 60px;
-        font-weight: 600;
-        line-height: 72px;
-        color: #FFFFFF;
-
-      }
     }
 
     .app-container-bg {
