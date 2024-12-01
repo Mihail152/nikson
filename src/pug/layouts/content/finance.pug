@@ -1,0 +1,15 @@
+div.content-header
+    div.title 
+        span.mw100 Финансовые группы
+
+    //- a(href="./organizations-add.html").btn.prime
+    a(href="./finance-add.html").btn.prime.mxw
+        img(src="../svg/BTNicons.svg", alt="")
+        span Добавить финансовую группу
+
+div.content-bar
+    input(type="text", class="search", placeholder="Поиск по финансовым группам")
+    include ../../components/sorting.pug 
+
+include ./finance/table.pug
+

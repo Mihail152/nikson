@@ -263,4 +263,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+// finance
+document.addEventListener('click', function (event) {
+  const deleteButton = event.target.closest('.delete');
+  if (deleteButton && deleteButton.closest('.finance')) {
+      const parentTr = deleteButton.closest('.tr');
+      if (parentTr) {
+          parentTr.classList.toggle('active');
+      }
+  }
+});
+
+
+
 });

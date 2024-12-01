@@ -1,0 +1,45 @@
+div.app-container_header
+    a(href="./finance.html").back
+        img(src="../svg/arrow/arrow-prev.svg", alt="")
+    div.title Добавить финансовую группу
+div.app-container_body
+    div.field-group
+
+        div.field-row
+            div.h1 Основные данные
+
+        div.field-row.mb40
+            div.field-column
+                label(for="") Название
+                input(type="text", placeholder="Введите название")
+            div.field-column
+                label(for="") Баланс
+                input(type="text", placeholder="Введите значение")
+       
+        div.field-row
+            div.h1 Организации
+
+        div.field-row.mb40
+            div.field-column 
+                div.checkbox.style-2
+                    input(type="checkbox", id="checkbox-1")
+                    label(for="checkbox-1") Использовать общую цену   
+                
+                div.checkbox.style-2
+                    input(type="checkbox", id="checkbox-2")
+                    label(for="checkbox-2") Использовать общую цену   
+                div.checkbox.style-2
+                    input(type="checkbox", id="checkbox-3")
+                    label(for="checkbox-3") Использовать общую цену   
+                    span ФГ Афанасьев
+                div.checkbox.style-2
+                    input(type="checkbox", id="checkbox-4")
+                    label(for="checkbox-4") Использовать общую цену   
+                    span ФГ Афанасьев
+             
+
+    div.field-group.gap0
+        div.field-footer                
+            button.btn Отменить
+            button.btn.prime Сохранить
+    

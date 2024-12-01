@@ -1,0 +1,29 @@
+div.tabs                
+    button(data-tab="tab1").tab-link.active Все пользователи
+    button(data-tab="tab2").tab-link Закупщики
+    button(data-tab="tab3").tab-link Партнеры
+    button(data-tab="tab4").tab-link Менеджеры
+div.tabs-content    
+    div.tab-content.active(data-id="tab1")
+
+        div.content-header
+            div.title Все пользователи
+
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
+
+
+        div.h1.mb24 Интеграции
+        div.cards-grid.mb40
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-delete.pug
+
+div.tabs-content    
+    div.tab-content.active(data-id="tab2")  
+div.tabs-content    
+    div.tab-content.active(data-id="tab3")  
+div.tabs-content    
+    div.tab-content.active(data-id="tab4")  

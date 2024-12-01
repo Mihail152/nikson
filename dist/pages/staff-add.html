@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/nouislider.css">
     <link rel="stylesheet" href="../css/style.min.css">
-    <title>Products</title>
+    <title>Добавить сотрудника</title>
   </head>
   <body class="bg-dark">
     <div class="page-wrapper">
@@ -42,43 +42,56 @@
         <div class="app-container"> 
           <div class="app-container-bg"></div>
           <div class="app-container-inner"> 
-            <div class="tabs">               
-              <button class="tab-link" data-tab="tab1">Общие данные</button>
-              <button class="tab-link" data-tab="tab2">Товары</button>
-              <button class="tab-link active" data-tab="tab3">Интеграции</button>
-              <button class="tab-link" data-tab="tab4">Сотрудники</button>
+            <div class="app-container_header"><a class="back" href="./finance.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a>
+              <div class="title">Добавить сотрудника</div>
             </div>
-            <div class="tabs-content">   
-              <div class="tab-content" data-id="tab1"> </div>
-            </div>
-            <div class="tabs-content">   
-              <div class="tab-content active" data-id="tab3">
-                <div class="content-header">
-                  <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="#"><img src="../svg/BTNicons.svg" alt=""><span>Добавить интеграцию</span></a>
+            <div class="app-container_body">
+              <div class="field-group">
+                <div class="field-row">
+                  <div class="h1">Основные данные</div>
                 </div>
-                <div class="h1 mb24">Интеграции</div>
-                <div class="cards-grid">
-                  <div class="card integrations mh312">
-                    <div class="card__header">
-                      <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
+                <div class="field-row mb40">
+                  <div class="field-column">
+                    <label for="">E-mail</label>
+                    <input type="text" placeholder="Введите почту">
+                  </div>
+                  <div class="field-column">
+                    <label for="">ФИО</label>
+                    <input type="text" placeholder="ФИО сотрудника">
+                  </div>
+                  <div class="field-column">
+                    <label for="">Должность</label>
+                    <input type="text" placeholder="Выберите из списка">
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="h1">Организации</div>
+                </div>
+                <div class="field-row mb40">
+                  <div class="field-column"> 
+                    <div class="checkbox style-2">
+                      <input type="checkbox" id="checkbox-1">
+                      <label for="checkbox-1">Использовать общую цену   </label>
                     </div>
-                    <div class="card__body">
-                      <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    <div class="checkbox style-2">
+                      <input type="checkbox" id="checkbox-2">
+                      <label for="checkbox-2">Использовать общую цену   </label>
                     </div>
-                    <div class="card__footer text-right">
-                      <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                    <div class="checkbox style-2">
+                      <input type="checkbox" id="checkbox-3">
+                      <label for="checkbox-3">Использовать общую цену   </label><span>ФГ Афанасьев</span>
+                    </div>
+                    <div class="checkbox style-2">
+                      <input type="checkbox" id="checkbox-4">
+                      <label for="checkbox-4">Использовать общую цену   </label><span>ФГ Афанасьев</span>
                     </div>
                   </div>
-                  <div class="card integrations delete mh312">
-                    <div class="card__body">       
-                      <div class="action"><span>Удалить интеграцию?   </span></div>
-                    </div>
-                    <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
-                  </div>
-                  <div class="card integrations aicenter jccenter gap24 mh312"><a class="btn-add prime" href="#"><img src="../svg/btnIcons/plus.svg" alt=""></a>
-                    <div class="label fz18">Добавить интеграцию </div>
-                  </div>
+                </div>
+              </div>
+              <div class="field-group gap0">
+                <div class="field-footer">               
+                  <button class="btn">Отменить</button>
+                  <button class="btn prime">Сохранить</button>
                 </div>
               </div>
             </div>

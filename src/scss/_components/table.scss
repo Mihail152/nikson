@@ -70,7 +70,7 @@
                         display: block;
                     }
 
-                    circle{
+                    circle {
                         fill: #DE5658;
                     }
                 }
@@ -240,6 +240,83 @@
                 border-radius: 16px;
                 padding: 16px;
             }
+        }
+    }
+
+    &.finance {
+        .trhead {
+            display: grid;       
+            margin-bottom: 8px;
+        }
+        .trhead{
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16.8px;
+                }
+            
+        }
+        .thead,
+        .trhead {
+            grid-template-columns: 144px 1fr 144px 86px;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .tr {
+            grid-template-columns: 1fr;
+        }
+
+        button.delete {
+            background: none;
+            padding: 0;
+        }
+
+        .td {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icons {
+            gap: 24px;
+            justify-content: flex-end;
+        }
+
+        .indicator {
+            margin-left: 8px;
+        }
+    }
+
+    .tag {
+        display: flex;
+        padding: 8px 16px;
+        gap: 8px;
+        border-radius: 24px;
+        background: #FFFFFF1A;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+    }
+    .active{
+        .trfoot{
+            display: flex;
+        }
+    }
+    .trfoot {
+        display: none;
+        align-items: center;
+        gap: 64px;
+        padding-top: 33px;
+        padding-bottom: 17px;
+
+        .action {
+            span{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+
         }
     }
 }

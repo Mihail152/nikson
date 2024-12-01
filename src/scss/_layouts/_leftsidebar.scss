@@ -121,6 +121,14 @@
         align-items: center;
         margin-bottom: 8px;
       }
+
+      .page-title {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 72px;
+        color: #FFFFFF;
+
+      }
     }
 
     .app-container-bg {
@@ -153,6 +161,16 @@
       justify-content: space-between;
       align-items: center;
 
+      .btn {
+        height: 56px;
+        max-width: max-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+
       .title {
         font-size: 60px;
         font-weight: 600;
@@ -161,7 +179,7 @@
         align-items: center;
         gap: 16px;
 
-        span{
+        span {
           max-width: calc(100% - 64px);
         }
       }

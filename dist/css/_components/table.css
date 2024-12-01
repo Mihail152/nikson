@@ -186,6 +186,65 @@
   border-radius: 16px;
   padding: 16px;
 }
+.table.finance .trhead {
+  display: grid;
+  margin-bottom: 8px;
+}
+.table.finance .trhead span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.table.finance .thead,
+.table.finance .trhead {
+  grid-template-columns: 144px 1fr 144px 86px;
+  align-items: center;
+  gap: 40px;
+}
+.table.finance .tr {
+  grid-template-columns: 1fr;
+}
+.table.finance button.delete {
+  background: none;
+  padding: 0;
+}
+.table.finance .td {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.table.finance .icons {
+  gap: 24px;
+  justify-content: flex-end;
+}
+.table.finance .indicator {
+  margin-left: 8px;
+}
+.table .tag {
+  display: flex;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1019607843);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+.table .active .trfoot {
+  display: flex;
+}
+.table .trfoot {
+  display: none;
+  align-items: center;
+  gap: 64px;
+  padding-top: 33px;
+  padding-bottom: 17px;
+}
+.table .trfoot .action span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
 
 .thead,
 .tr {

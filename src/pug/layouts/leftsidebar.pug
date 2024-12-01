@@ -28,15 +28,15 @@ div.page-wrapper
                                 img(src="./../svg/navigation/briefcase.svg", alt="") 
                                 span Организации
                         li 
-                            a(href="#").menu-item
+                            a(href="./integrations.html").menu-item
                                 img(src="./../svg/navigation/integrations.svg", alt="") 
                                 span Интеграции
                         li 
-                            a(href="#").menu-item
+                            a(href="./finance.html").menu-item
                                 img(src="./../svg/navigation/finance.svg", alt="") 
                                 span Финансовые группы
                         li 
-                            a(href="#").menu-item
+                            a(href="./staff.html").menu-item
                                 img(src="./../svg/navigation/users.svg", alt="") 
                                 span Пользователи
                 div.sidebar-footer
@@ -86,6 +86,21 @@ div.page-wrapper
                     include ./content/integrations.pug 
                 if template_main == 'integrations-add'
                     include ./content/integrations-add.pug 
+
+                if template_main == 'finance'
+                    include ./content/finance.pug 
+                if template_main == 'finance-add'
+                    include ./content/finance-add.pug 
+
+                if template_main == 'staff'
+                    include ./content/staff.pug 
+                if template_main == 'staff-partner.pug'
+                    include ./content/staff-partner.pug 
+                if template_main == 'staff-add.pug'
+                    include ./content/staff-add.pug 
+
+                if template_main == 'profile'
+                    include ./content/profile.pug 
 
 
             
