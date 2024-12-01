@@ -1,0 +1,64 @@
+div.app-container_header
+    a(href="./integrations.html").back
+        img(src="../svg/arrow/arrow-prev.svg", alt="")
+    div.title Добавить интеграцию
+div.app-container_body
+    div.field-group.mw664.mb40   
+
+        div.field-row
+            div.field-column
+                label(for="") Название
+                input(type="text", placeholder="Введите название")
+        div.field-row
+            div.field-column.mw50
+                label(for="") Организация
+                input(type="text", placeholder="Выберите из списка")
+            div.field-column.mw50
+                label(for="") Маркетплейс
+                input(type="text", placeholder="Выберите из списка")
+
+        div.field-row.mb40  
+            div.field-column.mw50
+                label(for="") Схема работы
+                input(type="text", placeholder="Выберите из списка")
+            div.field-column.mw50
+                label(for="") Частота выплат
+                input(type="text", placeholder="Выберите из списка")
+
+        div.field-row
+            div.field-column
+                label(for="") Токен
+                input(type="text", placeholder="Введите токен")
+
+        div.field-row.mb40 
+            div.field-column.mw33
+                label(for="") compaign_id
+                input(type="text", placeholder="Введите id")
+            div.field-column.mw33
+                label(for="") business_id
+                input(type="text", placeholder="Введите id")        
+            div.field-column.mw33
+                label(for="") warehouse_id
+                input(type="text", placeholder="Введите id")  
+
+        div.field-row.mb40 
+            div.checkbox
+                input(type="checkbox", id="checkbox-1")
+                label(for="checkbox-1") Использовать общую цену    
+
+        div.field-row
+            div.h1 МойСклад
+
+        div.field-row
+            div.field-column.mw50
+                label(for="") Схема работы
+                input(type="text", placeholder="Выберите из списка")
+            div.field-column.mw50
+                label(for="") Частота выплат
+                input(type="text", placeholder="Выберите из списка")          
+
+    div.field-group.gap0
+        div.field-footer                
+            button.btn Отменить
+            button.btn.prime Сохранить
+    

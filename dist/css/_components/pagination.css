@@ -1,10 +1,6 @@
 .pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 8px;
 }
 .pagination .page-item {
@@ -12,16 +8,11 @@
   height: 40px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1019607843);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #fff;
   font-size: 16px;

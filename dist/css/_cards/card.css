@@ -25,19 +25,15 @@
 
 .card {
   background: rgba(255, 255, 255, 0.1019607843);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   max-width: 342px;
   min-height: 380px;
   border-radius: 24px;
   padding: 40px 24px;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .card.company {
   min-height: 508px;
@@ -51,15 +47,9 @@
 .card .card__header {
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .card .card__header.type {
   border-bottom: none;
@@ -71,9 +61,7 @@
   color: rgba(255, 255, 255, 0.6);
 }
 .card .card__body {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 .card .action {
   font-size: 24px;
@@ -81,12 +69,8 @@
   line-height: 28.8px;
 }
 .card .status {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8px;
 }
 .card .status .indocator {
@@ -101,8 +85,6 @@
 .card .markets {
   margin-top: 24px;
   margin-bottom: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 8px;
 }
@@ -138,15 +120,9 @@
   gap: 16px;
 }
 .card .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   gap: 8px;
 }
 .card .link:hover span {
@@ -184,18 +160,11 @@
   line-height: 33.6px;
 }
 .card.integrations .markets {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .card.integrations .markets .market {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8px;
 }
 .card.integrations .markets .market span {
@@ -223,13 +192,8 @@
   max-width: inherit;
 }
 .card.order .card__header {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
 }
 .card.order .title {
@@ -240,12 +204,8 @@
   line-height: 33.6px;
 }
 .card.order .detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8px;
 }
 .card.order .detail a {
@@ -259,21 +219,14 @@
   text-decoration: none;
 }
 .card.order .markets {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
 }
 .card.order .markets .market {
   display: grid;
   grid-template-columns: 40px 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .card.order .markets span {
   font-size: 20px;

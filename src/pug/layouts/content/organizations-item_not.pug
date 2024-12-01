@@ -1,0 +1,70 @@
+div.tabs                
+    button(data-tab="tab1").tab-link.active Общие данные
+    button(data-tab="tab2").tab-link Товары
+    button(data-tab="tab3").tab-link Интеграции
+    button(data-tab="tab4").tab-link Сотрудники
+div.tabs-content    
+    div.tab-content.active(data-id="tab1")            
+        div.content-header
+            div.title 
+                a(href="./organizations.html").back
+                    img(src="../svg/arrow/arrow-prev.svg", alt="")
+                span ООО “Ромашка”
+
+            a(href="add-product.html").btn.prime
+                span Редактировать
+            div.card__header
+ 
+        div.content-body
+            div.status.not-work
+                img(src="../svg/indicator/status_off.svg" class="indicator")
+                span Не работает
+
+            div.info 
+                div.label ФН Иванов
+                div.subtitle Финансовая группа
+            div.info 
+                div.label 20%
+                div.subtitle Дополнительный процент затрат
+            div.info.mb40
+                div.markets
+                    a.market(href="#") 
+                        img(src="../svg/markets/ozon_on.svg", alt="")
+                        span Ozon
+                    a.market(href="#") 
+                        img(src="../svg/markets/wb_on.svg", alt="") 
+                        span Wildberries
+                div.subtitle Маркетплейсы
+            div.h2.mb24 Желаемая чистая прибыль
+            div.cards-grid
+                include ../../components/cards/profit/card-default.pug
+                include ../../components/cards/profit/card-default.pug
+                include ../../components/cards/profit/card-default.pug
+                include ../../components/cards/profit/card-default.pug
+
+
+
+          
+
+
+  
+div.tab-content(data-id="tab2")
+    div.content-header 
+        div.title Задания для закупщиков 
+
+    div.content-bar
+        input(type="text", class="search", placeholder="Поиск по товарам")
+        include ../../components/sorting.pug 
+    
+    div.cards-grid
+        include ../../components/cards/orders/order.pug
+        include ../../components/cards/orders/order.pug
+        include ../../components/cards/orders/order-2.pug
+        include ../../components/cards/orders/order-2.pug
+        include ../../components/cards/orders/order-2.pug
+
+div.tab-content(data-id="tab3")
+    span 3
+
+div.tab-content(data-id="tab4")
+    span 4

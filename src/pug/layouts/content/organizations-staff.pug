@@ -1,0 +1,36 @@
+div.tabs                
+    button(data-tab="tab1").tab-link Общие данные
+    button(data-tab="tab2").tab-link Товары
+    button(data-tab="tab3").tab-link Интеграции
+    button(data-tab="tab4").tab-link.active Сотрудники
+div.tabs-content    
+    div.tab-content(data-id="tab1")  
+
+
+div.tabs-content    
+    div.tab-content.active(data-id="tab4")
+
+        include ./integrations/header.pug
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
+
+
+        div.h1.mb24 Сотрудники организации
+        div.cards-grid.mb40
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+
+
+        div.field-group.gap0
+            div.field-row.mb24.gap24
+                div.h2 Сотрудники вне организации
+                img(src="../svg/arrow/arrow-up.svg", alt="")
+            div.cards-grid.mb40
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug

@@ -1,159 +1,127 @@
 import gulp from "gulp";
 import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
-import autoprefixer from 'gulp-autoprefixer';
-import cleanCSS from 'gulp-clean-css';
-import postcss from "gulp-postcss";
-import changed from 'gulp-changed';
-import rename from 'gulp-rename';
-import uglify from 'gulp-uglify';
-import concat from 'gulp-concat';
-import pug from 'gulp-pug';
-import imagemin from 'gulp-imagemin';
-import browserSync from 'browser-sync';
-import fileInclude from 'gulp-file-include';
-import prettier from 'gulp-prettier';
+import autoprefixer from "gulp-autoprefixer";
+import cleanCSS from "gulp-clean-css";
+import rename from "gulp-rename";
+import uglify from "gulp-uglify";
+import concat from "gulp-concat";
+import pug from "gulp-pug";
+import imagemin from "gulp-imagemin";
+import browserSync from "browser-sync";
+import fileInclude from "gulp-file-include";
+import prettier from "gulp-prettier";
+import { deleteAsync } from "del";
+
+const bs = browserSync.create();
+const sass = gulpSass(dartSass);
 
 const paths = {
-  styles: 'src/scss/**/*.scss',
-  css: 'src/css/**/*.css',
-  scripts: 'src/js/**/*.js',
-  pug: 'src/pug/**/*.pug',
-  images: 'src/images/**/*',
-  svg: 'src/svg/**/*',
-  fonts: 'src/fonts/**/*',
-  html: 'src/html/**/*.html',
+  styles: "src/scss/**/*.scss",
+  css: "src/css/**/*.css",
+  scripts: "src/js/**/*.js",
+  pug: "src/pug/**/*.pug",
+  images: "src/images/**/*",
+  svg: "src/svg/**/*",
+  fonts: "src/fonts/**/*",
+  html: "src/html/**/*.html",
   dist: {
-    base: 'dist',
-    css: 'dist/css',
-    js: 'dist/js',
-    images: 'dist/images',
-    svg: 'dist/svg',
-    fonts: 'dist/fonts',
+    base: "dist",
+    css: "dist/css",
+    js: "dist/js",
+    images: "dist/images",
+    svg: "dist/svg",
+    fonts: "dist/fonts",
   },
 };
 
+// Очистка папки dist
+export const clean = () => deleteAsync([paths.dist.base]);
 
-const sass = gulpSass(dartSass);
-function styles() {
-  return gulp
+// Компиляция SCSS
+export const styles = () =>
+  gulp
     .src(paths.styles)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest(paths.dist.css)) 
-
-    // minify
-    .pipe(cleanCSS({ level: 1 }))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest(paths.dist.css))
-    .pipe(browserSync.stream());
-}
+    .pipe(cleanCSS({ level: 1 }))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest(paths.dist.css))
+    .pipe(bs.stream());
 
-function css() {
-  return gulp
-    .src(paths.css)
-    .pipe(gulp.dest(paths.dist.css));
-}
+// Перенос CSS
+export const css = () => gulp.src(paths.css).pipe(gulp.dest(paths.dist.css));
 
-
-function scripts() {
-  return gulp
+// Компиляция JS
+export const scripts = () =>
+  gulp
     .src(paths.scripts)
-    
     .pipe(gulp.dest(paths.dist.js))
-    
+    .pipe(concat("main.js"))
     .pipe(uglify())
-    .pipe(concat('main.js'))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(paths.dist.js))
-    .pipe(browserSync.stream());
-}
+    .pipe(bs.stream());
 
-
-function compilePug() {
-  return gulp
+// Компиляция PUG
+export const pugCompile = () =>
+  gulp
     .src(paths.pug)
-    .pipe(pug({ pretty: true }))
+    .pipe(
+      pug({ pretty: true }).on("error", (err) => {
+        console.error(err);
+        this.emit("end");
+      })
+    )
     .pipe(gulp.dest(paths.dist.base))
-    .pipe(browserSync.stream());
-}
+    .pipe(bs.stream());
 
+// Оптимизация изображений
+export const images = () =>
+  gulp.src(paths.images).pipe(imagemin()).pipe(gulp.dest(paths.dist.images));
 
-function images() {
-  return gulp
-    .src(paths.images, { encoding: false })
-    .pipe(imagemin())
-    .pipe(gulp.dest(paths.dist.images))
-    .pipe(browserSync.stream());
-}
+// Перенос SVG
+export const copySVG = () => gulp.src(paths.svg).pipe(gulp.dest(paths.dist.svg));
 
-function copySVG() {
-  return gulp
-    .src(paths.svg)
-    .pipe(changed(paths.dist.svg))
-    .pipe(rename((path) => {
-      path.basename = path.basename.replace(/[^a-zA-Z0-9-_]/g, '');
-      return path;
-    }))
-    .pipe(gulp.dest(paths.dist.svg));
-}
-function copyFonts() {
-  return gulp
-    .src(paths.fonts)
-    .pipe(gulp.dest(paths.dist.fonts));
-}
+// Перенос шрифтов
+export const copyFonts = () =>
+  gulp.src(paths.fonts).pipe(gulp.dest(paths.dist.fonts));
 
-
-function includeHTML() {
-  return gulp
+// Обработка HTML
+export const includeHTML = () =>
+  gulp
     .src(paths.html)
-    .pipe(fileInclude({ prefix: '@@', basepath: '@file' }))
+    .pipe(fileInclude({ prefix: "@@", basepath: "@file" }))
     .pipe(gulp.dest(paths.dist.base))
-    .pipe(browserSync.stream());
-}
+    .pipe(bs.stream());
 
-
-function format() {
-  return gulp
-    .src([paths.styles, paths.scripts, paths.pug])
-    .pipe(prettier({ singleQuote: true }))
-    .pipe(gulp.dest((file) => file.base));
-}
-
-
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: paths.dist.base,
-    },
+// Локальный сервер
+// Локальный сервер
+export const serve = () => {
+  bs.init({
+    server: { baseDir: paths.dist.base },
+    notify: false,
+    open: true,
+    reloadDebounce: 500,
   });
 
-  gulp.watch(paths.styles, styles).on('change', browserSync.reload);;
-  gulp.watch(paths.css, css).on('change', browserSync.reload);;
-  gulp.watch(paths.scripts, scripts).on('change', browserSync.reload);;
-  gulp.watch(paths.pug, compilePug).on('change', browserSync.reload);;
-  gulp.watch(paths.html, includeHTML).on('change', browserSync.reload);;
-  gulp.watch(paths.images, images).on('change', browserSync.reload);
-  gulp.watch(paths.svg, copySVG).on('change', browserSync.reload); 
-  gulp.watch(paths.fonts, copyFonts).on('change', browserSync.reload); 
-}
-
-
-export {
-  styles,
-  css,
-  scripts,
-  compilePug,
-  images,
-  includeHTML,
-  copySVG,
-  copyFonts,
-  format,
-  serve,
+  gulp.watch(paths.styles, gulp.series(styles));
+  gulp.watch(paths.css, gulp.series(css));
+  gulp.watch(paths.scripts, gulp.series(scripts));
+  gulp.watch(paths.pug, gulp.series(pugCompile));
+  gulp.watch(paths.images, gulp.series(images));
+  gulp.watch(paths.svg, gulp.series(copySVG));
+  gulp.watch(paths.fonts, gulp.series(copyFonts));
+  gulp.watch(paths.html, gulp.series(includeHTML));
 };
 
 
-export default gulp.series(
-  gulp.parallel(styles, css, scripts, compilePug, includeHTML, images, copySVG),
-  serve
+// Сборка проекта
+export const build = gulp.series(
+  clean,
+  gulp.parallel(styles, css, scripts, pugCompile, images, copySVG, copyFonts, includeHTML)
 );
+
+// Задача по умолчанию
+export default gulp.series(build, serve);

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nouislider.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <title>Products</title>
+  </head>
+  <body class="bg-dark">
+    <div class="page-wrapper">
+      <div class="main-container">
+        <div class="sidebar-wrapper"> 
+          <nav class="sidebar-inner slimScroll">
+            <div class="sidebar-header">
+              <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
+              <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
+            </div>
+            <div class="user-profile"><a href="#">
+                <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div>
+                <div class="user">
+                  <div class="user-name">Иванов Иван Иванович</div>
+                  <div class="user-role">Администратор</div>
+                </div></a></div>
+            <div class="menu-wrap">
+              <ul class="menu"> 
+                <li> <a class="menu-item active" href="./products.html"><img src="./../svg/navigation/products.svg" alt=""><span>Товары</span></a></li>
+                <li> <a class="menu-item" href="./organizations.html"><img src="./../svg/navigation/briefcase.svg" alt=""><span>Организации</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/integrations.svg" alt=""><span>Интеграции</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/finance.svg" alt=""><span>Финансовые группы</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/users.svg" alt=""><span>Пользователи</span></a></li>
+              </ul>
+            </div>
+            <div class="sidebar-footer">
+              <ul class="menu"> 
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
+                <li> <a class="menu-item" href="#"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="app-container"> 
+          <div class="app-container-bg"></div>
+          <div class="app-container-inner"> 
+            <div class="tabs">               
+              <button class="tab-link" data-tab="tab1">Общие данные</button>
+              <button class="tab-link" data-tab="tab2">Товары</button>
+              <button class="tab-link active" data-tab="tab3">Интеграции</button>
+              <button class="tab-link" data-tab="tab4">Сотрудники</button>
+            </div>
+            <div class="tabs-content">   
+              <div class="tab-content" data-id="tab1"> </div>
+            </div>
+            <div class="tabs-content">   
+              <div class="tab-content active" data-id="tab3">
+                <div class="content-header">
+                  <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="#"><img src="../svg/BTNicons.svg" alt=""><span>Добавить интеграцию</span></a>
+                </div>
+                <div class="h1 mb24">Интеграции</div>
+                <div class="cards-grid">
+                  <div class="card integrations mh312">
+                    <div class="card__header">
+                      <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
+                    </div>
+                    <div class="card__body">
+                      <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer text-right">
+                      <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                    </div>
+                  </div>
+                  <div class="card integrations delete mh312">
+                    <div class="card__body">       
+                      <div class="action"><span>Удалить интеграцию?   </span></div>
+                    </div>
+                    <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
+                  </div>
+                  <div class="card integrations aicenter jccenter gap24 mh312"><a class="btn-add prime" href="#"><img src="../svg/btnIcons/plus.svg" alt=""></a>
+                    <div class="label fz18">Добавить интеграцию </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./../js/nouislider.js"></script>
+    <script src="./../js/main.js"></script>
+  </body>
+</html>

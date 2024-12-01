@@ -82,6 +82,13 @@ body {
 }
 
 
+.h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+}
+
+
 .h2 {
     font-size: 28px;
     font-weight: 700;
@@ -97,4 +104,14 @@ body {
 }
 .mw15{
     max-width: 15%;
+}
+.mw240{
+    max-width: 240px;
+}
+.mw664{
+    max-width: 664px;
+}
+
+.jcc{
+    justify-content: center;
 }

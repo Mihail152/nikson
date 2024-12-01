@@ -53,20 +53,39 @@ div.page-wrapper
                                 span Выйти
 
 
-        div.app-container
+        div.app-container 
             div.app-container-bg
-            div.app-container-inner
+            div.app-container-inner 
                 if template_main == 'products'
                     include ./content/products.pug    
-                if template_main == 'add-product'
-                    include ./content/add-product.pug
+                if template_main == 'product-add'
+                    include ./content/product-add.pug
                 if template_main == 'order'
                     include ./content/order.pug
                 if template_main == 'organizations'
-                    include ./content/organizations.pug
-                if template_main == 'add-organizations'
-                    include ./content/add-organizations.pug
+                    include ./content/organizations.pug 
+                if template_main == 'organizations-add'
+                    include ./content/organizations-add.pug
+                if template_main == 'organizations-item'
+                    include ./content/organizations-item.pug
+                if template_main == 'organizations-edit' 
+                    include ./content/organizations-edit.pug
+                if template_main == 'organizations-item_not'
+                    include ./content/organizations-item_not.pug
+                if template_main == 'organizations-products'
+                    include ./content/organizations-products.pug
                     
+                if template_main == 'organizations-integration'
+                    include ./content/organizations-integration.pug
+                if template_main == 'organizations-staff'
+                    include ./content/organizations-staff.pug
+                if template_main == 'organizations-staff-add'
+                    include ./content/organizations-staff-add.pug
+
+                if template_main == 'integrations'
+                    include ./content/integrations.pug 
+                if template_main == 'integrations-add'
+                    include ./content/integrations-add.pug 
 
 
             

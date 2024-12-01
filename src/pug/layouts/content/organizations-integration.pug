@@ -1,0 +1,20 @@
+div.tabs                
+    button(data-tab="tab1").tab-link Общие данные
+    button(data-tab="tab2").tab-link Товары
+    button(data-tab="tab3").tab-link.active Интеграции
+    button(data-tab="tab4").tab-link Сотрудники
+div.tabs-content    
+    div.tab-content(data-id="tab1")  
+
+
+div.tabs-content    
+    div.tab-content.active(data-id="tab3")
+
+        include ./integrations/header.pug
+
+
+        div.h1.mb24 Интеграции
+        div.cards-grid
+            include ../../components/cards/integrations/card-default.pug
+            include ../../components/cards/integrations/card-delete.pug
+            include ../../components/cards/integrations/card-add.pug

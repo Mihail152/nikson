@@ -1,10 +1,6 @@
 .filed_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 16px;
   margin-bottom: 8px;
 }
@@ -38,25 +34,7 @@ input:focus {
   outline-color: #6825DA;
   outline-offset: 0px;
 }
-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-}
 input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-}
-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-}
-input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 18px;
   font-weight: 400;

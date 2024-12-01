@@ -124,10 +124,38 @@ input[type="number"] {
             line-height: 19.2px;
             color: #FFFFFF99;
 
+            &.has-icon{
+                display: flex;
+                align-items: center;
+                gap:8px;
+
+                &.gray{
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                        path{
+                            stroke: #FFFFFF99;
+                        }
+                    }
+                }
+                *{
+                    line-height: 1;
+                }
+            }
+
         }
 
         input {
             width: 100%;
+        }
+
+        &.last{
+            justify-content: center;
+        }
+        .field-input{
+            display: flex;
+            gap:8px;
+            align-items: center;        
         }
     }
 

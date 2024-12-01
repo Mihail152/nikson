@@ -1,0 +1,19 @@
+div.tabs                
+    button(data-tab="tab1").tab-link Общие данные
+    button(data-tab="tab2").tab-link.active Товары
+    button(data-tab="tab3").tab-link Интеграции
+    button(data-tab="tab4").tab-link Сотрудники
+div.tabs-content    
+    div.tab-content(data-id="tab1")  
+
+
+div.tabs-content    
+    div.tab-content.active(data-id="tab2")
+        include ./organizations/header.pug
+
+        include ./organizations/content-bar.pug
+        include ./organizations/table.pug       
+        include ../../components/pagination.pug 
+    
+
+    

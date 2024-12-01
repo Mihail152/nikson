@@ -250,4 +250,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFilterCount();
     console.log("Фильтры сброшены");
   });
+
+
+
+// organizations
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('.toggle-panel')) {
+      const parentTr = event.target.closest('.tr');
+      if (parentTr) {
+        parentTr.classList.toggle('active');
+      }
+    }
+  });
+
 });
