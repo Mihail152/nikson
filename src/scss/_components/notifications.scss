@@ -1,0 +1,28 @@
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .notifications-item {
+    padding: 40px;
+    border-radius: 24px;
+    background: #ffffff1a;
+    backdrop-filter: blur(16px);
+    gap: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.notification-read{
+        background: #FFFFFF0D;
+        .h1{
+            color: #FFFFFF99;
+        }
+    }
+
+    .first {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+  }
+}

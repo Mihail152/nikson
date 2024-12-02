@@ -30,6 +30,15 @@ button {
 .btn.prime:hover {
   background: #7D39F0;
 }
+.btn[disabled], .btn.disabled {
+  background: rgba(255, 255, 255, 0.031372549);
+  color: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+.btn[disabled]:hover, .btn.disabled:hover {
+  background: rgba(255, 255, 255, 0.031372549);
+  color: rgba(255, 255, 255, 0.2);
+}
 
 .btn-add {
   width: 64px;

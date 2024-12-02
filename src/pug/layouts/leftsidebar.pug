@@ -9,7 +9,7 @@ div.page-wrapper
                     div.toggle-sidebar
                         img(src="./../svg/ToggleBar.svg", alt="")
                 div.user-profile
-                    a(href="#")
+                    a(href="./profile.html")
                         div.icon
                             img(src="./../svg/IconAccount.svg", alt="")
                         div.user
@@ -40,18 +40,17 @@ div.page-wrapper
                                 img(src="./../svg/navigation/users.svg", alt="") 
                                 span Пользователи
                 div.sidebar-footer
-                    ul.menu  
+                    ul.menu   
                         li 
-                            a(href="#").menu-item
+                            a(href="./notifications.html").menu-item
                                 img(src="./../svg/navigation/notifications.svg", alt="") 
                                 span Уведомления
                                 span.badge 99+
 
                         li 
-                            a(href="#").menu-item
+                            a(href="/").menu-item
                                 img(src="./../svg/navigation/logout.svg", alt="") 
                                 span Выйти
-
 
         div.app-container 
             div.app-container-bg
@@ -101,6 +100,17 @@ div.page-wrapper
 
                 if template_main == 'profile'
                     include ./content/profile.pug 
+                if template_main == 'profile-completed'
+                    include ./content/profile-completed.pug 
+                if template_main == 'profile-error'
+                    include ./content/profile-error.pug 
+                if template_main == 'profile-success'
+                    include ./content/profile-success.pug 
 
+                if template_main == 'notifications'
+                    include ./content/notifications.pug 
 
-            
+                if template_main == 'notifications-read'
+                    include ./content/notifications-read.pug 
+                    
+            include ./content/popup/popup-sendmail.pug           

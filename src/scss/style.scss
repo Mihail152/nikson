@@ -5,6 +5,8 @@
 @use '_layouts/_leftsidebar.scss';
 @use 'common';
 @use 'form';
+@use '_popup';
 @use '_components/table.scss';
 @use '_components/filtres.scss';
 @use '_components/pagination.scss';
+@use '_components/notifications.scss';

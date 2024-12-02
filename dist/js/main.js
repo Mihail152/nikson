@@ -1,79 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function () {
   // toggle sidebar
   const updatePinnedClass = () => {
-    const pageWrapper = document.querySelector(".page-wrapper");
+    const $pageWrapper = $(".page-wrapper");
 
-    if (window.innerWidth < 1580) {
-      pageWrapper.classList.add("pinned");
+    if ($(window).width() < 1580) {
+      $pageWrapper.addClass("pinned");
     } else {
-      pageWrapper.classList.remove("pinned");
+      $pageWrapper.removeClass("pinned");
     }
   };
 
   updatePinnedClass();
-  window.addEventListener("resize", updatePinnedClass);
+  $(window).resize(updatePinnedClass);
 
   // tabs
-  const tabLinks = document.querySelectorAll(".tab-link");
-  const tabContents = document.querySelectorAll(".tab-content");
+  $(".tab-link").on("click", function () {
+    const targetTab = $(this).data("tab");
 
-  tabLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const targetTab = link.getAttribute("data-tab");
+    $(".tab-link").removeClass("active");
+    $(".tab-content").removeClass("active");
 
-      tabLinks.forEach((tab) => tab.classList.remove("active"));
-      tabContents.forEach((content) => content.classList.remove("active"));
-
-      link.classList.add("active");
-      document
-        .querySelector(`.tab-content[data-id="${targetTab}"]`)
-        .classList.add("active");
-    });
+    $(this).addClass("active");
+    $(`.tab-content[data-id="${targetTab}"]`).addClass("active");
   });
 
-  const toggleButton = document.querySelector(".toggle-sidebar");
-  const pageWrapper = document.querySelector(".page-wrapper");
+  const $toggleButton = $(".toggle-sidebar");
+  const $pageWrapper = $(".page-wrapper");
 
-  toggleButton.addEventListener("click", () => {
-    pageWrapper.classList.toggle("pinned");
+  $toggleButton.on("click", function () {
+    $pageWrapper.toggleClass("pinned");
   });
 
   // Toggle filter
-  // Функция для обработки клика по кнопке .filter-toggle
-  document.querySelectorAll(".btn.filter-toggle").forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const parent = button.parentElement;
+  $(".btn.filter-toggle").on("click", function (e) {
+    const $parent = $(this).parent();
 
-      // Проверяем, если родитель уже открыт, то закрываем его
-      if (parent.classList.contains("open")) {
-        parent.classList.remove("open");
-      } else {
-        // Сначала удаляем класс 'open' у всех других элементов
-        document.querySelectorAll(".btn.filter-toggle").forEach((btn) => {
-          btn.parentElement.classList.remove("open");
-        });
+    // Проверяем, если родитель уже открыт, то закрываем его
+    if ($parent.hasClass("open")) {
+      $parent.removeClass("open");
+    } else {
+      // Сначала удаляем класс 'open' у всех других элементов
+      $(".btn.filter-toggle").parent().removeClass("open");
 
-        // Добавляем класс 'open' только для текущего элемента
-        parent.classList.add("open");
-      }
+      // Добавляем класс 'open' только для текущего элемента
+      $parent.addClass("open");
+    }
 
-      // Блокируем событие клика для предотвращения распространения
-      e.stopPropagation();
-    });
+    // Блокируем событие клика для предотвращения распространения
+    e.stopPropagation();
   });
 
   // Закрытие всех открытых элементов при клике вне
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".btn.filter-toggle").forEach((button) => {
-      button.parentElement.classList.remove("open");
-    });
+  $(document).on("click", function () {
+    $(".btn.filter-toggle").parent().removeClass("open");
   });
 
   // Для предотвращения закрытия при клике внутри родительского элемента
-  document.querySelectorAll(".sorting").forEach((container) => {
-    container.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+  $(".sorting").on("click", function (e) {
+    e.stopPropagation();
   });
 
   // Helper function
@@ -85,195 +69,214 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initialize slider
-  function initializeSlider(sliderId, container) {
-    const slider = document.getElementById(sliderId);
-    const minPrice = container.querySelector(".price-min");
-    const maxPrice = container.querySelector(".price-max");
+  if ($(".sorting").length) {
+    // Initialize slider
+    function initializeSlider(sliderId, container) {
+      const $slider = $("#" + sliderId);
+      const $minPrice = container.find(".price-min");
+      const $maxPrice = container.find(".price-max");
 
-    noUiSlider.create(slider, {
-      start: [0, 100],
-      connect: true,
-      range: {
-        min: 0,
-        max: 100,
-      },
-      format: {
-        to: (value) => Math.round(value),
-        from: (value) => Number(value),
-      },
-    });
+      noUiSlider.create($slider[0], {
+        start: [0, 100],
+        connect: true,
+        range: {
+          min: 0,
+          max: 100,
+        },
+        format: {
+          to: (value) => Math.round(value),
+          from: (value) => Number(value),
+        },
+      });
 
-    [minPrice, maxPrice].forEach((input) => {
-      input.dataset.initialValue = input.value || "";
-      input.dataset.changed = "false";
-    });
+      $minPrice.add($maxPrice).each(function () {
+        this.dataset.initialValue = this.value || "";
+        this.dataset.changed = "false";
+      });
 
-    slider.noUiSlider.on("update", (values) => {
-      minPrice.value = values[0];
-      maxPrice.value = values[1];
-      markInputAsChanged(minPrice);
-      markInputAsChanged(maxPrice);
-    });
+      $slider[0].noUiSlider.on("update", (values) => {
+        $minPrice.val(values[0]);
+        $maxPrice.val(values[1]);
+        markInputAsChanged($minPrice[0]);
+        markInputAsChanged($maxPrice[0]);
+      });
 
-    minPrice.addEventListener("change", () => {
-      slider.noUiSlider.set([minPrice.value, null]);
-      minPrice.classList.add("changed-input");
-      markInputAsChanged(minPrice);
-    });
+      $minPrice.on("change", function () {
+        $slider[0].noUiSlider.set([$minPrice.val(), null]);
+        $minPrice.addClass("changed-input");
+        markInputAsChanged(this);
+      });
 
-    maxPrice.addEventListener("change", () => {
-      slider.noUiSlider.set([null, maxPrice.value]);
-      markInputAsChanged(maxPrice);
-    });
+      $maxPrice.on("change", function () {
+        $slider[0].noUiSlider.set([null, $maxPrice.val()]);
+        markInputAsChanged(this);
+      });
 
-    return slider;
-  }
+      return $slider;
+    }
 
-  // Update filter count
-  function updateFilterCount() {
-    let count = 0;
-    firstLoadPage = false;
+    // Update filter count
+    function updateFilterCount() {
+      let count = 0;
+      firstLoadPage = false;
 
-    filterContainer
-      .querySelectorAll(".filter__price")
-      .forEach((priceContainer) => {
-        const minInput = priceContainer.querySelector(".price-min");
-        const maxInput = priceContainer.querySelector(".price-max");
+      $(".filter__price").each(function () {
+        const $priceContainer = $(this);
+        const $minInput = $priceContainer.find(".price-min");
+        const $maxInput = $priceContainer.find(".price-max");
         if (
-          (minInput && minInput.dataset.changed === "true") ||
-          (maxInput && maxInput.dataset.changed === "true")
+          ($minInput.length && $minInput.data("changed") === "true") ||
+          ($maxInput.length && $maxInput.data("changed") === "true")
         ) {
           count++;
         }
       });
 
-    filterContainer
-      .querySelectorAll('input[type="checkbox"]:checked')
-      .forEach(() => {
+      $(".filter-container")
+        .find('input[type="checkbox"]:checked')
+        .each(function () {
+          count++;
+        });
+
+      const checkedRadio = $(".filter-container").find(
+        'input[type="radio"]:checked'
+      );
+      if (checkedRadio.length && !checkedRadio[0].defaultChecked) {
         count++;
-      });
+      }
 
-    const checkedRadio = filterContainer.querySelector(
-      'input[type="radio"]:checked'
-    );
-    if (checkedRadio && !checkedRadio.defaultChecked) {
-      count++;
-    }
-
-    const filterCountElement = document.querySelector(".filtercount");
-    if (filterCountElement) {
-      if (count > 0) {
-        filterCountElement.textContent = count;
-        filterCountElement.classList.add("visible");
-      } else {
-        filterCountElement.textContent = "";
-        filterCountElement.classList.remove("visible");
+      const $filterCountElement = $(".filtercount");
+      if ($filterCountElement.length) {
+        if (count > 0) {
+          $filterCountElement.text(count).addClass("visible");
+        } else {
+          $filterCountElement.text("").removeClass("visible");
+        }
       }
     }
-  }
 
-  // Initialize filter container
-  const filterContainer = document.querySelector(".filter-container");
+    // Initialize filter container
+    const $filterContainer = $(".filter-container");
 
-  // Initialize sliders
-  const slider = initializeSlider(
-    "price-range",
-    document.querySelector(".filter__column:nth-child(1) .filter__price")
-  );
-  const slider2 = initializeSlider(
-    "price-range-2",
-    document.querySelector(".filter__column:nth-child(2) .filter__price")
-  );
+    // Initialize sliders
+    const $slider = initializeSlider(
+      "price-range",
+      $(".filter__column:nth-child(1) .filter__price")
+    );
+    const $slider2 = initializeSlider(
+      "price-range-2",
+      $(".filter__column:nth-child(2) .filter__price")
+    );
 
-  // Set initial radio button
-  const radioButtons = filterContainer.querySelectorAll('input[type="radio"]');
-  if (radioButtons.length > 0) {
-    radioButtons[0].checked = true;
-  }
+    // Set initial radio button
+    const $radioButtons = $filterContainer.find('input[type="radio"]');
+    if ($radioButtons.length > 0) {
+      $radioButtons[0].checked = true;
+    }
 
-  // Add event listeners to inputs for counting
-  filterContainer
-    .querySelectorAll(".price-min, .price-max")
-    .forEach((input) => {
-      input.dataset.initialValue = input.value || "";
-      input.dataset.changed = "false";
+    // Add event listeners to inputs for counting
+    $filterContainer.find(".price-min, .price-max").each(function () {
+      this.dataset.initialValue = this.value || "";
+      this.dataset.changed = "false";
 
-      input.addEventListener("change", () => {
-        if (input.value !== input.dataset.initialValue) {
-          input.dataset.changed = "true";
+      $(this).on("change", function () {
+        if (this.value !== this.dataset.initialValue) {
+          this.dataset.changed = "true";
         } else {
-          input.dataset.changed = "false";
+          this.dataset.changed = "false";
         }
         updateFilterCount();
       });
     });
 
-  filterContainer
-    .querySelectorAll('input[type="checkbox"], input[type="radio"]')
-    .forEach((input) => {
-      input.addEventListener("change", updateFilterCount);
-    });
+    $filterContainer
+      .find('input[type="checkbox"], input[type="radio"]')
+      .on("change", updateFilterCount);
 
-  slider.noUiSlider.on("change", updateFilterCount);
-  slider2.noUiSlider.on("change", updateFilterCount);
+    $slider[0].noUiSlider.on("change", updateFilterCount);
+    $slider2[0].noUiSlider.on("change", updateFilterCount);
 
-  // Initialize the filter count
-  updateFilterCount();
-
-  // Reset filters
-  document.querySelector(".reset-filter").addEventListener("click", () => {
-    filterContainer
-      .querySelectorAll(".price-min, .price-max")
-      .forEach((input) => {
-        input.value = "";
-        input.dataset.changed = "false";
-      });
-
-    filterContainer
-      .querySelectorAll('input[type="checkbox"]')
-      .forEach((checkbox) => {
-        checkbox.checked = false;
-      });
-
-    filterContainer.querySelectorAll('input[type="radio"]').forEach((radio) => {
-      radio.checked = false;
-    });
-
-    if (radioButtons.length > 0) {
-      radioButtons[0].checked = true;
-    }
-
-    slider.noUiSlider.set([0, 100]);
-    slider2.noUiSlider.set([0, 100]);
-
+    // Initialize the filter count
     updateFilterCount();
-    console.log("Фильтры сброшены");
-  });
 
+    // Reset filters
+    $(".reset-filter").on("click", function () {
+      $filterContainer.find(".price-min, .price-max").each(function () {
+        this.value = "";
+        this.dataset.changed = "false";
+      });
 
+      $filterContainer.find('input[type="checkbox"]').prop("checked", false);
 
-// organizations
-  document.addEventListener('click', function (event) {
-    if (event.target.closest('.toggle-panel')) {
-      const parentTr = event.target.closest('.tr');
-      if (parentTr) {
-        parentTr.classList.toggle('active');
+      $filterContainer.find('input[type="radio"]').prop("checked", false);
+
+      if ($radioButtons.length > 0) {
+        $radioButtons[0].checked = true;
       }
-    }
-  });
 
-// finance
-document.addEventListener('click', function (event) {
-  const deleteButton = event.target.closest('.delete');
-  if (deleteButton && deleteButton.closest('.finance')) {
-      const parentTr = deleteButton.closest('.tr');
-      if (parentTr) {
-          parentTr.classList.toggle('active');
-      }
+      $slider[0].noUiSlider.set([0, 100]);
+      $slider2[0].noUiSlider.set([0, 100]);
+
+      updateFilterCount();
+      console.log("Фильтры сброшены");
+    });
   }
 });
 
+// organizations
+$(document).on("click", function (event) {
+  if ($(event.target).closest(".toggle-panel").length) {
+    const $parentTr = $(event.target).closest(".tr");
+    if ($parentTr.length) {
+      $parentTr.toggleClass("active");
+    }
+  }
+});
+
+// finance
+$(document).on("click", function (event) {
+  const $deleteButton = $(event.target).closest(".delete");
+  if ($deleteButton.length && $deleteButton.closest(".finance").length) {
+    const $parentTr = $deleteButton.closest(".tr");
+    if ($parentTr.length) {
+      $parentTr.toggleClass("active");
+    }
+  }
+});
+
+// toggle password
+$(document).ready(function () {
+  $(".field-input.password").each(function () {
+    const $passwordField = $(this);
+    const $passwordInput = $passwordField.find(".password-input");
+    const $showIcon = $passwordField.find(".toggle-icon.show");
+    const $hideIcon = $passwordField.find(".toggle-icon.hide");
+
+    const togglePasswordVisibility = () => {
+      if ($passwordInput.attr("type") === "password") {
+        $passwordInput.attr("type", "text");
+        $showIcon.hide();
+        $hideIcon.show();
+      } else {
+        $passwordInput.attr("type", "password");
+        $showIcon.show();
+        $hideIcon.hide();
+      }
+    };
+
+    $showIcon.on("click", togglePasswordVisibility);
+    $hideIcon.on("click", togglePasswordVisibility);
+  });
+});
 
 
+$(document).ready(function() {
+  $('[data-popup="sendmail"]').on('click', function() {
+    const popupId = $(this).data('popup');
+    const popup = $('[data-id="' + popupId + '"]');
+    popup.addClass('active');
+  });
+  $('.close-popup').on('click', function(){
+    $(this).closest('.popup').removeClass('active')
+  })
 });

@@ -32,6 +32,17 @@ button {
             background: #7D39F0;
         }
     }
+
+    &[disabled],
+    &.disabled{
+        background: #FFFFFF08;
+        color: #FFFFFF33;
+        cursor: default;
+        &:hover {
+            background: #FFFFFF08;
+            color: #FFFFFF33;
+        }
+    }
     
 }
 

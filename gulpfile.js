@@ -12,6 +12,7 @@ import browserSync from "browser-sync";
 import fileInclude from "gulp-file-include";
 import prettier from "gulp-prettier";
 import { deleteAsync } from "del";
+import changed from "gulp-changed";
 
 const bs = browserSync.create();
 const sass = gulpSass(dartSass);
@@ -68,6 +69,7 @@ export const scripts = () =>
 export const pugCompile = () =>
   gulp
     .src(paths.pug)
+    .pipe(changed(paths.dist.base, { extension: '.html' }))  // Ensure we only process changed files
     .pipe(
       pug({ pretty: true }).on("error", (err) => {
         console.error(err);

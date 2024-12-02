@@ -1,0 +1,32 @@
+.popup{
+    position: absolute;
+    z-index: 10;
+    max-width: 360px;
+    background: #fff;
+    right: 40px;
+    top: 40px;
+    background: #FFFFFF1A;
+    border-radius: 24px;
+    padding: 24px;
+    backdrop-filter: blur(16px);
+    display: none;
+
+    &.active{
+        display: block;
+    }
+
+    .popup-head{
+        margin-bottom: 24px;
+    }
+    
+    .popup-body{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        color: #FFFFFF99;
+        margin-bottom: 24px;
+        b{
+            color: #fff;
+        }
+    }
+}

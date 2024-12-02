@@ -8,9 +8,8 @@ html(lang="en")
         title Products
     body.bg-dark
 
-        - var template_main = 'add-product'
+        - var template_main = 'product-add'
         include ../layouts/leftsidebar.pug
 
 
-        script(src="./../js/nouislider.js")
-        script(src="./../js/main.js")
+        include ../foot.pug 
