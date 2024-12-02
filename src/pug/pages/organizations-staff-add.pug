@@ -1,11 +1,8 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/nouislider.css")
-        link(rel="stylesheet", href="../css/style.min.css")
-        title Products
+    - var page_title = 'Products'
+    include ../head.pug 
+    
     body.bg-dark
         - var template_main = 'organizations-staff-add'
         include ../layouts/leftsidebar.pug 

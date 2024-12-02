@@ -1,7 +1,7 @@
 div.page-wrapper
     div.main-container
         div.sidebar-wrapper 
-            nav.sidebar-inner.slimScroll
+            nav.sidebar-inner
                 div.sidebar-header
                     div.brand
                         a(href="../") 
@@ -9,10 +9,10 @@ div.page-wrapper
                     div.toggle-sidebar
                         img(src="./../svg/ToggleBar.svg", alt="")
                 div.user-profile
-                    a(href="./profile.html")
+                    a(href="./profile.html", class=(['profile', 'profile-completed', 'profile-error', 'profile-success'].includes(template_main) ? 'active' : ''))
                         div.icon
-                            img(src="./../svg/IconAccount.svg", alt="")
-                        div.user
+                            img(src="./../svg/IconAccount.svg", alt="")  
+                        div.user  
                             div.user-name Иванов Иван Иванович
                             div.user-role Администратор
 
@@ -20,29 +20,29 @@ div.page-wrapper
                 div.menu-wrap
                     ul.menu  
                         li 
-                            a(href="./products.html").menu-item.active
+                            a(href="./products.html", class=(template_main == 'products' || template_main == 'product-add' || template_main == 'order' ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/products.svg", alt="") 
                                 span Товары
                         li 
-                            a(href="./organizations.html").menu-item
+                            a(href="./organizations.html", class=(['organizations', 'organizations-add', 'organizations-item', 'organizations-edit', 'organizations-item_not', 'organizations-products', 'organizations-integration', 'organizations-staff', 'organizations-staff-add'].includes(template_main) ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/briefcase.svg", alt="") 
                                 span Организации
                         li 
-                            a(href="./integrations.html").menu-item
+                            a(href="./integrations.html", class=(['integrations', 'integrations-add'].includes(template_main) ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/integrations.svg", alt="") 
                                 span Интеграции
                         li 
-                            a(href="./finance.html").menu-item
+                            a(href="./finance.html", class=(['finance', 'finance-add'].includes(template_main) ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/finance.svg", alt="") 
                                 span Финансовые группы
                         li 
-                            a(href="./staff.html").menu-item
+                            a(href="./staff.html", class=(['staff', 'staff-partner', 'staff-add'].includes(template_main) ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/users.svg", alt="") 
                                 span Пользователи
                 div.sidebar-footer
                     ul.menu   
                         li 
-                            a(href="./notifications.html").menu-item
+                            a(href="./notifications.html", class=(['notifications', 'notifications-read'].includes(template_main) ? 'active' : '')).menu-item
                                 img(src="./../svg/navigation/notifications.svg", alt="") 
                                 span Уведомления
                                 span.badge 99+
@@ -68,13 +68,13 @@ div.page-wrapper
                 if template_main == 'organizations-item'
                     include ./content/organizations-item.pug
                 if template_main == 'organizations-edit' 
-                    include ./content/organizations-edit.pug
-                if template_main == 'organizations-item_not'
+                    include ./content/organizations-edit.pug 
+                if template_main == 'organizations-item_not' 
                     include ./content/organizations-item_not.pug
-                if template_main == 'organizations-products'
-                    include ./content/organizations-products.pug
+                if template_main == 'organizations-products' 
+                    include ./content/organizations-products.pug  
                     
-                if template_main == 'organizations-integration'
+                if template_main == 'organizations-integration' 
                     include ./content/organizations-integration.pug
                 if template_main == 'organizations-staff'
                     include ./content/organizations-staff.pug

@@ -31,6 +31,7 @@
   "dependencies": {
     "cssnano": "^7.0.6",
     "del": "^8.0.0",
-    "nouislider": "^15.8.1"
+    "nouislider": "^15.8.1",
+    "select2": "^4.1.0-rc.0"
   }
 }

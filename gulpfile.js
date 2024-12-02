@@ -81,7 +81,7 @@ export const pugCompile = () =>
 
 // Оптимизация изображений
 export const images = () =>
-  gulp.src(paths.images).pipe(imagemin()).pipe(gulp.dest(paths.dist.images));
+  gulp.src(paths.images, { encoding: false }).pipe(imagemin()).pipe(gulp.dest(paths.dist.images));
 
 // Перенос SVG
 export const copySVG = () => gulp.src(paths.svg).pipe(gulp.dest(paths.dist.svg));

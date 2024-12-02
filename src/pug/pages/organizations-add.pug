@@ -1,12 +1,9 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/nouislider.css")
-        link(rel="stylesheet", href="../css/style.min.css")
-        title Добавить организацию
-    body.bg-dark
+    - var page_title = 'Добавить организацию'
+    include ../head.pug  
+
+    body.bg-dark 
 
         - var template_main = 'organizations-add'
         include ../layouts/leftsidebar.pug

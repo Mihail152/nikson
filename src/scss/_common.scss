@@ -63,6 +63,9 @@ body {
     gap: 16px !important;
 }
 
+.mb8 {
+    margin-bottom: 8px !important;
+}
 .mb16 {
     margin-bottom: 16px !important;
 }
@@ -123,4 +126,53 @@ body {
 
 .jcc{
     justify-content: center;
+}
+
+.bg-cover{
+    background-image: url(../images/Cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo2{
+       
+    }
+    .year{
+        color: #fff;
+        font-size: 32px;
+        font-weight: 350;
+        line-height: 35.2px;
+    } 
+
+    .bg-cover-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    @media(max-width:767px){
+        padding: 30px;
+        text-align: center;
+        .bg-cover-header{
+            img{
+                max-width: 200px;
+            }
+        }
+        .bg-cover-footer{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            img{
+                max-width: 150px;
+            }
+            .year{
+                font-size: 18px;
+            }
+        }
+    }
 }

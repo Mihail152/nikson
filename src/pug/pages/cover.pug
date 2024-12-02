@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    - var page_title = 'NIKSON'
+    include ../head.pug 
+
+    body.bg-cover
+        div.bg-cover-header
+            div.logo
+                a(href="/") 
+                    img(src="../images/logo.png", alt="")
+        div.bg-cover-footer
+            div.logo2
+                img(src="../images/Nikson.png", alt="")
+            div.year
+                span 2024
+                
+        include ../foot.pug 

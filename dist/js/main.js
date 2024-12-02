@@ -119,15 +119,17 @@ $(document).ready(function () {
     function updateFilterCount() {
       let count = 0;
       firstLoadPage = false;
-
+      
       $(".filter__price").each(function () {
+        
         const $priceContainer = $(this);
         const $minInput = $priceContainer.find(".price-min");
         const $maxInput = $priceContainer.find(".price-max");
+        console.log($minInput)
         if (
-          ($minInput.length && $minInput.data("changed") === "true") ||
-          ($maxInput.length && $maxInput.data("changed") === "true")
-        ) {
+          ($minInput.length && $minInput.attr("data-changed") === "true") ||
+          ($maxInput.length && $maxInput.attr("data-changed") === "true")
+        ) {          
           count++;
         }
       });
@@ -270,13 +272,46 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function() {
-  $('[data-popup="sendmail"]').on('click', function() {
+$(document).ready(function () {
+  $('[data-popup="sendmail"]').on('click', function () {
     const popupId = $(this).data('popup');
     const popup = $('[data-id="' + popupId + '"]');
     popup.addClass('active');
   });
-  $('.close-popup').on('click', function(){
+  $('.close-popup').on('click', function () {
     $(this).closest('.popup').removeClass('active')
   })
 });
+
+
+$(document).ready(function () {
+  $('.select').select2({
+    placeholder: "Выбранная позиция",
+    minimumResultsForSearch: -1,
+    dropdownParent: $('.dropdown-container')
+  });
+
+  $('.slimScroll').slimscroll({
+    distance: '5px',
+    height: '100%',
+    alwaysVisible: false,
+    color: '#FFFFFF33'    
+  }); 
+
+  $('table').slimscroll({
+    // axis: 'x',
+    width: '1480px',
+    railVisible: true,
+  });
+});
+
+$(document).on('select2:open', function () {
+  $('.select2-results__options').slimscroll({
+    height: '85px', 
+    alwaysVisible: true,
+    color: '#FFFFFF33',
+    railVisible: true,
+    railColor: '#FFFFFF1A'
+  });
+});
+
