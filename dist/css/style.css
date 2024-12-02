@@ -606,7 +606,15 @@ body {
   max-width: inherit !important;
 }
 
-.mx-800 {
+.mw-240 {
+  max-width: 240px;
+}
+
+.mw-400 {
+  max-width: 400px;
+}
+
+.mw-800 {
   max-width: 800px;
 }
 
