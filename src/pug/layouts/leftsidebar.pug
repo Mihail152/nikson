@@ -1,5 +1,11 @@
 div.page-wrapper
     div.main-container
+        .mobile-header
+            .brand
+                a(href="../") 
+                    img(src="./../svg/Logo.svg", alt="")
+            .menu-burger
+                include ../../svg/menu-burger.svg
         div.sidebar-wrapper 
             nav.sidebar-inner
                 div.sidebar-header
@@ -52,7 +58,7 @@ div.page-wrapper
                                 img(src="./../svg/navigation/logout.svg", alt="") 
                                 span Выйти
 
-        div.app-container 
+        div.app-container(class=(['login'].includes(template_main) ? 'login' : ''))
             div.app-container-bg
             div.app-container-inner 
                 if template_main == 'products'
@@ -112,5 +118,10 @@ div.page-wrapper
 
                 if template_main == 'notifications-read'
                     include ./content/notifications-read.pug 
+
+                if template_main == 'login'
+                    include ./content/login.pug
+                if template_main == 'login-completed'
+                    include ./content/login-completed.pug
                     
             include ./content/popup/popup-sendmail.pug           

@@ -1,0 +1,41 @@
+div.page-wrapper
+    div.main-container
+        .mobile-header
+            .brand
+                a(href="../") 
+                    img(src="./../svg/Logo.svg", alt="")
+            .menu-burger
+                include ../../svg/menu-burger.svg
+        div.sidebar-wrapper 
+            nav.sidebar-inner
+                div.sidebar-header.mb24 
+                    div.brand
+                        a(href="../") 
+                            img(src="./../svg/Logo.svg", alt="")
+                    div.toggle-sidebar
+                        img(src="./../svg/ToggleBar.svg", alt="")              
+
+                div.user-login.mb24
+                    ul.menu                           
+                        li 
+                            a(href="/").menu-item.active
+                                img(src="./../svg/navigation/login.svg", alt="") 
+                                span Авторизация
+                div.menu-wrap
+                    ul.menu  
+
+                div.sidebar-footer
+
+
+        div.app-container.login
+            div.app-container-bg
+            div.app-container-inner                
+
+                if template_main == 'login'
+                    include ./content/login.pug
+                if template_main == 'login-completed'
+                    include ./content/login-completed.pug
+                if template_main == 'login-error'
+                    include ./content/login-error.pug
+                    
+            include ./content/popup/popup-sendmail.pug           

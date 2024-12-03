@@ -5,6 +5,10 @@
     .main-container {
       padding-left: 88px;
 
+      @media (max-width: 1200px) {
+        padding-left: 0;
+      }
+
       .badge {
         top: 0px;
         right: -5px;
@@ -18,22 +22,32 @@
         }
       }
     }
-
     .sidebar-wrapper {
       width: 128px;
       margin-top: 0;
       margin-bottom: 0;
     }
+    @media (max-width: 1200px) {
+      .sidebar-wrapper {
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform .1s ease;
+      }
+    }
+
 
     .scroll-inner {
       padding: 0;
     }
 
-    .brand {
-      img {
-        max-width: 64px;
+    .sidebar-header {
+      .brand {
+        img {
+          max-width: 64px;
+        }
       }
     }
+
 
     .user {
       display: none;
@@ -50,12 +64,18 @@
 .main-container {
   padding: 0 0 0 376px;
   // transition: padding-left .25s ease;
+
   color: #fff;
+
+  @media (max-width: 1200px) {
+    padding-left: 0;
+  }
+
 
   .sidebar-wrapper {
     width: 400px;
     padding: 24px;
-    padding-right: 8px;
+    padding-right: 24px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -63,13 +83,18 @@
     z-index: 10;
     // padding-right: 16px;
     // transition: left .3s ease, width .3s ease;
+    transition: transform .1s ease;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      background-color: #151515;
+    }
   }
 
   .sidebar-inner {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-right: 16px;
 
     .sidebar-footer {
       margin-top: auto;
@@ -216,15 +241,27 @@
       }
     }
 
+    &.login {
+      .app-container-inner {
+        padding: 20px;
+
+      }
+    }
   }
 
   .app-container-inner {
     position: relative;
     padding: 40px;
 
+
+
     @media (max-width: 1580px) {
       overflow: auto;
       width: 1496px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px;
     }
 
   }
@@ -454,6 +491,36 @@
       gap: 8px;
       color: #fff;
 
+    }
+  }
+}
+
+.mobile-header {
+  display: none;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+  }
+
+  .brand {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.menu-burger {
+  cursor: pointer;
+
+  svg {
+    width: 36px;
+    height: 36px;
+
+    path {
+      stroke: #fff;
     }
   }
 }

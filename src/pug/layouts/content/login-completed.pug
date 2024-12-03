@@ -1,0 +1,19 @@
+.login-inner
+    .h1 Авторизация
+    .form-title Введите логин и пароль
+    form(action="#") 
+        div.field-row.mb24
+            div.field-column
+                label(for="") Логин
+                div.field-input
+                    input(type="text", value="123pochta@mail.ru") 
+        div.field-row.mb40
+            div.field-column
+                label(for="") Пароль                
+                div.field-input.password
+                    input(type="password", value="password12345", class="password-input")
+                    div.show-password
+                        img(src="../svg/eye/hide_on.svg", alt="Показать пароль", class="toggle-icon show")
+                        img(src="../svg/eye/hide_off.svg", alt="Скрыть пароль", class="toggle-icon hide", style="display: none;")
+        div.field-footer                
+            button(type="submit").btn.prime Войти

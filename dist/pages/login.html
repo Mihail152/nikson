@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/nouislider.css">
+    <link rel="stylesheet" href="../css/select2.min.css">
     <link rel="stylesheet" href="../css/style.min.css">
-    <title>Сотрудники</title>
+    <title>Авторизация</title>
   </head>
   <body class="bg-dark">
     <div class="page-wrapper">
@@ -28,36 +29,49 @@
         </div>
         <div class="sidebar-wrapper"> 
           <nav class="sidebar-inner">
-            <div class="sidebar-header">
+            <div class="sidebar-header mb24"> 
               <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
               <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
             </div>
-            <div class="user-profile"><a href="./profile.html">
-                <div class="icon"><img src="./../svg/IconAccount.svg" alt=""></div>
-                <div class="user"> 
-                  <div class="user-name">Иванов Иван Иванович</div>
-                  <div class="user-role">Администратор</div>
-                </div></a></div>
+            <div class="user-login mb24">
+              <ul class="menu">                          
+                <li> <a class="menu-item active" href="/"><img src="./../svg/navigation/login.svg" alt=""><span>Авторизация</span></a></li>
+              </ul>
+            </div>
             <div class="menu-wrap">
-              <ul class="menu"> 
-                <li> <a class="menu-item" href="./products.html"><img src="./../svg/navigation/products.svg" alt=""><span>Товары</span></a></li>
-                <li> <a class="menu-item" href="./organizations.html"><img src="./../svg/navigation/briefcase.svg" alt=""><span>Организации</span></a></li>
-                <li> <a class="menu-item" href="./integrations.html"><img src="./../svg/navigation/integrations.svg" alt=""><span>Интеграции</span></a></li>
-                <li> <a class="menu-item" href="./finance.html"><img src="./../svg/navigation/finance.svg" alt=""><span>Финансовые группы</span></a></li>
-                <li> <a class="active menu-item" href="./staff.html"><img src="./../svg/navigation/users.svg" alt=""><span>Пользователи</span></a></li>
-              </ul>
+              <ul class="menu"> </ul>
             </div>
-            <div class="sidebar-footer">
-              <ul class="menu">  
-                <li> <a class="menu-item" href="./notifications.html"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
-              </ul>
-            </div>
+            <div class="sidebar-footer"></div>
           </nav>
         </div>
-        <div class="app-container">
+        <div class="app-container login">
           <div class="app-container-bg"></div>
-          <div class="app-container-inner"> 
+          <div class="app-container-inner">               
+            <div class="login-inner">
+              <div class="h1">Авторизация</div>
+              <div class="form-title">Введите логин и пароль</div>
+              <form action="#"> 
+                <div class="field-row mb24">
+                  <div class="field-column">
+                    <label for="">Логин</label>
+                    <div class="field-input">
+                      <input type="text" placeholder="Введите почту">
+                    </div>
+                  </div>
+                </div>
+                <div class="field-row mb40">
+                  <div class="field-column">
+                    <label for="">Пароль</label>
+                    <div class="field-input">
+                      <input type="text" placeholder="Введите пароль">
+                    </div>
+                  </div>
+                </div>
+                <div class="field-footer">               
+                  <button class="btn prime" type="submit" disabled>Войти</button>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="popup" data-id="sendmail">
             <div class="popup-head"><img src="../../../../svg/btnIcons/check.svg" alt=""></div>

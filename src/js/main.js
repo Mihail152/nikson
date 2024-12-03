@@ -24,7 +24,7 @@ $(document).ready(function () {
     $(`.tab-content[data-id="${targetTab}"]`).addClass("active");
   });
 
-  const $toggleButton = $(".toggle-sidebar");
+  const $toggleButton = $(".toggle-sidebar, .menu-burger");
   const $pageWrapper = $(".page-wrapper");
 
   $toggleButton.on("click", function () {
