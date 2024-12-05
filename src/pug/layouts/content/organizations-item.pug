@@ -11,7 +11,7 @@ div.tabs-content
                     img(src="../svg/arrow/arrow-prev.svg", alt="")
                 span ООО “Ромашка”
 
-            a(href="product-add.html").btn.prime
+            a(href="product-edit.html").btn.prime
                 span Редактировать
 
         div.content-body
@@ -40,30 +40,57 @@ div.tabs-content
                 include ../../components/cards/profit/card-default-mini.pug
                 include ../../components/cards/profit/card-default-mini.pug
                 include ../../components/cards/profit/card-default-mini.pug
+    div.tab-content(data-id="tab2")
+        include ./organizations/header.pug
+
+        include ./organizations/content-bar.pug
+        include ./organizations/table.pug       
+        include ../../components/pagination.pug 
+
+    div.tabs-content    
+        div.tab-content(data-id="tab3")
+
+            include ./integrations/header.pug
 
 
+            div.h1.mb24 Интеграции
+            div.cards-grid
+                include ../../components/cards/integrations/card-default.pug
+                include ../../components/cards/integrations/card-delete.pug
+                include ../../components/cards/integrations/card-add.pug
 
-          
+    div.tab-content(data-id="tab4")
+
+        div.content-header
+            div.title 
+                a(href="organizations-item.html").back
+                    img(src="../svg/arrow/arrow-prev.svg", alt="")
+                span ООО “Ромашка”
+
+            //- a(href="./organizations-add.html").btn.prime
+            a(href="organizations-staff-add.html").btn.prime
+                img(src="../svg/BTNicons.svg", alt="")
+                span Добавить сотрудника
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
 
 
-  
-div.tab-content(data-id="tab2")
-    div.content-header 
-        div.title Задания для закупщиков 
+        div.h1.mb24 Сотрудники организации
+        div.cards-grid.mb40
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
 
-    div.content-bar
-        input(type="text", class="search", placeholder="Поиск по товарам")
-        include ../../components/sorting.pug 
-    
-    div.cards-grid
-        include ../../components/cards/orders/order.pug
-        include ../../components/cards/orders/order.pug
-        include ../../components/cards/orders/order-2.pug
-        include ../../components/cards/orders/order-2.pug
-        include ../../components/cards/orders/order-2.pug
 
-div.tab-content(data-id="tab3")
-    span 3
-
-div.tab-content(data-id="tab4")
-    span 4
+        div.field-group.gap0
+            div.field-row.mb24.gap24
+                div.h2 Сотрудники вне организации
+                img(src="../svg/arrow/arrow-up.svg", alt="")
+            div.cards-grid.mb40
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug

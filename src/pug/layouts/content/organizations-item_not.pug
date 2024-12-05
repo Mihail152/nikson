@@ -62,7 +62,41 @@ div.tab-content(data-id="tab2")
         include ../../components/cards/orders/order-2.pug
 
 div.tab-content(data-id="tab3")
-    span 3
 
-div.tab-content(data-id="tab4")
-    span 4
+    div.content-header
+        div.title 
+            span Интеграции
+
+        //- a(href="./organizations-add.html").btn.prime
+        a(href="./integrations-add.html").btn.prime
+            img(src="../svg/BTNicons.svg", alt="")
+            span Добавить интеграцию
+
+    div.content-bar
+        input(type="text", class="search", placeholder="Поиск по товарам")
+        include ../../components/sorting.pug 
+
+
+    div.h1.mb24 Интеграции
+    div.cards-grid.mb40
+        include ../../components/cards/integrations/inOrganization.pug
+        include ../../components/cards/integrations/other.pug
+        include ../../components/cards/integrations/card-default.pug
+        include ../../components/cards/integrations/card-default.pug
+
+div.tab-content(data-id="tab4")  
+
+    div.content-header
+        div.title Менеджеры
+
+
+    div.content-bar
+        input(type="text", class="search", placeholder="Поиск по товарам")
+        include ../../components/sorting.pug 
+
+
+    div.h1.mb24 Интеграции
+    div.cards-grid.mb40
+        include ../../components/cards/worker/card-default.pug
+        include ../../components/cards/worker/card-default.pug
+        include ../../components/cards/worker/card-delete.pug

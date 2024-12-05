@@ -4,16 +4,84 @@ div.tabs
     button(data-tab="tab3").tab-link Интеграции
     button(data-tab="tab4").tab-link Сотрудники
 div.tabs-content    
-    div.tab-content(data-id="tab1")  
+    div.tab-content(data-id="tab1")            
+        div.content-header
+            div.title 
+                a(href="./organizations.html").back
+                    img(src="../svg/arrow/arrow-prev.svg", alt="")
+                span ООО “Ромашка”
+                
+            a(href="product-edit.html").btn.prime
+                span Редактировать
 
+        div.content-body
+            div.status.mb40
+                img(src="../svg/indicator/status_on.svg" class="indicator")
+                span Работает
 
-div.tabs-content    
+            div.info 
+                div.label ФН Иванов
+                div.subtitle Финансовая группа
+            div.info 
+                div.label 20%
+                div.subtitle Дополнительный процент затрат
+            div.info.mb40
+                div.markets
+                    a.market(href="#") 
+                        img(src="../svg/markets/ozon_on.svg", alt="")
+                        span Ozon
+                    a.market(href="#") 
+                        img(src="../svg/markets/wb_on.svg", alt="") 
+                        span Wildberries
+                div.subtitle Маркетплейсы
+            div.h2.mb24 Желаемая чистая прибыль
+            div.flex-grid
+                include ../../components/cards/profit/card-default-mini.pug
+                include ../../components/cards/profit/card-default-mini.pug
+                include ../../components/cards/profit/card-default-mini.pug
+                include ../../components/cards/profit/card-default-mini.pug
     div.tab-content.active(data-id="tab2")
         include ./organizations/header.pug
 
         include ./organizations/content-bar.pug
         include ./organizations/table.pug       
         include ../../components/pagination.pug 
-    
 
-    
+    div.tabs-content    
+        div.tab-content(data-id="tab3")
+
+            include ./integrations/header.pug
+
+
+            div.h1.mb24 Интеграции
+            div.cards-grid
+                include ../../components/cards/integrations/card-default.pug
+                include ../../components/cards/integrations/card-delete.pug
+                include ../../components/cards/integrations/card-add.pug
+
+    div.tab-content(data-id="tab4")
+
+        include ./integrations/header.pug
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
+
+
+        div.h1.mb24 Сотрудники организации
+        div.cards-grid.mb40
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+            include ../../components/cards/worker/card-default.pug
+
+
+        div.field-group.gap0
+            div.field-row.mb24.gap24
+                div.h2 Сотрудники вне организации
+                img(src="../svg/arrow/arrow-up.svg", alt="")
+            div.cards-grid.mb40
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug
+                include ../../components/cards/worker/other.pug

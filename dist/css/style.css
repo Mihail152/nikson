@@ -579,6 +579,32 @@ table {
   stroke: #fff;
 }
 
+[data-toggle=collaps] {
+  cursor: pointer;
+}
+
+.collaps {
+  transition: height 0.1s ease, opacity 0.1s ease;
+}
+
+.collaps.collapsed {
+  height: 0;
+  opacity: 0;
+}
+
+.collaps.expanded {
+  height: auto;
+  opacity: 1;
+}
+
+.toggle-arrow {
+  transition: transform 0.1s ease;
+}
+
+.toggle-arrow.rotated {
+  transform: rotate(180deg);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -947,6 +973,9 @@ button {
   font-size: 24px;
   font-weight: 600;
   line-height: 28.8px;
+}
+.card .title a {
+  color: #fff;
 }
 .card .info {
   margin-top: 24px;

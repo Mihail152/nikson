@@ -4,10 +4,10 @@ div.app-container_header
     div.title Добавить организацию
 div.app-container_body
     div.field-group.gap0
-        div.field-row.mb24.gap24
+        div.field-row.mb24.gap24(data-toggle="collaps")
             div.h2 Основные данные
-            img(src="../svg/arrow/arrow-up.svg", alt="")
-        div.field-row.mb40
+            img(src="../svg/arrow/arrow-up.svg", alt="", class="toggle-arrow")
+        div.field-row.mb40.collaps
             div.field-column.mw60
                 label(for="") Название
                 input(type="text", placeholder="Название")
@@ -29,20 +29,20 @@ div.app-container_body
                 label(for="") Доп. процент затрат
                 input(type="text", placeholder="Введите значение")
     div.field-group.gap0
-        div.field-row.mb24.gap24
+        div.field-row.mb24.gap24(data-toggle="collaps")
             div.h2 Желаемая чистая прибыль
-            img(src="../svg/arrow/arrow-up.svg", alt="")
-        div.cards-grid.mb40
+            img(src="../svg/arrow/arrow-up.svg", alt="", class="toggle-arrow")
+        div.cards-grid.mb40.collaps
             include ../../components/cards/profit/card-default.pug
             include ../../components/cards/profit/card-delete.pug
             include ../../components/cards/profit/card-add-type.pug
             include ../../components/cards/profit/card-add.pug
 
     div.field-group.gap0
-        div.field-row.mb24.gap24
+        div.field-row.mb24.gap24(data-toggle="collaps")
             div.h2 Интеграции
-            img(src="../svg/arrow/arrow-up.svg", alt="")
-        div.cards-grid.mb40
+            img(src="../svg/arrow/arrow-up.svg", alt="", class="toggle-arrow")
+        div.cards-grid.mb40.collaps
             include ../../components/cards/integrations/card-default.pug
             include ../../components/cards/integrations/card-delete.pug
             include ../../components/cards/integrations/card-add.pug

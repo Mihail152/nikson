@@ -108,6 +108,9 @@
   font-weight: 600;
   line-height: 28.8px;
 }
+.card .title a {
+  color: #fff;
+}
 .card .info {
   margin-top: 24px;
   margin-bottom: 24px;

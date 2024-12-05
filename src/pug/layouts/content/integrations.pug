@@ -27,6 +27,46 @@ div.tabs-content
             include ../../components/cards/integrations/card-default.pug
 
 div.tabs-content    
-    div.tab-content.active(data-id="tab2")  
+    div.tab-content(data-id="tab2")  
+        div.content-header
+            div.title 
+                span МойСклад
+
+            //- a(href="./organizations-add.html").btn.prime
+            a(href="./integrations-add.html").btn.prime
+                img(src="../svg/BTNicons.svg", alt="")
+                span Добавить МойСклад
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
+
+
+        div.h1.mb24 МойСклад
+        div.cards-grid.mb40
+            include ../../components/cards/integrations/inOrganization.pug
+            include ../../components/cards/integrations/other.pug
+            include ../../components/cards/integrations/card-default.pug
+            include ../../components/cards/integrations/card-default.pug
 div.tabs-content    
-    div.tab-content.active(data-id="tab3")  
+    div.tab-content(data-id="tab3")  
+        div.content-header
+            div.title 
+                span Маркетплейсы
+
+            //- a(href="./organizations-add.html").btn.prime
+            a(href="./integrations-add.html").btn.prime
+                img(src="../svg/BTNicons.svg", alt="")
+                span Добавить маркетплейс
+
+        div.content-bar
+            input(type="text", class="search", placeholder="Поиск по товарам")
+            include ../../components/sorting.pug 
+
+
+        div.h1.mb24 Маркетплейсы
+        div.cards-grid.mb40
+            include ../../components/cards/integrations/inOrganization.pug
+            include ../../components/cards/integrations/other.pug
+            include ../../components/cards/integrations/card-default.pug
+            include ../../components/cards/integrations/card-default.pug

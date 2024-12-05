@@ -315,3 +315,26 @@ $(document).on('select2:open', function () {
   });
 });
 
+
+
+$(document).ready(function () {
+  $("[data-toggle='collaps']").on("click", function () {
+      const $cardsGrid = $(this).next(".collaps"); 
+      const $arrow = $(this).find(".toggle-arrow");
+
+      if ($cardsGrid.hasClass("collapsed")) {
+          $cardsGrid.removeClass("collapsed").css({
+              height: $cardsGrid.prop("scrollHeight"),
+              opacity: 1
+          });
+          $arrow.removeClass("rotated");
+      } else {
+          $cardsGrid.addClass("collapsed").css({
+              height: 0,
+              opacity: 0
+          });
+          $arrow.addClass("rotated");
+          
+      }
+  });
+});
