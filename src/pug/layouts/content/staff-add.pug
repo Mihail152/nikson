@@ -1,5 +1,5 @@
 div.app-container_header
-    a(href="./finance.html").back
+    a(href="./staff.html").back
         img(src="../svg/arrow/arrow-prev.svg", alt="")
     div.title Добавить сотрудника
 div.app-container_body
@@ -17,7 +17,17 @@ div.app-container_body
                 input(type="text", placeholder="ФИО сотрудника")
             div.field-column
                 label(for="") Должность
-                input(type="text", placeholder="Выберите из списка")
+                div.dropdown-container
+                    select(name="group").select
+                        option(value="") Выберите из списка
+                        option(value="1") Позиция списка 1
+                        option(value="2") Позиция списка 2
+                        option(value="3") Позиция списка 3
+                        option(value="4") Позиция списка 4
+                        option(value="5") Позиция списка 5 
+                        option(value="6") Позиция списка 6
+                        option(value="7") Позиция списка 7
+                        option(value="8") Позиция списка 8
        
         div.field-row
             div.h1 Организации
@@ -25,20 +35,28 @@ div.app-container_body
         div.field-row.mb40
             div.field-column 
                 div.checkbox.style-2
-                    input(type="checkbox", id="checkbox-1")
-                    label(for="checkbox-1") Использовать общую цену   
+                    label 
+                        input(type="checkbox")
+                        span.checked 
+                        span Использовать общую цену
                 
                 div.checkbox.style-2
-                    input(type="checkbox", id="checkbox-2")
-                    label(for="checkbox-2") Использовать общую цену   
+                    label 
+                        input(type="checkbox")
+                        span.checked 
+                        span Использовать общую цену
                 div.checkbox.style-2
-                    input(type="checkbox", id="checkbox-3")
-                    label(for="checkbox-3") Использовать общую цену   
-                    span ФГ Афанасьев
+                    label 
+                        input(type="checkbox")
+                        span.checked 
+                        span Использовать общую цену 
+                            small ФГ Афанасьев
                 div.checkbox.style-2
-                    input(type="checkbox", id="checkbox-4")
-                    label(for="checkbox-4") Использовать общую цену   
-                    span ФГ Афанасьев
+                    label 
+                        input(type="checkbox")
+                        span.checked 
+                        span Использовать общую цену 
+                            small ФГ Афанасьев
              
 
     div.field-group.gap0

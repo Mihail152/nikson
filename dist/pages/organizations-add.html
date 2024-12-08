@@ -27,8 +27,8 @@
 </svg>
           </div>
         </div>
-        <div class="sidebar-wrapper"> 
-          <nav class="sidebar-inner">
+        <div class="sidebar-wrapper">
+          <nav class="sidebar-inner slimScroll">
             <div class="sidebar-header">
               <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
               <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
@@ -51,7 +51,7 @@
             <div class="sidebar-footer">
               <ul class="menu">  
                 <li> <a class="menu-item" href="./notifications.html"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти </span></a></li>
               </ul>
             </div>
           </nav>
@@ -103,7 +103,8 @@
                     <div class="card__header">
                       <div class="status"><img src="../svg/PriceIcon.svg"><span>568 товаров в диапазоне</span></div>
                     </div>
-                    <div class="card__body">      
+                    <div class="card__body">
+                      <div class="action hidden"><span>Удалить?         </span></div>
                       <div class="info"> 
                         <div class="label">Диапазон цен</div>
                         <div class="text">от 0 ₽</div>
@@ -114,7 +115,13 @@
                         <div class="text">1%</div>
                       </div>
                     </div>
-                    <div class="card__footer text-right"> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
+                    </div>
+                    <div class="card__footer text-right">
+                      <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                    </div>
                   </div>
                   <div class="card profit delete">
                     <div class="card__body">       
@@ -151,16 +158,23 @@
                   <div class="h2">Интеграции</div><img class="toggle-arrow" src="../svg/arrow/arrow-up.svg" alt="">
                 </div>
                 <div class="cards-grid mb40 collaps">
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
                   <div class="card integrations delete mh312">
@@ -173,8 +187,7 @@
                     <div class="label fz18">Добавить интеграцию </div>
                   </div>
                 </div>
-                <div class="field-footer">               
-                  <button class="btn">Отменить</button>
+                <div class="field-footer">               <a class="btn" href="./organizations.html">Отменить</a>
                   <button class="btn prime">Сохранить</button>
                 </div>
               </div>

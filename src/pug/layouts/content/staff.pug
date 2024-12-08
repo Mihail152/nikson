@@ -12,7 +12,8 @@ div.tabs-content
 
         div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
-            include ../../components/sorting.pug 
+            - var filter_option = 'filter-option-1'
+            include ../../components/sorting.pug  
 
 
         div.h1.mb24 Интеграции
@@ -22,7 +23,7 @@ div.tabs-content
             include ../../components/cards/worker/card-delete.pug
 
 div.tabs-content    
-    div.tab-content.active(data-id="tab2")  
+    div.tab-content(data-id="tab2")  
 
         div.content-header
             div.title Закупщики
@@ -30,6 +31,7 @@ div.tabs-content
 
         div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
+            - var filter_option = 'filter-option-2'
             include ../../components/sorting.pug 
 
 
@@ -39,7 +41,7 @@ div.tabs-content
             include ../../components/cards/worker/card-default.pug
             include ../../components/cards/worker/card-delete.pug
 div.tabs-content    
-    div.tab-content.active(data-id="tab3")  
+    div.tab-content(data-id="tab3")  
 
         div.content-header
             div.title Партнеры
@@ -47,6 +49,7 @@ div.tabs-content
 
         div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
+            - var filter_option = 'filter-option-3'
             include ../../components/sorting.pug 
 
 
@@ -56,7 +59,7 @@ div.tabs-content
             include ../../components/cards/worker/card-default.pug
             include ../../components/cards/worker/card-delete.pug
 div.tabs-content    
-    div.tab-content.active(data-id="tab4")  
+    div.tab-content(data-id="tab4")  
 
         div.content-header
             div.title Менеджеры
@@ -64,6 +67,7 @@ div.tabs-content
 
         div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
+            - var filter_option = 'filter-option-4'
             include ../../components/sorting.pug 
 
 

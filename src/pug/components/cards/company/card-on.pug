@@ -6,6 +6,10 @@ div.card.company
             img(src="../svg/indicator/status_on.svg" class="indicator")
 
     div.card__body
+        div.action.hidden
+            span Удалить
+            br 
+            span ООО «Ромашка-промо»?      
         div.markets
             a.market(href="#") 
                 img(src="../svg/markets/ozon_on.svg", alt="")
@@ -24,8 +28,10 @@ div.card.company
         div.info 
             div.label Доп. процент затрат
             div.text 20%
-
+    div.card__footer.w-100.flex.hidden
+        button.btn.cancel Отменить
+        a(href="#").btn.prime Удалить
     div.card__footer.text-right 
-        a(href="#").link          
+        button.remove.link          
             img(src="../svg/IconTrash.svg", alt="")
             span Удалить

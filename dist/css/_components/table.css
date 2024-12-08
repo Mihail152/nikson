@@ -33,6 +33,26 @@
   align-items: center;
   gap: 9px;
 }
+.table.products .tr {
+  display: block;
+}
+.table.products .trhead {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px 120px 120px;
+  align-items: center;
+  gap: 8px;
+}
+.table.products .trhead .td.icon-svgs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.table.products .trhead .td.icon-svgs button {
+  background: none;
+  padding: 0;
+  border: none;
+}
 .table.organizations .thead,
 .table.organizations .tr {
   display: grid;

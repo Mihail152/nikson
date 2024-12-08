@@ -42,6 +42,33 @@
         }
     }
 
+    &.products{
+        .tr{
+            display: block;
+        }
+        .trhead {
+            display: grid;
+            grid-template-columns: 120px 1fr 120px 120px 120px;
+            align-items: center;
+            gap: 8px;
+        
+            .td {
+                &.icon-svgs {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 24px;
+        
+                    button {
+                        background: none;
+                        padding: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
     &.organizations {
 
         .thead,

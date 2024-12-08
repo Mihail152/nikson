@@ -1,5 +1,5 @@
 
-<div class="app-container_header"><a class="back" href="./finance.html"><img src="../svg/arrow/arrow-prev.svg" alt=""/></a>
+<div class="app-container_header"><a class="back" href="./staff.html"><img src="../svg/arrow/arrow-prev.svg" alt=""/></a>
   <div class="title">Добавить сотрудника</div>
 </div>
 <div class="app-container_body">
@@ -18,7 +18,19 @@
       </div>
       <div class="field-column">
         <label for="">Должность</label>
-        <input type="text" placeholder="Выберите из списка"/>
+        <div class="dropdown-container">
+          <select class="select" name="group">
+            <option value="">Выберите из списка</option>
+            <option value="1">Позиция списка 1</option>
+            <option value="2">Позиция списка 2</option>
+            <option value="3">Позиция списка 3</option>
+            <option value="4">Позиция списка 4</option>
+            <option value="5">Позиция списка 5 </option>
+            <option value="6">Позиция списка 6</option>
+            <option value="7">Позиция списка 7</option>
+            <option value="8">Позиция списка 8</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="field-row">
@@ -27,20 +39,24 @@
     <div class="field-row mb40">
       <div class="field-column"> 
         <div class="checkbox style-2">
-          <input type="checkbox" id="checkbox-1"/>
-          <label for="checkbox-1">Использовать общую цену   </label>
+          <label> 
+            <input type="checkbox"/><span class="checked"> </span><span>Использовать общую цену</span>
+          </label>
         </div>
         <div class="checkbox style-2">
-          <input type="checkbox" id="checkbox-2"/>
-          <label for="checkbox-2">Использовать общую цену   </label>
+          <label> 
+            <input type="checkbox"/><span class="checked"> </span><span>Использовать общую цену</span>
+          </label>
         </div>
         <div class="checkbox style-2">
-          <input type="checkbox" id="checkbox-3"/>
-          <label for="checkbox-3">Использовать общую цену   </label><span>ФГ Афанасьев</span>
+          <label> 
+            <input type="checkbox"/><span class="checked"> </span><span>Использовать общую цену <small>ФГ Афанасьев</small></span>
+          </label>
         </div>
         <div class="checkbox style-2">
-          <input type="checkbox" id="checkbox-4"/>
-          <label for="checkbox-4">Использовать общую цену   </label><span>ФГ Афанасьев</span>
+          <label> 
+            <input type="checkbox"/><span class="checked"> </span><span>Использовать общую цену <small>ФГ Афанасьев</small></span>
+          </label>
         </div>
       </div>
     </div>

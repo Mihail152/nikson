@@ -123,6 +123,7 @@ export const serve = () => {
 export const build = gulp.series(
   clean,
   gulp.parallel(styles, css, scripts, pugCompile, images, copySVG, copyFonts, includeHTML)
+  // gulp.parallel(styles, css, scripts, pugCompile, includeHTML)
 );
 
 // Задача по умолчанию

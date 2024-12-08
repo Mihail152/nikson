@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/nouislider.css">
+    <link rel="stylesheet" href="../css/select2.min.css">
     <link rel="stylesheet" href="../css/style.min.css">
     <title>Добавить сотрудника</title>
   </head>
@@ -26,8 +27,8 @@
 </svg>
           </div>
         </div>
-        <div class="sidebar-wrapper"> 
-          <nav class="sidebar-inner">
+        <div class="sidebar-wrapper">
+          <nav class="sidebar-inner slimScroll">
             <div class="sidebar-header">
               <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
               <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
@@ -50,7 +51,7 @@
             <div class="sidebar-footer">
               <ul class="menu">  
                 <li> <a class="menu-item" href="./notifications.html"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти </span></a></li>
               </ul>
             </div>
           </nav>
@@ -58,59 +59,6 @@
         <div class="app-container">
           <div class="app-container-bg"></div>
           <div class="app-container-inner"> 
-            <div class="app-container_header"><a class="back" href="./finance.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a>
-              <div class="title">Добавить сотрудника</div>
-            </div>
-            <div class="app-container_body">
-              <div class="field-group">
-                <div class="field-row">
-                  <div class="h1">Основные данные</div>
-                </div>
-                <div class="field-row mb40">
-                  <div class="field-column">
-                    <label for="">E-mail</label>
-                    <input type="text" placeholder="Введите почту">
-                  </div>
-                  <div class="field-column">
-                    <label for="">ФИО</label>
-                    <input type="text" placeholder="ФИО сотрудника">
-                  </div>
-                  <div class="field-column">
-                    <label for="">Должность</label>
-                    <input type="text" placeholder="Выберите из списка">
-                  </div>
-                </div>
-                <div class="field-row">
-                  <div class="h1">Организации</div>
-                </div>
-                <div class="field-row mb40">
-                  <div class="field-column"> 
-                    <div class="checkbox style-2">
-                      <input type="checkbox" id="checkbox-1">
-                      <label for="checkbox-1">Использовать общую цену   </label>
-                    </div>
-                    <div class="checkbox style-2">
-                      <input type="checkbox" id="checkbox-2">
-                      <label for="checkbox-2">Использовать общую цену   </label>
-                    </div>
-                    <div class="checkbox style-2">
-                      <input type="checkbox" id="checkbox-3">
-                      <label for="checkbox-3">Использовать общую цену   </label><span>ФГ Афанасьев</span>
-                    </div>
-                    <div class="checkbox style-2">
-                      <input type="checkbox" id="checkbox-4">
-                      <label for="checkbox-4">Использовать общую цену   </label><span>ФГ Афанасьев</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="field-group gap0">
-                <div class="field-footer">               
-                  <button class="btn">Отменить</button>
-                  <button class="btn prime">Сохранить</button>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="popup" data-id="sendmail">
             <div class="popup-head"><img src="../../../../svg/btnIcons/check.svg" alt=""></div>

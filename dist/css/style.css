@@ -204,7 +204,7 @@ table {
 .main-container .sidebar-wrapper {
   width: 400px;
   padding: 24px;
-  padding-right: 24px;
+  padding-right: 9px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -222,6 +222,7 @@ table {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-right: 15px;
 }
 .main-container .sidebar-inner .sidebar-footer {
   margin-top: auto;
@@ -579,7 +580,7 @@ table {
   stroke: #fff;
 }
 
-[data-toggle=collaps] {
+[data-toggle=collaps] > .toggle-arrow {
   cursor: pointer;
 }
 
@@ -792,6 +793,16 @@ body {
   .bg-cover .bg-cover-footer .year {
     font-size: 18px;
   }
+}
+
+.hidden {
+  visibility: hidden;
+  display: none !important;
+}
+
+.w-100 {
+  width: 100%;
+  max-width: 100%;
 }
 
 button {
@@ -1149,6 +1160,9 @@ button {
 .card.mh312 {
   min-height: 312px;
 }
+.card.mh340 {
+  min-height: 340px;
+}
 
 .filed_row {
   display: flex;
@@ -1219,7 +1233,7 @@ input.search {
   position: absolute;
   left: -99999999px;
 }
-.checkbox label::before {
+.checkbox .checked::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -1233,7 +1247,7 @@ input.search {
   text-align: center;
   position: relative;
 }
-.checkbox input:checked + label::before {
+.checkbox input:checked + .checked::before {
   background: url(../svg/filtres/check.svg);
   border-color: #6825da;
   background-size: 16px;
@@ -1254,7 +1268,7 @@ input.search {
   position: absolute;
   left: -99999999px;
 }
-.radio label::before {
+.radio .checked::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -1269,7 +1283,7 @@ input.search {
   position: relative;
   top: -0.2em;
 }
-.radio input:checked + label::before {
+.radio input:checked + .checked::before {
   background: url(../svg/filtres/radio.svg);
   border-color: #6825da;
   background-size: 16px;
@@ -1371,13 +1385,13 @@ input[type=number] {
   align-items: center;
   gap: 16px;
 }
-.checkbox.style-2 label {
+.checkbox.style-2 span {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
 }
-.checkbox.style-2 label span {
+.checkbox.style-2 span small {
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -1449,6 +1463,26 @@ input[type=number] {
   display: flex;
   align-items: center;
   gap: 9px;
+}
+.table.products .tr {
+  display: block;
+}
+.table.products .trhead {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px 120px 120px;
+  align-items: center;
+  gap: 8px;
+}
+.table.products .trhead .td.icon-svgs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.table.products .trhead .td.icon-svgs button {
+  background: none;
+  padding: 0;
+  border: none;
 }
 .table.organizations .thead,
 .table.organizations .tr {
@@ -1896,7 +1930,7 @@ input[type=number] {
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: normal;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   background-image: url(../../svg/arrow/arrow-down.svg);
@@ -1930,6 +1964,39 @@ input[type=number] {
 }
 .dropdown-container select {
   width: 100%;
+}
+
+.select2-selection .select2-search__field {
+  border: none;
+  outline: 0;
+  height: 100%;
+  padding: 0;
+  margin-left: 0;
+  width: auto;
+  flex-grow: 1;
+  background: transparent;
+  border-radius: 0;
+}
+
+.select2-selection__rendered {
+  width: 100%;
+}
+
+.select2-container--default .select2-selection--single {
+  display: flex;
+  align-items: center;
+}
+
+.select2-selection[aria-expanded=true] .select2-selection__rendered {
+  width: auto;
+}
+
+.select2-selection[aria-expanded=false] .select2-search__field {
+  display: none;
+}
+
+.select2-search--dropdown {
+  padding: 0;
 }
 
 .login {

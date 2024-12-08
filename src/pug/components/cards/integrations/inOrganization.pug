@@ -4,21 +4,28 @@ div.card.integrations
             img(src="../svg/Integrations.svg")
             span Ozon INT
 
-    div.card__body        
+    div.card__body     
+        div.action.hidden
+            span Удалить интеграцию?   
         div.title ООО “Ромашка”
         div.markets
             a.market(href="#") 
                 img(src="../svg/markets/markets.svg", alt="")
                 span МойСклад
             a.market(href="#") 
-                img(src="../svg/markets/markets-1.svg", alt="")
+                img(src="../svg/markets/markets-1.svg", alt="") 
                 span Wildberries
+                
+    div.card__footer.w-100.flex.hidden
+        button.btn.cancel Отменить
+        button.btn.prime Удалить
+
     div.card__footer.text-right
         div.mb16
             a(href="#").link          
                 img(src="../svg/IconPencil.svg", alt="")
                 span Редактировать
         div 
-            a(href="#").link          
+            button.remove.link          
                 img(src="../svg/IconTrash.svg", alt="")
                 span Удалить

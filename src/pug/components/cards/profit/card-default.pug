@@ -4,7 +4,9 @@ div.card.profit
             img(src="../svg/PriceIcon.svg")
             span 568 товаров в диапазоне
 
-    div.card__body       
+    div.card__body
+        div.action.hidden
+            span Удалить?         
         div.info 
             div.label Диапазон цен
             div.text от 0 ₽
@@ -13,7 +15,10 @@ div.card.profit
             div.label Прибыль в процентах
             div.text 1%
 
-    div.card__footer.text-right 
-        a(href="#").link          
+    div.card__footer.w-100.flex.hidden
+        button.btn.cancel Отменить
+        button.btn.prime Удалить
+    div.card__footer.text-right
+        button.remove.link          
             img(src="../svg/IconTrash.svg", alt="")
             span Удалить

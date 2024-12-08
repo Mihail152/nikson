@@ -1,19 +1,27 @@
-div.filter-container.sort
+form(action="").filter-container.sort
     div.filter
         div.filter__column.wide
             div.h2 Сортировать по
             div.filter__radios
                 div.radio
-                    input(type="radio", name="filterSort-option", value="sort-1", id="sort-1", checked)
-                    label(for="sort-1") Позиция
+                    label 
+                        input(type="radio", name="filterSort-option", value="sort-1", checked)
+                        span.checked
+                        span Позиция
                 div.radio
-                    input(type="radio", name="filterSort-option", value="sort-2", id="sort-2")
-                    label(for="sort-2") Позиция                    
+                    label 
+                        input(type="radio", name="filterSort-option", value="sort-2")
+                        span.checked
+                        span Позиция
                 div.radio
-                    input(type="radio", name="filterSort-option", value="sort-3", id="sort-3")
-                    label(for="sort-3") Позиция                    
+                    label 
+                        input(type="radio", name="filterSort-option", value="sort-3")
+                        span.checked
+                        span Позиция                    
                 div.radio
-                    input(type="radio", name="filterSort-option", value="sort-4", id="sort-4" )
-                    label(for="sort-4") Позиция 
+                    label 
+                        input(type="radio", name="filterSort-option", value="sort-4")
+                        span.checked
+                        span Позиция
     div.filter__actions
         button.btn.prime.apply-filter(type="button") Применить

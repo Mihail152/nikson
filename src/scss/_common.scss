@@ -185,3 +185,13 @@ body {
         }
     }
 }
+
+.hidden{
+    visibility: hidden;
+    display: none !important;
+}
+
+.w-100 {
+    width: 100%;
+    max-width: 100%;
+}

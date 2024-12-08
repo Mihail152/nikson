@@ -12,6 +12,7 @@ div.tabs-content
 
         div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
+            - var filter_option = 'filter-option-1'
             include ../../components/sorting.pug 
 
         include ../../components/table.pug                                                     
@@ -22,6 +23,7 @@ div.tab-content(data-id="tab2")
 
     div.content-bar
             input(type="text", class="search", placeholder="Поиск по товарам")
+            - var filter_option = 'filter-option-2'
             include ../../components/sorting.pug 
     
     div.cards-grid

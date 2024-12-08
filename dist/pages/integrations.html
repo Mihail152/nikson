@@ -27,8 +27,8 @@
 </svg>
           </div>
         </div>
-        <div class="sidebar-wrapper"> 
-          <nav class="sidebar-inner">
+        <div class="sidebar-wrapper">
+          <nav class="sidebar-inner slimScroll">
             <div class="sidebar-header">
               <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
               <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
@@ -51,7 +51,7 @@
             <div class="sidebar-footer">
               <ul class="menu">  
                 <li> <a class="menu-item" href="./notifications.html"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти </span></a></li>
               </ul>
             </div>
           </nav>
@@ -78,34 +78,38 @@
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
                       </button>
-                      <div class="filter-container">
+                      <form class="filter-container" action="">
                         <div class="filter">
                           <div class="filter__column">
-                            <div class="h2">Filter's slider</div>
+                            <div class="h2">Filter's slider </div>
                             <div class="filter__price">
                               <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">CheckBoxes</div>
                             <div class="filter__checkboxes">
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-1">
-                                <label for="checkbox-1">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-2">
-                                <label for="checkbox-2">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-3">
-                                <label for="checkbox-3">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-4">
-                                <label for="checkbox-4">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -116,25 +120,30 @@
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range-2"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">RadioBTN</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked>
-                                <label for="radio-1">Позиция</label>
+                                <label> </label>
+                                <undefined>
+                                  <input type="radio" value="radio-1" checked><span class="checked"></span><span>Позиция</span>
+                                </undefined>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-2" id="radio-2">
-                                <label for="radio-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-2"><span class="checked"></span><span>Позиция              </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-3" id="radio-3">
-                                <label for="radio-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-3"><span class="checked"></span><span>Позиция                 </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-4" id="radio-4">
-                                <label for="radio-4">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -143,7 +152,7 @@
                           <button class="btn prime apply-filter" type="button">Применить</button>
                           <button class="link reset-filter" type="button">Сбросить фильтры</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div> 
                       <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,26 +160,30 @@
 </svg>
 <span>Сортировка</span>
                       </button>
-                      <div class="filter-container sort">
+                      <form class="filter-container sort" action="">
                         <div class="filter">
                           <div class="filter__column wide">
                             <div class="h2">Сортировать по</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked>
-                                <label for="sort-1">Позиция</label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-1" checked><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-2" id="sort-2">
-                                <label for="sort-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-2"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-3" id="sort-3">
-                                <label for="sort-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-3"><span class="checked"></span><span>Позиция                    </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-4" id="sort-4">
-                                <label for="sort-4">Позиция </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -178,7 +191,7 @@
                         <div class="filter__actions">
                           <button class="btn prime apply-filter" type="button">Применить</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -188,13 +201,20 @@
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
-                    <div class="card__body">       
+                    <div class="card__body">    
+                      <div class="action hidden"><span>Удалить интеграцию?   </span></div>
                       <div class="title">ООО “Ромашка”</div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a></div>
                     </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
+                    </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
                     </div>
                   </div>
                   <div class="card integrations delete">
@@ -203,28 +223,42 @@
                     </div>
                     <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -244,34 +278,38 @@
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
                       </button>
-                      <div class="filter-container">
+                      <form class="filter-container" action="">
                         <div class="filter">
                           <div class="filter__column">
-                            <div class="h2">Filter's slider</div>
+                            <div class="h2">Filter's slider </div>
                             <div class="filter__price">
                               <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">CheckBoxes</div>
                             <div class="filter__checkboxes">
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-1">
-                                <label for="checkbox-1">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-2">
-                                <label for="checkbox-2">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-3">
-                                <label for="checkbox-3">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-4">
-                                <label for="checkbox-4">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -282,25 +320,30 @@
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range-2"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">RadioBTN</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked>
-                                <label for="radio-1">Позиция</label>
+                                <label> </label>
+                                <undefined>
+                                  <input type="radio" value="radio-1" checked><span class="checked"></span><span>Позиция</span>
+                                </undefined>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-2" id="radio-2">
-                                <label for="radio-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-2"><span class="checked"></span><span>Позиция              </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-3" id="radio-3">
-                                <label for="radio-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-3"><span class="checked"></span><span>Позиция                 </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-4" id="radio-4">
-                                <label for="radio-4">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -309,7 +352,7 @@
                           <button class="btn prime apply-filter" type="button">Применить</button>
                           <button class="link reset-filter" type="button">Сбросить фильтры</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div> 
                       <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -317,26 +360,30 @@
 </svg>
 <span>Сортировка</span>
                       </button>
-                      <div class="filter-container sort">
+                      <form class="filter-container sort" action="">
                         <div class="filter">
                           <div class="filter__column wide">
                             <div class="h2">Сортировать по</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked>
-                                <label for="sort-1">Позиция</label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-1" checked><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-2" id="sort-2">
-                                <label for="sort-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-2"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-3" id="sort-3">
-                                <label for="sort-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-3"><span class="checked"></span><span>Позиция                    </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-4" id="sort-4">
-                                <label for="sort-4">Позиция </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -344,7 +391,7 @@
                         <div class="filter__actions">
                           <button class="btn prime apply-filter" type="button">Применить</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -354,13 +401,20 @@
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
-                    <div class="card__body">       
+                    <div class="card__body">    
+                      <div class="action hidden"><span>Удалить интеграцию?   </span></div>
                       <div class="title">ООО “Ромашка”</div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a></div>
                     </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
+                    </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
                     </div>
                   </div>
                   <div class="card integrations delete">
@@ -369,28 +423,42 @@
                     </div>
                     <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -410,34 +478,38 @@
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
                       </button>
-                      <div class="filter-container">
+                      <form class="filter-container" action="">
                         <div class="filter">
                           <div class="filter__column">
-                            <div class="h2">Filter's slider</div>
+                            <div class="h2">Filter's slider </div>
                             <div class="filter__price">
                               <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">CheckBoxes</div>
                             <div class="filter__checkboxes">
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-1">
-                                <label for="checkbox-1">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-2">
-                                <label for="checkbox-2">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-3">
-                                <label for="checkbox-3">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                               <div class="checkbox">
-                                <input type="checkbox" id="checkbox-4">
-                                <label for="checkbox-4">Позиция      </label>
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -448,25 +520,30 @@
                               <input class="price-max" type="number" placeholder="До">
                             </div>
                             <div class="filter__slider">
-                              <div id="price-range-2"></div>
+                              <div class="slider"></div>
                             </div>
                             <div class="h3">RadioBTN</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked>
-                                <label for="radio-1">Позиция</label>
+                                <label> </label>
+                                <undefined>
+                                  <input type="radio" value="radio-1" checked><span class="checked"></span><span>Позиция</span>
+                                </undefined>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-2" id="radio-2">
-                                <label for="radio-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-2"><span class="checked"></span><span>Позиция              </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-3" id="radio-3">
-                                <label for="radio-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-3"><span class="checked"></span><span>Позиция                 </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filter-option" value="radio-4" id="radio-4">
-                                <label for="radio-4">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" value="radio-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -475,7 +552,7 @@
                           <button class="btn prime apply-filter" type="button">Применить</button>
                           <button class="link reset-filter" type="button">Сбросить фильтры</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div> 
                       <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -483,26 +560,30 @@
 </svg>
 <span>Сортировка</span>
                       </button>
-                      <div class="filter-container sort">
+                      <form class="filter-container sort" action="">
                         <div class="filter">
                           <div class="filter__column wide">
                             <div class="h2">Сортировать по</div>
                             <div class="filter__radios">
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked>
-                                <label for="sort-1">Позиция</label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-1" checked><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-2" id="sort-2">
-                                <label for="sort-2">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-2"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-3" id="sort-3">
-                                <label for="sort-3">Позиция                    </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-3"><span class="checked"></span><span>Позиция                    </span>
+                                </label>
                               </div>
                               <div class="radio">
-                                <input type="radio" name="filterSort-option" value="sort-4" id="sort-4">
-                                <label for="sort-4">Позиция </label>
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -510,7 +591,7 @@
                         <div class="filter__actions">
                           <button class="btn prime apply-filter" type="button">Применить</button>
                         </div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -520,13 +601,20 @@
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
-                    <div class="card__body">       
+                    <div class="card__body">    
+                      <div class="action hidden"><span>Удалить интеграцию?   </span></div>
                       <div class="title">ООО “Ромашка”</div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a></div>
                     </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
+                    </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
                     </div>
                   </div>
                   <div class="card integrations delete">
@@ -535,28 +623,42 @@
                     </div>
                     <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
-                  <div class="card integrations mh312">
+                  <div class="card integrations mh340">
                     <div class="card__header">
                       <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
                     </div>
                     <div class="card__body">
+                      <div class="action hidden"><span>Удалить интеграцию?</span></div>
                       <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="btn cancel">Отменить</button>
+                      <button class="btn prime">Удалить</button>
                     </div>
                     <div class="card__footer text-right">
                       <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
-                      <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></a></div>
+                      <div> 
+                        <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                      </div>
                     </div>
                   </div>
                 </div>

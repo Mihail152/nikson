@@ -18,7 +18,7 @@
     left: -99999999px;
   }
 
-  label::before {
+  .checked::before{
     content: "";
     display: inline-block;
     width: 24px;
@@ -34,7 +34,8 @@
     // top: -0.2em;
   }
 
-  input:checked + label::before {
+
+  input:checked + .checked::before {
     background: url(../svg/filtres/check.svg);
     border-color: #6825da;
     background-size: 16px;
@@ -59,7 +60,7 @@
     left: -99999999px;
   }
 
-  label::before {
+  .checked::before{
     content: "";
     display: inline-block;
     width: 24px;
@@ -75,7 +76,7 @@
     top: -0.2em;
   }
 
-  input:checked + label::before {
+  input:checked + .checked::before{
     background: url(../svg/filtres/radio.svg);
     border-color: #6825da;
     background-size: 16px;
@@ -195,13 +196,13 @@ input[type="number"] {
   align-items: center;
   gap: 16px;
 
-  label {
+  span {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
 
-    span {
+    small {
       font-size: 16px;
       font-weight: 400;
       line-height: 19.2px;

@@ -26,8 +26,8 @@
 </svg>
           </div>
         </div>
-        <div class="sidebar-wrapper"> 
-          <nav class="sidebar-inner">
+        <div class="sidebar-wrapper">
+          <nav class="sidebar-inner slimScroll">
             <div class="sidebar-header">
               <div class="brand"><a href="../"> <img src="./../svg/Logo.svg" alt=""></a></div>
               <div class="toggle-sidebar"><img src="./../svg/ToggleBar.svg" alt=""></div>
@@ -50,7 +50,7 @@
             <div class="sidebar-footer">
               <ul class="menu">  
                 <li> <a class="menu-item" href="./notifications.html"><img src="./../svg/navigation/notifications.svg" alt=""><span>Уведомления</span><span class="badge">99+</span></a></li>
-                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти</span></a></li>
+                <li> <a class="menu-item" href="/"><img src="./../svg/navigation/logout.svg" alt=""><span>Выйти </span></a></li>
               </ul>
             </div>
           </nav>
@@ -67,7 +67,7 @@
             <div class="tabs-content">   
               <div class="tab-content active" data-id="tab1">           
                 <div class="content-header">
-                  <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="product-add.html"><span>Редактировать</span></a>
+                  <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="./organizations-edit.html"><span>Редактировать</span></a>
                 </div>
                 <div class="content-body">
                   <div class="status mb40"><img class="indicator" src="../svg/indicator/status_on.svg"><span>Работает</span></div>
@@ -152,189 +152,946 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="tab-content" data-id="tab2">
-              <div class="content-header"> 
-                <div class="title">Задания для закупщиков </div>
-              </div>
-              <div class="content-bar">
-                <input class="search" type="text" placeholder="Поиск по товарам">
-                <div class="sorting">
-                  <div> 
-                    <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="tab-content" data-id="tab2">
+                <div class="content-header">
+                  <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div>
+                </div>
+                <div class="content-bar">
+                  <input class="search" type="text" placeholder="Поиск по товарам">
+                  <div class="sorting">
+                    <div> 
+                      <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19.306 2H4.69362C3.34806 2 2.22656 3.11101 2.55899 4.41737C2.91304 5.80166 3.56503 7.09147 4.46917 8.19624C5.37331 9.30102 6.50769 10.194 7.79266 10.8124C8.79482 11.2934 9.56441 12.2384 9.56441 13.3519V20.7798C9.56452 20.9878 9.61764 21.1923 9.71874 21.374C9.81984 21.5557 9.96556 21.7084 10.1421 21.8178C10.3186 21.9271 10.52 21.9894 10.7273 21.9988C10.9346 22.0081 11.1408 21.9642 11.3264 21.8712L13.7618 20.6503C13.964 20.549 14.1342 20.3933 14.2531 20.2005C14.372 20.0077 14.4351 19.7855 14.4352 19.5589V13.3519C14.4352 12.2384 15.2048 11.2934 16.2057 10.8124C17.4912 10.1942 18.626 9.30142 19.5306 8.19663C20.4352 7.09185 21.0875 5.80189 21.4418 4.41737C21.7718 3.11101 20.6491 2 19.306 2Z" stroke="#999999" stroke-width="2"/>
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
-                    </button>
-                    <div class="filter-container">
-                      <div class="filter">
-                        <div class="filter__column">
-                          <div class="h2">Filter's slider</div>
-                          <div class="filter__price">
-                            <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
-                            <input class="price-max" type="number" placeholder="До">
+                      </button>
+                      <form class="filter-container" action="">
+                        <div class="filter">
+                          <div class="filter__column">
+                            <div class="h2">Filter's slider </div>
+                            <div class="filter__price">
+                              <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
+                              <input class="price-max" type="number" placeholder="До">
+                            </div>
+                            <div class="filter__slider">
+                              <div class="slider"></div>
+                            </div>
+                            <div class="h3">CheckBoxes</div>
+                            <div class="filter__checkboxes">
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                            </div>
                           </div>
-                          <div class="filter__slider">
-                            <div id="price-range"></div>
-                          </div>
-                          <div class="h3">CheckBoxes</div>
-                          <div class="filter__checkboxes">
-                            <div class="checkbox">
-                              <input type="checkbox" id="checkbox-1">
-                              <label for="checkbox-1">Позиция      </label>
+                          <div class="filter__column">
+                            <div class="h2">Filter's slider 2</div>
+                            <div class="filter__price">
+                              <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
+                              <input class="price-max" type="number" placeholder="До">
                             </div>
-                            <div class="checkbox">
-                              <input type="checkbox" id="checkbox-2">
-                              <label for="checkbox-2">Позиция      </label>
+                            <div class="filter__slider">
+                              <div class="slider"></div>
                             </div>
-                            <div class="checkbox">
-                              <input type="checkbox" id="checkbox-3">
-                              <label for="checkbox-3">Позиция      </label>
-                            </div>
-                            <div class="checkbox">
-                              <input type="checkbox" id="checkbox-4">
-                              <label for="checkbox-4">Позиция      </label>
+                            <div class="h3">RadioBTN</div>
+                            <div class="filter__radios">
+                              <div class="radio">
+                                <label> </label>
+                                <undefined>
+                                  <input type="radio" value="radio-1" checked><span class="checked"></span><span>Позиция</span>
+                                </undefined>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-2"><span class="checked"></span><span>Позиция              </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-3"><span class="checked"></span><span>Позиция                 </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class="filter__column">
-                          <div class="h2">Filter's slider 2</div>
-                          <div class="filter__price">
-                            <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
-                            <input class="price-max" type="number" placeholder="До">
-                          </div>
-                          <div class="filter__slider">
-                            <div id="price-range-2"></div>
-                          </div>
-                          <div class="h3">RadioBTN</div>
-                          <div class="filter__radios">
-                            <div class="radio">
-                              <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked>
-                              <label for="radio-1">Позиция</label>
-                            </div>
-                            <div class="radio">
-                              <input type="radio" name="filter-option" value="radio-2" id="radio-2">
-                              <label for="radio-2">Позиция                    </label>
-                            </div>
-                            <div class="radio">
-                              <input type="radio" name="filter-option" value="radio-3" id="radio-3">
-                              <label for="radio-3">Позиция                    </label>
-                            </div>
-                            <div class="radio">
-                              <input type="radio" name="filter-option" value="radio-4" id="radio-4">
-                              <label for="radio-4">Позиция                    </label>
-                            </div>
-                          </div>
+                        <div class="filter__actions">
+                          <button class="btn prime apply-filter" type="button">Применить</button>
+                          <button class="link reset-filter" type="button">Сбросить фильтры</button>
                         </div>
-                      </div>
-                      <div class="filter__actions">
-                        <button class="btn prime apply-filter" type="button">Применить</button>
-                        <button class="link reset-filter" type="button">Сбросить фильтры</button>
-                      </div>
+                      </form>
                     </div>
-                  </div>
-                  <div> 
-                    <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div> 
+                      <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.85714 22V9.5M6.85714 22L3 18.25M6.85714 22L10.7143 18.25M17.1429 2V14.5M17.1429 2L21 5.75M17.1429 2L13.2857 5.75" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 <span>Сортировка</span>
-                    </button>
-                    <div class="filter-container sort">
-                      <div class="filter">
-                        <div class="filter__column wide">
-                          <div class="h2">Сортировать по</div>
-                          <div class="filter__radios">
-                            <div class="radio">
-                              <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked>
-                              <label for="sort-1">Позиция</label>
+                      </button>
+                      <form class="filter-container sort" action="">
+                        <div class="filter">
+                          <div class="filter__column wide">
+                            <div class="h2">Сортировать по</div>
+                            <div class="filter__radios">
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-1" checked><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-2"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-3"><span class="checked"></span><span>Позиция                    </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
                             </div>
-                            <div class="radio">
-                              <input type="radio" name="filterSort-option" value="sort-2" id="sort-2">
-                              <label for="sort-2">Позиция                    </label>
+                          </div>
+                        </div>
+                        <div class="filter__actions">
+                          <button class="btn prime apply-filter" type="button">Применить</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-before"> 
+                  <h2>Товары</h2>
+                </div>
+                <div class="table organizations">
+                  <div class="thead"> 
+                    <div class="td"> <img src="../svg/navigation/products.svg" alt=""><span>SKU</span></div>
+                    <div class="td"> <img src="../svg/navigation/briefcase.svg" alt=""><span>SKU</span></div>
+                    <div class="td">Название</div>
+                    <div class="td">Цена закупки</div>
+                    <div class="td">В продаже</div>
+                    <div class="td"></div>
+                  </div>
+                  <div class="tbody"> 
+                    <div class="tr">
+                      <div class="trhead">
+                        <div class="trbody_col first"> 
+                          <div class="td">39847</div>
+                          <div class="td">39847</div>
+                          <div class="td title">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                          <div class="td">200 000 ₽</div>
+                          <div class="td"> 
+                            <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="td icons">
+                            <button class="info toggle-panel">
+                              <div class="icon-svg ic-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35833)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35833" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35826)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35826" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                            </button>
+                            <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6.44444H21M9.75 10.8889V17.5556M14.25 10.8889V17.5556M4.125 6.44444L5.25 19.7778C5.25 20.3671 5.48705 20.9324 5.90901 21.3491C6.33097 21.7659 6.90326 22 7.5 22H16.5C17.0967 22 17.669 21.7659 18.091 21.3491C18.5129 20.9324 18.75 20.3671 18.75 19.7778L19.875 6.44444M8.625 6.44444V3.11111C8.625 2.81643 8.74353 2.53381 8.95451 2.32544C9.16548 2.11706 9.45163 2 9.75 2H14.25C14.5484 2 14.8345 2.11706 15.0455 2.32544C15.2565 2.53381 15.375 2.81643 15.375 3.11111V6.44444" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                            </button><a href="./organizations-edit.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9994 21.5H22M15.333 4.73503L18.6665 8.08803M16.8619 3.19489C17.3043 2.74996 17.9042 2.5 18.5298 2.5C19.1554 2.5 19.7553 2.74996 20.1977 3.19489C20.64 3.63982 20.8885 4.24328 20.8885 4.87251C20.8885 5.50173 20.64 6.10519 20.1977 6.55012L6.85249 19.9744C6.58814 20.2403 6.26137 20.4348 5.90244 20.5399L2.71115 21.4765C2.61554 21.5046 2.51418 21.5063 2.4177 21.4814C2.32122 21.4565 2.23315 21.406 2.16273 21.3352C2.0923 21.2644 2.0421 21.1758 2.01738 21.0787C1.99266 20.9817 1.99434 20.8797 2.02222 20.7836L2.95339 17.5736C3.05808 17.213 3.25146 16.8847 3.51564 16.6192L16.8619 3.19489Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trbody">
+                        <div class="trbody_col first">
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
                             </div>
-                            <div class="radio">
-                              <input type="radio" name="filterSort-option" value="sort-3" id="sort-3">
-                              <label for="sort-3">Позиция                    </label>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽ <img src="../svg/price/hand_on_alarm_off.svg"></div>
                             </div>
-                            <div class="radio">
-                              <input type="radio" name="filterSort-option" value="sort-4" id="sort-4">
-                              <label for="sort-4">Позиция </label>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="trbody_row h-100">
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a></div>
+                            </div>
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="filter__actions">
-                        <button class="btn prime apply-filter" type="button">Применить</button>
+                    </div>
+                    <div class="tr error">
+                      <div class="trhead">
+                        <div class="trbody_col first"> 
+                          <div class="td">39847</div>
+                          <div class="td">39847</div>
+                          <div class="td title">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                          <div class="td">200 000 ₽</div>
+                          <div class="td"> 
+                            <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="td icons">
+                            <button class="info toggle-panel">
+                              <div class="icon-svg ic-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35833)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35833" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35826)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35826" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                            </button>
+                            <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6.44444H21M9.75 10.8889V17.5556M14.25 10.8889V17.5556M4.125 6.44444L5.25 19.7778C5.25 20.3671 5.48705 20.9324 5.90901 21.3491C6.33097 21.7659 6.90326 22 7.5 22H16.5C17.0967 22 17.669 21.7659 18.091 21.3491C18.5129 20.9324 18.75 20.3671 18.75 19.7778L19.875 6.44444M8.625 6.44444V3.11111C8.625 2.81643 8.74353 2.53381 8.95451 2.32544C9.16548 2.11706 9.45163 2 9.75 2H14.25C14.5484 2 14.8345 2.11706 15.0455 2.32544C15.2565 2.53381 15.375 2.81643 15.375 3.11111V6.44444" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                            </button><a href="./organizations-edit.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9994 21.5H22M15.333 4.73503L18.6665 8.08803M16.8619 3.19489C17.3043 2.74996 17.9042 2.5 18.5298 2.5C19.1554 2.5 19.7553 2.74996 20.1977 3.19489C20.64 3.63982 20.8885 4.24328 20.8885 4.87251C20.8885 5.50173 20.64 6.10519 20.1977 6.55012L6.85249 19.9744C6.58814 20.2403 6.26137 20.4348 5.90244 20.5399L2.71115 21.4765C2.61554 21.5046 2.51418 21.5063 2.4177 21.4814C2.32122 21.4565 2.23315 21.406 2.16273 21.3352C2.0923 21.2644 2.0421 21.1758 2.01738 21.0787C1.99266 20.9817 1.99434 20.8797 2.02222 20.7836L2.95339 17.5736C3.05808 17.213 3.25146 16.8847 3.51564 16.6192L16.8619 3.19489Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+                          </div>
+                        </div>
                       </div>
+                      <div class="trbody">
+                        <div class="trbody_col first">
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽ <img src="../svg/price/hand_on_alarm_off.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="trbody_row h-100">
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a></div>
+                            </div>
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tr active">
+                      <div class="trhead">
+                        <div class="trbody_col first"> 
+                          <div class="td">39847</div>
+                          <div class="td">39847</div>
+                          <div class="td title">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                          <div class="td">200 000 ₽</div>
+                          <div class="td"> 
+                            <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="td icons">
+                            <button class="info toggle-panel">
+                              <div class="icon-svg ic-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35833)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35833" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35826)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35826" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                            </button>
+                            <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6.44444H21M9.75 10.8889V17.5556M14.25 10.8889V17.5556M4.125 6.44444L5.25 19.7778C5.25 20.3671 5.48705 20.9324 5.90901 21.3491C6.33097 21.7659 6.90326 22 7.5 22H16.5C17.0967 22 17.669 21.7659 18.091 21.3491C18.5129 20.9324 18.75 20.3671 18.75 19.7778L19.875 6.44444M8.625 6.44444V3.11111C8.625 2.81643 8.74353 2.53381 8.95451 2.32544C9.16548 2.11706 9.45163 2 9.75 2H14.25C14.5484 2 14.8345 2.11706 15.0455 2.32544C15.2565 2.53381 15.375 2.81643 15.375 3.11111V6.44444" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                            </button><a href="./organizations-edit.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9994 21.5H22M15.333 4.73503L18.6665 8.08803M16.8619 3.19489C17.3043 2.74996 17.9042 2.5 18.5298 2.5C19.1554 2.5 19.7553 2.74996 20.1977 3.19489C20.64 3.63982 20.8885 4.24328 20.8885 4.87251C20.8885 5.50173 20.64 6.10519 20.1977 6.55012L6.85249 19.9744C6.58814 20.2403 6.26137 20.4348 5.90244 20.5399L2.71115 21.4765C2.61554 21.5046 2.51418 21.5063 2.4177 21.4814C2.32122 21.4565 2.23315 21.406 2.16273 21.3352C2.0923 21.2644 2.0421 21.1758 2.01738 21.0787C1.99266 20.9817 1.99434 20.8797 2.02222 20.7836L2.95339 17.5736C3.05808 17.213 3.25146 16.8847 3.51564 16.6192L16.8619 3.19489Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trbody">
+                        <div class="trbody_col first">
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽ <img src="../svg/price/hand_on_alarm_off.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%<img src="../svg/PriceIcon.svg"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="trbody_row h-100">
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a></div>
+                            </div>
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tr active error">
+                      <div class="trhead">
+                        <div class="trbody_col first"> 
+                          <div class="td">39847</div>
+                          <div class="td">39847</div>
+                          <div class="td title">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+                          <div class="td">200 000 ₽</div>
+                          <div class="td"> 
+                            <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="td icons">
+                            <button class="info toggle-panel">
+                              <div class="icon-svg ic-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6825DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35833)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35833" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                              </div>
+                              <div class="icon-svg ic-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" fill="url(#paint0_linear_216_35826)"/>
+<defs>
+<linearGradient id="paint0_linear_216_35826" x1="0" y1="0" x2="11.2353" y2="1.66515" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C93134"/>
+<stop offset="1" stop-color="#DE5658"/>
+</linearGradient>
+</defs>
+</svg>
+
+                              </div>
+                            </button>
+                            <button>
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6.44444H21M9.75 10.8889V17.5556M14.25 10.8889V17.5556M4.125 6.44444L5.25 19.7778C5.25 20.3671 5.48705 20.9324 5.90901 21.3491C6.33097 21.7659 6.90326 22 7.5 22H16.5C17.0967 22 17.669 21.7659 18.091 21.3491C18.5129 20.9324 18.75 20.3671 18.75 19.7778L19.875 6.44444M8.625 6.44444V3.11111C8.625 2.81643 8.74353 2.53381 8.95451 2.32544C9.16548 2.11706 9.45163 2 9.75 2H14.25C14.5484 2 14.8345 2.11706 15.0455 2.32544C15.2565 2.53381 15.375 2.81643 15.375 3.11111V6.44444" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                            </button><a href="./organizations-edit.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9994 21.5H22M15.333 4.73503L18.6665 8.08803M16.8619 3.19489C17.3043 2.74996 17.9042 2.5 18.5298 2.5C19.1554 2.5 19.7553 2.74996 20.1977 3.19489C20.64 3.63982 20.8885 4.24328 20.8885 4.87251C20.8885 5.50173 20.64 6.10519 20.1977 6.55012L6.85249 19.9744C6.58814 20.2403 6.26137 20.4348 5.90244 20.5399L2.71115 21.4765C2.61554 21.5046 2.51418 21.5063 2.4177 21.4814C2.32122 21.4565 2.23315 21.406 2.16273 21.3352C2.0923 21.2644 2.0421 21.1758 2.01738 21.0787C1.99266 20.9817 1.99434 20.8797 2.02222 20.7836L2.95339 17.5736C3.05808 17.213 3.25146 16.8847 3.51564 16.6192L16.8619 3.19489Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trbody">
+                        <div class="trbody_col first">
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%</div>
+                            </div>
+                          </div>
+                          <div class="trbody_row">
+                            <div class="td"> 
+                              <div class="label">Интеграция</div>
+                              <div class="text">WB int</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Цена </div>
+                              <div class="text">112 000 ₽</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Комиссия</div>
+                              <div class="text">24 000 ₽</div>
+                            </div>
+                            <div class="td"> 
+                              <div class="label">Прибыль</div>
+                              <div class="text">20%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="trbody_col last">
+                          <div class="trbody_row h-100">
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""></a><a class="market" href="#"> <img src="../svg/markets/wb_on.svg" alt=""></a></div>
+                            </div>
+                            <div> 
+                              <div class="label">В продаже</div>
+                              <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <nav>
+                  <ul class="pagination">
+                    <li><a class="page-item prev" href="#prev"> <img src="../svg/arrow/arrow-prev.svg" alt=""></a></li>
+                    <li> <span class="page-item current">1  </span></li>
+                    <li> <a class="page-item" href="#page-2"> <span>2 </span></a></li>
+                    <li> <a class="page-item" href="#page-3"> <span>3 </span></a></li>
+                    <li> <a class="page-item" href="#page-4"> <span>4 </span></a></li>
+                    <li> <a class="page-item" href="#page-5"> <span>5 </span></a></li>
+                    <li> <span class="page-item">... </span></li>
+                    <li> <a class="page-item" href="#page-99"> <span>99</span></a></li>
+                    <li><a class="page-item next" href="#next"><img src="../svg/arrow/arrow-next.svg" alt=""></a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="tabs-content">   
+                <div class="tab-content" data-id="tab3">
+                  <div class="content-header">
+                    <div class="title"> <a class="back" href="./organizations.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="#"><img src="../svg/BTNicons.svg" alt=""><span>Добавить интеграцию</span></a>
+                  </div>
+                  <div class="h1 mb24">Интеграции  4654654</div>
+                  <div class="cards-grid">
+                    <div class="card integrations mh340">
+                      <div class="card__header">
+                        <div class="status"><img src="../svg/Integrations.svg"><span>Ozon INT</span></div>
+                      </div>
+                      <div class="card__body">
+                        <div class="action hidden"><span>Удалить интеграцию?</span></div>
+                        <div class="markets"><a class="market" href="#"> <img src="../svg/markets/markets.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>Wildberries</span></a></div>
+                      </div>
+                      <div class="card__footer w-100 flex hidden">
+                        <button class="btn cancel">Отменить</button>
+                        <button class="btn prime">Удалить</button>
+                      </div>
+                      <div class="card__footer text-right">
+                        <div class="mb16"><a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                        <div> 
+                          <button class="remove link">      <img src="../svg/IconTrash.svg" alt=""><span>Удалить </span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card integrations delete mh312">
+                      <div class="card__body">       
+                        <div class="action"><span>Удалить интеграцию?   </span></div>
+                      </div>
+                      <div class="card__footer w-100 flex"><a class="btn" href="#">Отменить</a><a class="btn prime" href="#">Удалить</a></div>
+                    </div>
+                    <div class="card integrations aicenter jccenter gap24 mh312"><a class="btn-add prime" href="#"><img src="../svg/btnIcons/plus.svg" alt=""></a>
+                      <div class="label fz18">Добавить интеграцию </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="cards-grid">
-                <div class="card order">
-                  <div class="card__header">
-                    <div class="order">Заказ № <span>38944</span></div>
-                    <div class="detail"><img src="../svg/info/info.svg" alt=""><a href="/pages/order.html">Подробнее о заказе    </a></div>
-                  </div>
-                  <div class="card__body">  
-                    <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
-                  </div>
-                  <div class="card__footer">
-                    <div class="status"><img src="../svg/IconClock.svg"><span>В работе</span></div>
+              <div class="tab-content" data-id="tab4">
+                <div class="content-header">
+                  <div class="title"> <a class="back" href="organizations-item.html"><img src="../svg/arrow/arrow-prev.svg" alt=""></a><span>ООО “Ромашка”</span></div><a class="btn prime" href="organizations-staff-add.html"><img src="../svg/BTNicons.svg" alt=""><span>Добавить сотрудника</span></a>
+                </div>
+                <div class="content-bar">
+                  <input class="search" type="text" placeholder="Поиск по товарам">
+                  <div class="sorting">
+                    <div> 
+                      <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.306 2H4.69362C3.34806 2 2.22656 3.11101 2.55899 4.41737C2.91304 5.80166 3.56503 7.09147 4.46917 8.19624C5.37331 9.30102 6.50769 10.194 7.79266 10.8124C8.79482 11.2934 9.56441 12.2384 9.56441 13.3519V20.7798C9.56452 20.9878 9.61764 21.1923 9.71874 21.374C9.81984 21.5557 9.96556 21.7084 10.1421 21.8178C10.3186 21.9271 10.52 21.9894 10.7273 21.9988C10.9346 22.0081 11.1408 21.9642 11.3264 21.8712L13.7618 20.6503C13.964 20.549 14.1342 20.3933 14.2531 20.2005C14.372 20.0077 14.4351 19.7855 14.4352 19.5589V13.3519C14.4352 12.2384 15.2048 11.2934 16.2057 10.8124C17.4912 10.1942 18.626 9.30142 19.5306 8.19663C20.4352 7.09185 21.0875 5.80189 21.4418 4.41737C21.7718 3.11101 20.6491 2 19.306 2Z" stroke="#999999" stroke-width="2"/>
+</svg>
+<span>Фильтр </span><span class="filtercount"></span>
+                      </button>
+                      <form class="filter-container" action="">
+                        <div class="filter">
+                          <div class="filter__column">
+                            <div class="h2">Filter's slider </div>
+                            <div class="filter__price">
+                              <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
+                              <input class="price-max" type="number" placeholder="До">
+                            </div>
+                            <div class="filter__slider">
+                              <div class="slider"></div>
+                            </div>
+                            <div class="h3">CheckBoxes</div>
+                            <div class="filter__checkboxes">
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label> 
+                                  <input type="checkbox"><span class="checked"></span><span>Позиция </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__column">
+                            <div class="h2">Filter's slider 2</div>
+                            <div class="filter__price">
+                              <input class="price-min" type="number" placeholder="От"><img src="../svg/filtres/line.svg" alt="">
+                              <input class="price-max" type="number" placeholder="До">
+                            </div>
+                            <div class="filter__slider">
+                              <div class="slider"></div>
+                            </div>
+                            <div class="h3">RadioBTN</div>
+                            <div class="filter__radios">
+                              <div class="radio">
+                                <label> </label>
+                                <undefined>
+                                  <input type="radio" value="radio-1" checked><span class="checked"></span><span>Позиция</span>
+                                </undefined>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-2"><span class="checked"></span><span>Позиция              </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-3"><span class="checked"></span><span>Позиция                 </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" value="radio-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__actions">
+                          <button class="btn prime apply-filter" type="button">Применить</button>
+                          <button class="link reset-filter" type="button">Сбросить фильтры</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div> 
+                      <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.85714 22V9.5M6.85714 22L3 18.25M6.85714 22L10.7143 18.25M17.1429 2V14.5M17.1429 2L21 5.75M17.1429 2L13.2857 5.75" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<span>Сортировка</span>
+                      </button>
+                      <form class="filter-container sort" action="">
+                        <div class="filter">
+                          <div class="filter__column wide">
+                            <div class="h2">Сортировать по</div>
+                            <div class="filter__radios">
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-1" checked><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-2"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-3"><span class="checked"></span><span>Позиция                    </span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label> 
+                                  <input type="radio" name="filterSort-option" value="sort-4"><span class="checked"></span><span>Позиция</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__actions">
+                          <button class="btn prime apply-filter" type="button">Применить</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
-                <div class="card order">
-                  <div class="card__header">
-                    <div class="order">Заказ № <span>38944</span></div>
-                    <div class="detail"><img src="../svg/info/info.svg" alt=""><a href="/pages/order.html">Подробнее о заказе    </a></div>
+                <div class="h1 mb24">Сотрудники организации</div>
+                <div class="cards-grid mb40">
+                  <div class="card worker">
+                    <div class="card__header">
+                      <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="action hidden"><span>Удалить <br /> пользователя?   </span></div>
+                      <div class="title">Пушкин Александр Сергеевич</div>
+                      <div class="info"> 
+                        <div class="text">ООО «Ромашка»       </div>
+                      </div>
+                      <div class="info"> 
+                        <div class="text">ИП Иванов</div>
+                      </div>
+                      <div class="info"> <a class="more" href="#">ещё 3</a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="cancel btn">Отменить</button><a class="btn prime" href="#">Удалить</a>
+                    </div>
+                    <div class="card__footer text-right">
+                      <div class="mb16"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card__body">  
-                    <div class="markets"><a class="market" href="#"> <img src="../svg/markets/ozon_on.svg" alt=""><span>МойСклад</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
+                  <div class="card worker">
+                    <div class="card__header">
+                      <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="action hidden"><span>Удалить <br /> пользователя?   </span></div>
+                      <div class="title">Пушкин Александр Сергеевич</div>
+                      <div class="info"> 
+                        <div class="text">ООО «Ромашка»       </div>
+                      </div>
+                      <div class="info"> 
+                        <div class="text">ИП Иванов</div>
+                      </div>
+                      <div class="info"> <a class="more" href="#">ещё 3</a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="cancel btn">Отменить</button><a class="btn prime" href="#">Удалить</a>
+                    </div>
+                    <div class="card__footer text-right">
+                      <div class="mb16"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card__footer">
-                    <div class="status"><img src="../svg/IconClock.svg"><span>В работе</span></div>
+                  <div class="card worker">
+                    <div class="card__header">
+                      <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="action hidden"><span>Удалить <br /> пользователя?   </span></div>
+                      <div class="title">Пушкин Александр Сергеевич</div>
+                      <div class="info"> 
+                        <div class="text">ООО «Ромашка»       </div>
+                      </div>
+                      <div class="info"> 
+                        <div class="text">ИП Иванов</div>
+                      </div>
+                      <div class="info"> <a class="more" href="#">ещё 3</a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="cancel btn">Отменить</button><a class="btn prime" href="#">Удалить</a>
+                    </div>
+                    <div class="card__footer text-right">
+                      <div class="mb16"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card worker">
+                    <div class="card__header">
+                      <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                    </div>
+                    <div class="card__body">  
+                      <div class="action hidden"><span>Удалить <br /> пользователя?   </span></div>
+                      <div class="title">Пушкин Александр Сергеевич</div>
+                      <div class="info"> 
+                        <div class="text">ООО «Ромашка»       </div>
+                      </div>
+                      <div class="info"> 
+                        <div class="text">ИП Иванов</div>
+                      </div>
+                      <div class="info"> <a class="more" href="#">ещё 3</a></div>
+                    </div>
+                    <div class="card__footer w-100 flex hidden">
+                      <button class="cancel btn">Отменить</button><a class="btn prime" href="#">Удалить</a>
+                    </div>
+                    <div class="card__footer text-right">
+                      <div class="mb16"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      <div> 
+                        <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""><span>Удалить</span></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="card order">
-                  <div class="card__header">
-                    <div class="order">Заказ № <span>38944</span></div>
-                    <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="/pages/order.html">Вернуть в работу  </a></div>
+                <div class="field-group gap0">
+                  <div class="field-row mb24 gap24">
+                    <div class="h2">Сотрудники вне организации</div><img src="../svg/arrow/arrow-up.svg" alt="">
                   </div>
-                  <div class="card__body">  
-                    <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
-                  </div>
-                  <div class="card__footer">
-                    <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
-                  </div>
-                </div>
-                <div class="card order">
-                  <div class="card__header">
-                    <div class="order">Заказ № <span>38944</span></div>
-                    <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="/pages/order.html">Вернуть в работу  </a></div>
-                  </div>
-                  <div class="card__body">  
-                    <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
-                  </div>
-                  <div class="card__footer">
-                    <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
-                  </div>
-                </div>
-                <div class="card order">
-                  <div class="card__header">
-                    <div class="order">Заказ № <span>38944</span></div>
-                    <div class="detail"><img src="../svg/IconCancel.svg" alt=""><a href="/pages/order.html">Вернуть в работу  </a></div>
-                  </div>
-                  <div class="card__body">  
-                    <div class="markets">           <a class="market" href="#"> <img src="../svg/markets/markets-1.svg" alt=""><span>Wildberries</span></a><a class="market" href="#"> <img src="../svg/navigation/briefcase.svg" alt=""><span>ООО “Ромашка”</span></a></div>
-                  </div>
-                  <div class="card__footer">
-                    <div class="status"><img src="../svg/btnIcons/check.svg"><span class="check">Выполнено</span></div>
+                  <div class="cards-grid mb40">
+                    <div class="card organization">
+                      <div class="card__header">
+                        <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                      </div>
+                      <div class="card__body">       
+                        <div class="title">Петров Петр Петрович       </div>
+                      </div>
+                      <div class="card__footer">
+                        <div class="text-center"> <a class="btn prime w-100 block mb16" href="#"> Добавить в организацию</a></div>
+                        <div class="text-center"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      </div>
+                    </div>
+                    <div class="card organization">
+                      <div class="card__header">
+                        <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                      </div>
+                      <div class="card__body">       
+                        <div class="title">Петров Петр Петрович       </div>
+                      </div>
+                      <div class="card__footer">
+                        <div class="text-center"> <a class="btn prime w-100 block mb16" href="#"> Добавить в организацию</a></div>
+                        <div class="text-center"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      </div>
+                    </div>
+                    <div class="card organization">
+                      <div class="card__header">
+                        <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                      </div>
+                      <div class="card__body">       
+                        <div class="title">Петров Петр Петрович       </div>
+                      </div>
+                      <div class="card__footer">
+                        <div class="text-center"> <a class="btn prime w-100 block mb16" href="#"> Добавить в организацию</a></div>
+                        <div class="text-center"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      </div>
+                    </div>
+                    <div class="card organization">
+                      <div class="card__header">
+                        <div class="status"><img src="../svg/People.svg"><span>Менеджер</span></div>
+                      </div>
+                      <div class="card__body">       
+                        <div class="title">Петров Петр Петрович       </div>
+                      </div>
+                      <div class="card__footer">
+                        <div class="text-center"> <a class="btn prime w-100 block mb16" href="#"> Добавить в организацию</a></div>
+                        <div class="text-center"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""><span>Редактировать</span></a></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="tab-content" data-id="tab3"><span>3</span></div>
-            <div class="tab-content" data-id="tab4"><span>4</span></div>
           </div>
           <div class="popup" data-id="sendmail">
             <div class="popup-head"><img src="../../../../svg/btnIcons/check.svg" alt=""></div>

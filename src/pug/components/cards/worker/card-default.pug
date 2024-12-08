@@ -4,7 +4,10 @@ div.card.worker
             img(src="../svg/People.svg")
             span Менеджер
 
-    div.card__body        
+    div.card__body   
+        div.action.hidden
+            span Удалить <br /> пользователя?   
+
         div.title Пушкин Александр Сергеевич
         div.info 
             div.text ООО «Ромашка»       
@@ -13,6 +16,9 @@ div.card.worker
         div.info 
             a(href="#", class="more") ещё 3
         
+    div.card__footer.w-100.flex.hidden
+        button.cancel.btn Отменить
+        a(href="#").btn.prime Удалить
 
     div.card__footer.text-right
         div.mb16  
@@ -20,6 +26,6 @@ div.card.worker
                 img(src="../svg/IconPencil.svg", alt="")
                 span Редактировать
         div 
-            a(href="#").link          
+            button.remove.link          
                 img(src="../svg/IconTrash.svg", alt="")
                 span Удалить

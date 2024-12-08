@@ -3,7 +3,8 @@
   <div class="card__header">
     <div class="status"><img src="../svg/People.svg"/><span>Менеджер</span></div>
   </div>
-  <div class="card__body">       
+  <div class="card__body">  
+    <div class="action hidden"><span>Удалить <br /> пользователя?   </span></div>
     <div class="title">Пушкин Александр Сергеевич</div>
     <div class="info"> 
       <div class="text">ООО «Ромашка»       </div>
@@ -13,8 +14,13 @@
     </div>
     <div class="info"> <a class="more" href="#">ещё 3</a></div>
   </div>
+  <div class="card__footer w-100 flex hidden">
+    <button class="cancel btn">Отменить</button><a class="btn prime" href="#">Удалить</a>
+  </div>
   <div class="card__footer text-right">
     <div class="mb16"> <a class="link" href="#">         <img src="../svg/IconPencil.svg" alt=""/><span>Редактировать</span></a></div>
-    <div> <a class="link" href="#">         <img src="../svg/IconTrash.svg" alt=""/><span>Удалить</span></a></div>
+    <div> 
+      <button class="remove link">         <img src="../svg/IconTrash.svg" alt=""/><span>Удалить</span></button>
+    </div>
   </div>
 </div>

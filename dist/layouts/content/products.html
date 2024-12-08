@@ -17,34 +17,38 @@
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
           </button>
-          <div class="filter-container">
+          <form class="filter-container" action="">
             <div class="filter">
               <div class="filter__column">
-                <div class="h2">Filter's slider</div>
+                <div class="h2">Filter's slider </div>
                 <div class="filter__price">
                   <input class="price-min" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
                   <input class="price-max" type="number" placeholder="До"/>
                 </div>
                 <div class="filter__slider">
-                  <div id="price-range"></div>
+                  <div class="slider"></div>
                 </div>
                 <div class="h3">CheckBoxes</div>
                 <div class="filter__checkboxes">
                   <div class="checkbox">
-                    <input type="checkbox" id="checkbox-1"/>
-                    <label for="checkbox-1">Позиция      </label>
+                    <label> 
+                      <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                    </label>
                   </div>
                   <div class="checkbox">
-                    <input type="checkbox" id="checkbox-2"/>
-                    <label for="checkbox-2">Позиция      </label>
+                    <label> 
+                      <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                    </label>
                   </div>
                   <div class="checkbox">
-                    <input type="checkbox" id="checkbox-3"/>
-                    <label for="checkbox-3">Позиция      </label>
+                    <label> 
+                      <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                    </label>
                   </div>
                   <div class="checkbox">
-                    <input type="checkbox" id="checkbox-4"/>
-                    <label for="checkbox-4">Позиция      </label>
+                    <label> 
+                      <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -55,25 +59,30 @@
                   <input class="price-max" type="number" placeholder="До"/>
                 </div>
                 <div class="filter__slider">
-                  <div id="price-range-2"></div>
+                  <div class="slider"></div>
                 </div>
                 <div class="h3">RadioBTN</div>
                 <div class="filter__radios">
                   <div class="radio">
-                    <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked="checked"/>
-                    <label for="radio-1">Позиция</label>
+                    <label> </label>
+                    <filter-option-1>
+                      <input type="radio" name="filter-option-1" value="radio-1" checked="checked"/><span class="checked"></span><span>Позиция</span>
+                    </filter-option-1>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filter-option" value="radio-2" id="radio-2"/>
-                    <label for="radio-2">Позиция                    </label>
+                    <label> 
+                      <input type="radio" name="filter-option-1" value="radio-2"/><span class="checked"></span><span>Позиция              </span>
+                    </label>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filter-option" value="radio-3" id="radio-3"/>
-                    <label for="radio-3">Позиция                    </label>
+                    <label> 
+                      <input type="radio" name="filter-option-1" value="radio-3"/><span class="checked"></span><span>Позиция                 </span>
+                    </label>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filter-option" value="radio-4" id="radio-4"/>
-                    <label for="radio-4">Позиция                    </label>
+                    <label> 
+                      <input type="radio" name="filter-option-1" value="radio-4"/><span class="checked"></span><span>Позиция</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -82,7 +91,7 @@
               <button class="btn prime apply-filter" type="button">Применить</button>
               <button class="link reset-filter" type="button">Сбросить фильтры</button>
             </div>
-          </div>
+          </form>
         </div>
         <div> 
           <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,26 +99,30 @@
 </svg>
 <span>Сортировка</span>
           </button>
-          <div class="filter-container sort">
+          <form class="filter-container sort" action="">
             <div class="filter">
               <div class="filter__column wide">
                 <div class="h2">Сортировать по</div>
                 <div class="filter__radios">
                   <div class="radio">
-                    <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked="checked"/>
-                    <label for="sort-1">Позиция</label>
+                    <label> 
+                      <input type="radio" name="filterSort-option" value="sort-1" checked="checked"/><span class="checked"></span><span>Позиция</span>
+                    </label>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filterSort-option" value="sort-2" id="sort-2"/>
-                    <label for="sort-2">Позиция                    </label>
+                    <label> 
+                      <input type="radio" name="filterSort-option" value="sort-2"/><span class="checked"></span><span>Позиция</span>
+                    </label>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filterSort-option" value="sort-3" id="sort-3"/>
-                    <label for="sort-3">Позиция                    </label>
+                    <label> 
+                      <input type="radio" name="filterSort-option" value="sort-3"/><span class="checked"></span><span>Позиция                    </span>
+                    </label>
                   </div>
                   <div class="radio">
-                    <input type="radio" name="filterSort-option" value="sort-4" id="sort-4"/>
-                    <label for="sort-4">Позиция </label>
+                    <label> 
+                      <input type="radio" name="filterSort-option" value="sort-4"/><span class="checked"></span><span>Позиция</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -117,11 +130,11 @@
             <div class="filter__actions">
               <button class="btn prime apply-filter" type="button">Применить</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="table slimScroll">
+    <div class="table products slimScroll">
       <div class="thead"> 
         <div class="td">SKU</div>
         <div class="td">Название</div>
@@ -130,145 +143,365 @@
         <div class="td"></div>
       </div>
       <div class="tbody"> 
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"><a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"><a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
-        <div class="tr"> 
-          <div class="td">39847</div>
-          <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
-          <div class="td">200 000 ₽</div>
-          <div class="td">2 463</div>
-          <div class="td icons"> <a href="#"> <img src="../svg/IconTrash.svg" alt=""/></a><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a></div>
+        <div class="tr">
+          <div class="trhead">
+            <div class="td">39847</div>
+            <div class="td">Планшет Apple iPad Air (2024) 11” + Cellular 512GB фиолетовый</div>
+            <div class="td">200 000 ₽</div>
+            <div class="td">2 463</div>
+            <div class="td icons">
+              <button class="delete"><img src="../svg/IconTrash.svg" alt=""/></button><a href="#"> <img src="../svg/IconPencil.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="trfoot">
+            <div class="action"> <span>Удалить?</span></div>
+            <div class="flex gap16">
+              <button class="btn cancel">Отменить</button>
+              <button class="btn prime">Удалить</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -300,34 +533,38 @@
 </svg>
 <span>Фильтр </span><span class="filtercount"></span>
         </button>
-        <div class="filter-container">
+        <form class="filter-container" action="">
           <div class="filter">
             <div class="filter__column">
-              <div class="h2">Filter's slider</div>
+              <div class="h2">Filter's slider </div>
               <div class="filter__price">
                 <input class="price-min" type="number" placeholder="От"/><img src="../svg/filtres/line.svg" alt=""/>
                 <input class="price-max" type="number" placeholder="До"/>
               </div>
               <div class="filter__slider">
-                <div id="price-range"></div>
+                <div class="slider"></div>
               </div>
               <div class="h3">CheckBoxes</div>
               <div class="filter__checkboxes">
                 <div class="checkbox">
-                  <input type="checkbox" id="checkbox-1"/>
-                  <label for="checkbox-1">Позиция      </label>
+                  <label> 
+                    <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                  </label>
                 </div>
                 <div class="checkbox">
-                  <input type="checkbox" id="checkbox-2"/>
-                  <label for="checkbox-2">Позиция      </label>
+                  <label> 
+                    <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                  </label>
                 </div>
                 <div class="checkbox">
-                  <input type="checkbox" id="checkbox-3"/>
-                  <label for="checkbox-3">Позиция      </label>
+                  <label> 
+                    <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                  </label>
                 </div>
                 <div class="checkbox">
-                  <input type="checkbox" id="checkbox-4"/>
-                  <label for="checkbox-4">Позиция      </label>
+                  <label> 
+                    <input type="checkbox"/><span class="checked"></span><span>Позиция </span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -338,25 +575,30 @@
                 <input class="price-max" type="number" placeholder="До"/>
               </div>
               <div class="filter__slider">
-                <div id="price-range-2"></div>
+                <div class="slider"></div>
               </div>
               <div class="h3">RadioBTN</div>
               <div class="filter__radios">
                 <div class="radio">
-                  <input type="radio" name="filter-option" value="radio-1" id="radio-1" checked="checked"/>
-                  <label for="radio-1">Позиция</label>
+                  <label> </label>
+                  <filter-option-2>
+                    <input type="radio" name="filter-option-2" value="radio-1" checked="checked"/><span class="checked"></span><span>Позиция</span>
+                  </filter-option-2>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filter-option" value="radio-2" id="radio-2"/>
-                  <label for="radio-2">Позиция                    </label>
+                  <label> 
+                    <input type="radio" name="filter-option-2" value="radio-2"/><span class="checked"></span><span>Позиция              </span>
+                  </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filter-option" value="radio-3" id="radio-3"/>
-                  <label for="radio-3">Позиция                    </label>
+                  <label> 
+                    <input type="radio" name="filter-option-2" value="radio-3"/><span class="checked"></span><span>Позиция                 </span>
+                  </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filter-option" value="radio-4" id="radio-4"/>
-                  <label for="radio-4">Позиция                    </label>
+                  <label> 
+                    <input type="radio" name="filter-option-2" value="radio-4"/><span class="checked"></span><span>Позиция</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -365,7 +607,7 @@
             <button class="btn prime apply-filter" type="button">Применить</button>
             <button class="link reset-filter" type="button">Сбросить фильтры</button>
           </div>
-        </div>
+        </form>
       </div>
       <div> 
         <button class="btn filter-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,26 +615,30 @@
 </svg>
 <span>Сортировка</span>
         </button>
-        <div class="filter-container sort">
+        <form class="filter-container sort" action="">
           <div class="filter">
             <div class="filter__column wide">
               <div class="h2">Сортировать по</div>
               <div class="filter__radios">
                 <div class="radio">
-                  <input type="radio" name="filterSort-option" value="sort-1" id="sort-1" checked="checked"/>
-                  <label for="sort-1">Позиция</label>
+                  <label> 
+                    <input type="radio" name="filterSort-option" value="sort-1" checked="checked"/><span class="checked"></span><span>Позиция</span>
+                  </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filterSort-option" value="sort-2" id="sort-2"/>
-                  <label for="sort-2">Позиция                    </label>
+                  <label> 
+                    <input type="radio" name="filterSort-option" value="sort-2"/><span class="checked"></span><span>Позиция</span>
+                  </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filterSort-option" value="sort-3" id="sort-3"/>
-                  <label for="sort-3">Позиция                    </label>
+                  <label> 
+                    <input type="radio" name="filterSort-option" value="sort-3"/><span class="checked"></span><span>Позиция                    </span>
+                  </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="filterSort-option" value="sort-4" id="sort-4"/>
-                  <label for="sort-4">Позиция </label>
+                  <label> 
+                    <input type="radio" name="filterSort-option" value="sort-4"/><span class="checked"></span><span>Позиция</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -400,7 +646,7 @@
           <div class="filter__actions">
             <button class="btn prime apply-filter" type="button">Применить</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

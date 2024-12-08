@@ -6,8 +6,8 @@ div.page-wrapper
                     img(src="./../svg/Logo.svg", alt="")
             .menu-burger
                 include ../../svg/menu-burger.svg
-        div.sidebar-wrapper 
-            nav.sidebar-inner
+        div.sidebar-wrapper
+            nav.sidebar-inner.slimScroll
                 div.sidebar-header
                     div.brand
                         a(href="../") 
@@ -56,7 +56,7 @@ div.page-wrapper
                         li 
                             a(href="/").menu-item
                                 img(src="./../svg/navigation/logout.svg", alt="") 
-                                span Выйти
+                                span Выйти 
 
         div.app-container(class=(['login'].includes(template_main) ? 'login' : ''))
             div.app-container-bg
@@ -99,9 +99,9 @@ div.page-wrapper
 
                 if template_main == 'staff'
                     include ./content/staff.pug 
-                if template_main == 'staff-partner.pug'
+                if template_main == 'staff-partner'
                     include ./content/staff-partner.pug 
-                if template_main == 'staff-add.pug'
+                if template_main == 'staff-add'
                     include ./content/staff-add.pug 
 
                 if template_main == 'profile'
